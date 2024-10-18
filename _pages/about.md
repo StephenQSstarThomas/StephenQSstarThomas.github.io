@@ -34,6 +34,12 @@ Submitted on arXiv, September 2023
 [Link to paper](https://arxiv.org/abs/2309.07870)  
 [Project Link](https://github.com/aiwaves-cn/agents)
 
+[2] MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models
+Peng Xia, Siwei Han, Shi Qiu, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng, Zhaorun Chen, Chenhang Cui, Mingyu Ding, Linjie Li, Lijuan Wang, Huaxiu Yao
+Submitted on arXiv, September 2024 
+[Link to paper](https://arxiv.org/abs/2410.10139))  
+[Project Link](https://mmie-bench.github.io/)
+
 ---
 
 # 🎖 Honors and Awards
