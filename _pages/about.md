@@ -25,7 +25,7 @@ Hi, I'm Shi Qiu (仇是), a junior student at the School of Physics, Peking Univ
 - *huggingface*：https://huggingface.co/StarThomas1002
 
 ---
-https://x.com/StephenQS0710
+
 # 📝 Publications
 
 [1] Agents: An Open-source Framework for Autonomous Language Agents  
