@@ -16,6 +16,7 @@ Hi, I'm Shi Qiu (仇是), a junior student at the School of Physics, Peking Univ
 
 # 🔥 News
 - *2024*: Excellence in Research Award for contributions in AI and intelligent systems.
+- *2024*: MMIE is accepted by ICLR 2025!
 
 ---
 
@@ -56,7 +57,7 @@ Peng Xia, Siwei Han, Shi Qiu, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng, Zhaorun 
 *Beijing, China*  
 *School of Physics & School of Electronics Engineering and Computer Science*  
 *2022--*  
-- Overall GPA: 3.58/4.0  
+- Overall GPA: 3.61/4.0  
 
 ---
 
