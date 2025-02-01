@@ -41,6 +41,18 @@ Peng Xia, Siwei Han, Shi Qiu, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng, Zhaorun 
 [Link to paper](https://arxiv.org/abs/2410.10139)
 [Project Link](https://mmie-bench.github.io/)
 
+[3] GLIMPSE: VideoLLMs Can Watch but Do They Truly Understand?
+Shi Qiu*, Yiyang Zhou*, Linjie Li*, Haibo Tong, Lijuan Wang, Huaxiu Yao
+*currently under review*
+
+[4] MJ-BENCH-VIDEO: A Fine-Grained Preference Dataset for Evaluating Reward Model of Text-to-Video Generation
+Haibo Tong, Zhaoyang Wang, Zhaorun Chen, Haonian Ji, Shi Qiu, Siwei Han, Zhongkai Xue, Yiyang Zhou, Peng Xia, Kexin Geng, Mingyu Ding, Rafael Rafailov, Chelsea Finn, Huaxiu Yao
+*currently under review*
+
+[5] Scaling Large Language Model Evaluation to 286 Graduate-Level Disciplines
+Yifan Yao, Xeron Du, Bingli Wang, Kaijing Ma, Minghao Liu, Shi Qiu, ..., Jiaheng Liu, Stephen Huang, Ge Zhang
+*currently under review*
+
 ---
 
 # 🎖 Honors and Awards
@@ -48,6 +60,7 @@ Peng Xia, Siwei Han, Shi Qiu, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng, Zhaorun 
 - 🏅 Shu Qi Scholarship (top 5%) - *2023*  
 - 🏆 Youth Award for Athletics (Physics Major Representative) - *2023*  
 - 🥇 Excellence in Research Award - *2024*
+- 🥇 Peking University Third Class Scholarship *2024*
 
 ---
 
@@ -57,7 +70,7 @@ Peng Xia, Siwei Han, Shi Qiu, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng, Zhaorun 
 *Beijing, China*  
 *School of Physics & School of Electronics Engineering and Computer Science*  
 *2022--*  
-- Overall GPA: 3.61/4.0  
+- Overall GPA: 3.63/4.0  
 
 ---
 
@@ -98,7 +111,11 @@ CourseCommunity: An open-source, all-for-free platform providing university cour
 # ⚽ Extracurricular Activities & Interests
 
 - 🏆 **President of the Peking University Jump-Rope Team**  
-  - **Achievements:** Reached 29th place in the National Online Jump Rope Competition and secured 3rd place in the Beijing Jump Rope Competition. 
+  - **Achievements:**
+  - 29th place in the National Online Jump Rope Competition and secured 3rd place in the Beijing Jump Rope Competition.
+  - Beijing College Shuttlecock and Rope Skipping League: Men’s 30-Second Double Under: First Place
+  - Mixed 1-on-1 30-Second Single Under: Second Place (Broke the event record)
+  - Consecutive Triple Under: Third Place
   
 - 🏸 **Member of the Badminton Team**  
   - **Achievements:** Contributed to the team's 3rd place victory in the Beijing University Cup Badminton Team Competition.
