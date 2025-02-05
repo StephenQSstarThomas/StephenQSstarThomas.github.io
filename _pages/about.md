@@ -46,8 +46,9 @@ Peng Xia, Siwei Han, Shi Qiu, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng, Zhaorun 
 Shi Qiu*, Yiyang Zhou*, Linjie Li*, Haibo Tong, Lijuan Wang, Huaxiu Yao
 *currently under review*
 
-[4] MJ-BENCH-VIDEO: A Fine-Grained Preference Dataset for Evaluating Reward Model of Text-to-Video Generation
+[4] MJ-VIDEO: Fine-Grained Benchmarking and Rewarding Video Preferences in Video Generation
 Haibo Tong, Zhaoyang Wang, Zhaorun Chen, Haonian Ji, Shi Qiu, Siwei Han, Zhongkai Xue, Yiyang Zhou, Peng Xia, Kexin Geng, Mingyu Ding, Rafael Rafailov, Chelsea Finn, Huaxiu Yao
+[Paper Link](https://arxiv.org/abs/2502.01719)
 *currently under review*
 
 [5] Scaling Large Language Model Evaluation to 286 Graduate-Level Disciplines
