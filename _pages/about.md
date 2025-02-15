@@ -15,8 +15,9 @@ Hi, I'm Shi Qiu (仇是), a junior student at the School of Physics, Peking Univ
 ---
 
 # 🔥 News
+- *2025*: MMIE is accepted by ICLR 2025 as an **Oral** paper!!
+- *2025*: MJ-Video is released on Arxiv.
 - *2024*: Excellence in Research Award for contributions in AI and intelligent systems.
-- *2024*: MMIE is accepted by ICLR 2025!
 
 ---
 
