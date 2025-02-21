@@ -54,6 +54,7 @@ Haibo Tong, Zhaoyang Wang, Zhaorun Chen, Haonian Ji, Shi Qiu, Siwei Han, Zhongka
 
 [5] Scaling Large Language Model Evaluation to 286 Graduate-Level Disciplines
 Yifan Yao, Xeron Du, Bingli Wang, Kaijing Ma, Minghao Liu, Shi Qiu, ..., Jiaheng Liu, Stephen Huang, Ge Zhang
+[Paper Link](https://arxiv.org/abs/2502.14739)
 *currently under review*
 
 ---
