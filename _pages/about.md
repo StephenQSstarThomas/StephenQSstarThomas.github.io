@@ -26,6 +26,7 @@ Hi, I'm Shi Qiu (仇是), a junior student at the School of Physics, Peking Univ
 - *小红书*：是是是一只吃播萨米
 - *Wechat*: StephenQSqiuqiu
 - *huggingface*：https://huggingface.co/StarThomas1002
+- *Discord*: stephen_17949
 - *my personal cv*: https://github.com/StephenQSstarThomas/StephenQSstarThomas.github.io/blob/main/qs_cv.pdf
 
 ---
