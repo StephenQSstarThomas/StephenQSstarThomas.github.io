@@ -35,6 +35,7 @@ Hi, I'm Shi Qiu (仇是), a junior student at the School of Physics, Peking Univ
 # 📝 Publications
 
 [1] PHYBench: Holistic Evaluation of Physical Perception and Reasoning in Large Language Models
+Shi Qiu, Shaoyang Guo, Zhuo-Yang Song, Hua-Xing Zhu et al.
 Submitted on arXiv, April 2025
 [Link to paper]((https://arxiv.org/abs/2504.16074)
 [Project link](https://phybench-official.github.io/phybench-demo/)
