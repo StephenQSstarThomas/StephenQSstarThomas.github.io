@@ -10,7 +10,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hi, I'm Shi Qiu (仇是), a junior student at the School of Physics, Peking University. My research interests include the alignment and application of Large Language Models (LLMs) and Vision-Language Models (LVLMs). I am currently an intern with [Prof. Huaxiu Yao](https://www.huaxiuyao.io)'s team at UNC, where I contribute to cutting-edge AI research.
+Hi, I'm Shi Qiu (仇是), a junior student at the School of Physics, Peking University. My research interests focus on reasoning models and agents, with a specific emphasis on assessing their interpretability and robust reasoning capabilities. I've also done research in Large Multimodal Models(LMMs), especially their evaluation and application for human society. I am currently an intern with [Prof. Dawn Song](https://dawnsong.io/)'s team at UCB, and with [Prof. Huaxiu Yao](https://www.huaxiuyao.io)'s team at UNC, where I contribute to cutting-edge AI research. Additionally, I am affiliated with the AI4Physics research group led by Professors Qing-Hong Cao, Hua Xing Zhu, and Ming-Xing Luo at the School of Physics, Peking University.
 
 ---
 
