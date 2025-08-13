@@ -35,34 +35,34 @@ Hi, I'm Shi Qiu (仇是), a junior student at the School of Physics, Peking Univ
 # 📝 Publications
 
 [1] PHYBench: Holistic Evaluation of Physical Perception and Reasoning in Large Language Models
-Shi Qiu, Shaoyang Guo, Zhuo-Yang Song, Hua-Xing Zhu et al.
+**Shi Qiu**, Shaoyang Guo, Zhuo-Yang Song, Hua-Xing Zhu et al.
 Submitted on arXiv, April 2025
 [Link to paper]((https://arxiv.org/abs/2504.16074)
 [Project link](https://phybench-official.github.io/phybench-demo/)
 
-[2] Agents: An Open-source Framework for Autonomous Language Agents  
-Wangchunshu Zhou, Yuchen Eleanor Jiang, Long Li, Jialong Wu, Shi Qiu, etc.  
-Submitted on arXiv, September 2023  
-[Link to paper](https://arxiv.org/abs/2309.07870)  
-[Project Link](https://github.com/aiwaves-cn/agents)
-
-[3] MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models
+[2] MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models
 Peng Xia, Siwei Han, Shi Qiu, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng, Zhaorun Chen, Chenhang Cui, Mingyu Ding, Linjie Li, Lijuan Wang, Huaxiu Yao
 
 [Link to paper](https://arxiv.org/abs/2410.10139)
 [Project Link](https://mmie-bench.github.io/)
 
-[4] GLIMPSE: VideoLLMs Can Watch but Do They Truly Understand?
-Shi Qiu*, Yiyang Zhou*, Linjie Li*, Haibo Tong, Lijuan Wang, Huaxiu Yao
+[3] Agents: An Open-source Framework for Autonomous Language Agents  
+Wangchunshu Zhou, Yuchen Eleanor Jiang, Long Li, Jialong Wu, Shi Qiu, etc.  
+ICLR 2024 Workshop 
+[Link to paper](https://arxiv.org/abs/2309.07870)  
+[Project Link](https://github.com/aiwaves-cn/agents)
+
+[4] GLIMPSE: Do Large Vision-Language Models Truly Think With Videos or Just Glimpse at Them?
+Yiyang Zhou, Linjie Li, **Shi Qiu**, Zhengyuan Yang, Yuyang Zhao, Siwei Han, Yangfan He, Kangqi Li, Haonian Ji, Zihao Zhao, Haibo Tong, Lijuan Wang, Huaxiu Yao
 *currently under review*
 
 [5] MJ-VIDEO: Fine-Grained Benchmarking and Rewarding Video Preferences in Video Generation
-Haibo Tong, Zhaoyang Wang, Zhaorun Chen, Haonian Ji, Shi Qiu, Siwei Han, Zhongkai Xue, Yiyang Zhou, Peng Xia, Kexin Geng, Mingyu Ding, Rafael Rafailov, Chelsea Finn, Huaxiu Yao
+Haibo Tong, Zhaoyang Wang, Zhaorun Chen, Haonian Ji, **Shi Qiu**, Siwei Han, Zhongkai Xue, Yiyang Zhou, Peng Xia, Kexin Geng, Mingyu Ding, Rafael Rafailov, Chelsea Finn, Huaxiu Yao
 [Paper Link](https://arxiv.org/abs/2502.01719)
 *currently under review*
 
-[6] Scaling Large Language Model Evaluation to 286 Graduate-Level Disciplines
-Yifan Yao, Xeron Du, Bingli Wang, Kaijing Ma, Minghao Liu, Shi Qiu, ..., Jiaheng Liu, Stephen Huang, Ge Zhang
+[6] SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines
+Xeron Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu, Yiming Liang, Xiaolong Jin, Zhenlin Wei, **Shi Qiu**, ..., Jiaheng Liu, Stephen Huang, Ge Zhang
 [Paper Link](https://arxiv.org/abs/2502.14739)
 *currently under review*
 
