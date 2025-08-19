@@ -10,164 +10,150 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hi, I'm Shi Qiu (仇是), a junior student at the School of Physics, Peking University. My research interests focus on reasoning models and agents, with a specific emphasis on assessing their interpretability and robust reasoning capabilities. I've also done research in Large Multimodal Models(LMMs), especially their evaluation and application for human society. I am currently an intern with [Prof. Dawn Song](https://dawnsong.io/)'s team at UCB, and with [Prof. Huaxiu Yao](https://www.huaxiuyao.io)'s team at UNC, where I contribute to cutting-edge AI research. Additionally, I am affiliated with the AI4Physics research group led by Professors Qing-Hong Cao, Hua Xing Zhu, and Ming-Xing Luo at the School of Physics, Peking University.
+Hi, I'm Shi Qiu (仇是), a junior student at the School of Physics, Peking University. 
+
+My research interests focus on **reasoning models and agents**, with a specific emphasis on assessing their interpretability and robust reasoning capabilities. I've also done research in **Large Multimodal Models (LMMs)**, especially their evaluation and application for human society.
+
+I am currently an intern with [Prof. Dawn Song](https://dawnsong.io/)'s team at UC Berkeley, and with [Prof. Huaxiu Yao](https://www.huaxiuyao.io)'s team at UNC Chapel Hill, where I contribute to cutting-edge AI research. Additionally, I am affiliated with the AI4Physics research group led by Professors Qing-Hong Cao, Hua-Xing Zhu, and Ming-Xing Luo at the School of Physics, Peking University.
 
 ---
 
 # 🔥 News
-- *Newly*: We release PHYBench, the first large-scale reasoning benchmark within physical context. Follow us on our latest updates!
-- *2025*: MMIE is accepted by ICLR 2025 as an **Oral** paper!!
-- *2025*: MJ-Video is released on Arxiv.
-- *2024*: Excellence in Research Award for contributions in AI and intelligent systems.
+- **[New]** We released **PHYBench**, the first large-scale reasoning benchmark within a physical context. Follow us for the latest updates!
+- **[Jan 2025]** Our paper, **MMIE**, was accepted by ICLR 2025 as an **Oral** presentation!
+- **[Feb 2025]** Our paper, **MJ-Video**, was released on arXiv.
+- **[2024]** Honored to receive the Excellence in Research Award for contributions in AI and intelligent systems.
 
 ---
 
 # ✉️ Contact
-- *X*: https://x.com/StephenQS0710
-- *小红书*：是是是一只吃播萨米
-- *Wechat*: StephenQSqiuqiu
-- *huggingface*：https://huggingface.co/StarThomas1002
-- *Discord*: stephen_17949
-- *my personal cv*: https://github.com/StephenQSstarThomas/StephenQSstarThomas.github.io/blob/main/qs_cv.pdf
+- **X (Twitter):** [@StephenQS0710](https://x.com/StephenQS0710)
+- **Hugging Face:** [StarThomas1002](https://huggingface.co/StarThomas1002)
+- **Discord:** `stephen_17949`
+- **WeChat:** StephenQSqiuqiu
+- **小红书:** 是是是一只吃播萨米
+- **CV:** [View my Personal CV](https://github.com/StephenQSstarThomas/StephenQSstarThomas.github.io/blob/main/qs_cv.pdf)
 
 ---
 
 # 📝 Publications
 
-[1] PHYBench: Holistic Evaluation of Physical Perception and Reasoning in Large Language Models
-**Shi Qiu**, Shaoyang Guo, Zhuo-Yang Song, Hua-Xing Zhu et al.
-Submitted on arXiv, April 2025
-[Link to paper]((https://arxiv.org/abs/2504.16074)
-[Project link](https://phybench-official.github.io/phybench-demo/)
+*Your name is highlighted in **bold**.*
 
-[2] MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models
-Peng Xia, Siwei Han, Shi Qiu, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng, Zhaorun Chen, Chenhang Cui, Mingyu Ding, Linjie Li, Lijuan Wang, Huaxiu Yao
+<br>
 
-[Link to paper](https://arxiv.org/abs/2410.10139)
-[Project Link](https://mmie-bench.github.io/)
+[1] **PHYBench: Holistic Evaluation of Physical Perception and Reasoning in Large Language Models** **Shi Qiu**, Shaoyang Guo, Zhuo-Yang Song, Hua-Xing Zhu et al.  
+*Submitted to arXiv, April 2025* [[Paper]](https://arxiv.org/abs/2504.16074) [[Project]](https://phybench-official.github.io/phybench-demo/)
 
-[3] Agents: An Open-source Framework for Autonomous Language Agents  
-Wangchunshu Zhou, Yuchen Eleanor Jiang, Long Li, Jialong Wu, Shi Qiu, etc.  
-ICLR 2024 Workshop 
-[Link to paper](https://arxiv.org/abs/2309.07870)  
-[Project Link](https://github.com/aiwaves-cn/agents)
+[2] **MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models** Peng Xia, Siwei Han, **Shi Qiu**, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng, Zhaorun Chen, Chenhang Cui, Mingyu Ding, Linjie Li, Lijuan Wang, Huaxiu Yao  
+*ICLR 2025 (Oral)* [[Paper]](https://arxiv.org/abs/2410.10139) [[Project]](https://mmie-bench.github.io/)
 
-[4] GLIMPSE: Do Large Vision-Language Models Truly Think With Videos or Just Glimpse at Them?
-Yiyang Zhou, Linjie Li, **Shi Qiu**, Zhengyuan Yang, Yuyang Zhao, Siwei Han, Yangfan He, Kangqi Li, Haonian Ji, Zihao Zhao, Haibo Tong, Lijuan Wang, Huaxiu Yao
-*currently under review*
+[3] **Agents: An Open-source Framework for Autonomous Language Agents** Wangchunshu Zhou, Yuchen Eleanor Jiang, Long Li, Jialong Wu, **Shi Qiu**, etc.  
+*ICLR 2024 Workshop on Large Language Models for Agents* [[Paper]](https://arxiv.org/abs/2309.07870) [[Project]](https://github.com/aiwaves-cn/agents)
 
-[5] MJ-VIDEO: Fine-Grained Benchmarking and Rewarding Video Preferences in Video Generation
-Haibo Tong, Zhaoyang Wang, Zhaorun Chen, Haonian Ji, **Shi Qiu**, Siwei Han, Zhongkai Xue, Yiyang Zhou, Peng Xia, Kexin Geng, Mingyu Ding, Rafael Rafailov, Chelsea Finn, Huaxiu Yao
-[Paper Link](https://arxiv.org/abs/2502.01719)
-*currently under review*
+[4] **GLIMPSE: Do Large Vision-Language Models Truly Think With Videos or Just Glimpse at Them?** Yiyang Zhou, Linjie Li, **Shi Qiu**, Zhengyuan Yang, Yuyang Zhao, Siwei Han, Yangfan He, Kangqi Li, Haonian Ji, Zihao Zhao, Haibo Tong, Lijuan Wang, Huaxiu Yao  
+*Currently under review*
 
-[6] SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines
-Xeron Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu, Yiming Liang, Xiaolong Jin, Zhenlin Wei, **Shi Qiu**, ..., Jiaheng Liu, Stephen Huang, Ge Zhang
-[Paper Link](https://arxiv.org/abs/2502.14739)
-*currently under review*
+[5] **MJ-VIDEO: Fine-Grained Benchmarking and Rewarding Video Preferences in Video Generation** Haibo Tong, Zhaoyang Wang, Zhaorun Chen, Haonian Ji, **Shi Qiu**, Siwei Han, Zhongkai Xue, Yiyang Zhou, Peng Xia, Kexin Geng, Mingyu Ding, Rafael Rafailov, Chelsea Finn, Huaxiu Yao  
+*Currently under review* [[Paper]](https://arxiv.org/abs/2502.01719)
+
+[6] **SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines** Xeron Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu, Yiming Liang, Xiaolong Jin, Zhenlin Wei, **Shi Qiu**, ..., Jiaheng Liu, Stephen Huang, Ge Zhang  
+*Currently under review* [[Paper]](https://arxiv.org/abs/2502.14739)
 
 ---
 
-# 🎖 Honors and Awards
-
-- 🏅 Shu Qi Scholarship (top 5%) - *2023*  
-- 🏆 Youth Award for Athletics (Physics Major Representative) - *2023*  
-- 🥇 Excellence in Research Award - *2024*
-- 🥇 Peking University Third Class Scholarship *2024*
+# 🎖️ Honors and Awards
+- **Excellence in Research Award**, *2024*
+- **Peking University Third Class Scholarship**, *2024*
+- **Shu Qi Scholarship** (Top 5%), *2023*
+- **Youth Award for Athletics** (Physics Major Representative), *2023*
 
 ---
 
 # 📖 Education
-
-**Peking University**  
-*Beijing, China*  
-*School of Physics & School of Electronics Engineering and Computer Science*  
-*2022--*  
-- Overall GPA: 3.63/4.0  
+**Peking University** *Beijing, China* *B.S. in Physics & B.S. in Electronics Engineering and Computer Science (Double Major)* *2022 – Present*
+- Overall GPA: 3.63/4.0
 
 ---
 
 # 💼 Research Experience
 
-**Undergraduate Research Program** (sorted by time)
+**Undergraduate Researcher** | UNC Chapel Hill  
+*Advisor: [Prof. Huaxiu Yao](https://www.huaxiuyao.io)* *June 2024 – Aug 2024*
+- Contributed to multiple research projects in large multimodal models and AI agents as a summer research assistant.
 
-- **CUPT Competition** 2023.3–5  
-  - Third Prize in the CUPT (China Undergraduate Physics Tournament) School Competition, as one of the Main Speakers in the team.
+**Research Intern** | AIWaves  
+*June 2023 – Aug 2023*
+- Contributed to the core development of the open-source framework for autonomous language agents.
+- Co-authored the paper "Agents: An Open-source Framework for Autonomous Language Agents".
+- Project reached over 5,000 stars on GitHub: [[Project Link]](https://github.com/aiwaves-cn/agents)
 
-- **Summer Internship at AIWaves** 2023.6–8  
-  - Contributed to the development of the underlying code for an intelligent agent (AI-Agent) and co-authored a paper. Received 5k stars on GitHub.  
-  - [Project Link](https://github.com/aiwaves-cn/agents)
-
-- **Summer Internship at UNC** 2024.6–8  
-  - Worked with [Prof. Huaxiu Yao](https://www.huaxiuyao.io) at the Department of Computer Science, UNC-Chapel Hill, as an assistant researcher. Contributed to multiple projects.
+**CUPT Competition Team** | Peking University  
+*March 2023 – May 2023*
+- Served as a Main Speaker for the team.
+- Awarded Third Prize in the China Undergraduate Physics Tournament (CUPT) school-wide competition.
 
 ---
 
 # 💻 Projects
 
-### [LLM Agent](https://github.com/aiwaves-cn/agents) 
-*2023.6–2023.8*  
-Agents: An Open-source Framework for Autonomous Language Agents
+**[CourseCommunity](https://github.com/StephenQSstarThomas/CourseCommunity)** *March 2024 – Present* An open-source, all-for-free platform providing university course notes and self-study guides.
 
-### [CourseCommunity](https://github.com/StephenQSstarThomas/CourseCommunity) 
-*2024.3–Present*  
-CourseCommunity: An open-source, all-for-free platform providing university course notes and self-study guides.
+**[LLM Agent Framework](https://github.com/aiwaves-cn/agents)** *June 2023 – Aug 2023* An open-source framework for building and deploying autonomous language agents.
 
 ---
 
 # 🗺️ Skills
-- **Programming:** Python, LaTeX, Markdown  
-- **English:** TOEFL 112, CET-6 696, multiple internships in the US with significant English proficiency
+- **Programming:** Python, LaTeX, Markdown
+- **Languages:** Native Mandarin, Fluent English (TOEFL 112, CET-6 696)
 
 ---
 
 # ⚽ Extracurricular Activities & Interests
 
-- 🏆 **President of the Peking University Jump-Rope Team**  
+- **President of the Peking University Jump-Rope Team**
   - **Achievements:**
-  - 29th place in the National Online Jump Rope Competition and secured 3rd place in the Beijing Jump Rope Competition.
-  - Beijing College Shuttlecock and Rope Skipping League: Men’s 30-Second Double Under: First Place
-  - Mixed 1-on-1 30-Second Single Under: Second Place (Broke the event record)
-  - Consecutive Triple Under: Third Place
-  
-- 🏸 **Member of the Badminton Team**  
-  - **Achievements:** Contributed to the team's 3rd place victory in the Beijing University Cup Badminton Team Competition.
+    - 29th place in the National Online Jump Rope Competition.
+    - 3rd place in the Beijing Jump Rope Competition.
+    - **Beijing College League:** First Place (Men’s 30-Second Double Under), Second Place (Mixed 1-on-1 30-Second Single Under, Broke Event Record), Third Place (Consecutive Triple Under).
 
-- 🏫 **Class Monitor** of Class 8 in the 22nd Undergraduate Cohort  
+- **Member of the Badminton Team**
+  - **Achievement:** Contributed to the team's 3rd place victory in the Beijing University Cup Badminton Team Competition.
+
+- **Class Monitor**, Class 8 of the 22nd Undergraduate Cohort
   - Managed class responsibilities, organized events, and facilitated communication between students and faculty.
 
-- 🔗 **Key Member of the Peking University Blockchain Association**  
-  - Actively engaged in discussions on blockchain technology and its potential applications in various industries.
+- **Key Member of the Peking University Blockchain Association**
+  - Actively engaged in discussions on blockchain technology and its applications.
 
-- 📚 **Literature & Writing**  
-  - Published a personal collection of essays, available at [Literature](https://github.com/StephenQSstarThomas/Literature).  
-  - **Favorite Authors:** [Richard Powers](https://richardpowers.net), [Amor Towles](https://www.amortowles.com), [Anthony Doerr](https://www.anthonydoerr.com)
+- **Literature & Writing**
+  - Published a personal collection of essays, available at my [[Literature]](https://github.com/StephenQSstarThomas/Literature) repository.
+  - **Favorite Authors:** [Richard Powers](https://richardpowers.net), [Amor Towles](https://www.amortowles.com), and [Anthony Doerr](https://www.anthonydoerr.com).
 
-- 📸 **Photography**  
-  - Collaborated with Mengshu Yu and Dannni Luo to create a unique series of self-made postcards, available at [Postcard](https://github.com/StephenQSstarThomas/Postcards).
+- **Photography**
+  - Collaborated with Mengshu Yu and Dannni Luo to create a unique series of self-made postcards. View them here: [[Postcards]](https://github.com/StephenQSstarThomas/Postcards).
   <br>
-  <img src="../images/post.jpg" style="width: 60%;">
+  <img src="../images/post.jpg" alt="A collage of artistic postcards" style="width: 60%; border-radius: 8px;">
   <br>
-- 🎮 **Games**  
-  - **Clash Royale**  
-    - Achieved Ladder rank #31 and Tournament rank #46 on the Chinese Server. Reached #1 using Evo RG, detailed in this [video](https://www.bilibili.com/video/BV1CS411K7nU).  
-    - Team effort resulted in 3rd place in the Clash Royale Chinese University League (CRCUL) alongside Yikai Zhu, Hao Chen, Shibin Zhou, Luotian Yang, Yiming Liu, Haoxu Zhang, and others.  
+
+- **Games**
+  - **Clash Royale:**
+    - Achieved Ladder rank #31 and Tournament rank #46 on the Chinese Server. Reached #1 using Evo RG ([video proof](https://www.bilibili.com/video/BV1CS411K7nU)).
+    - Won 3rd place in the Clash Royale Chinese University League (CRCUL) with teammates Yikai Zhu, Hao Chen, and others.
     <br>
-    <img src="../images/CR_1.jpg" style="width: 40%;">
+    <img src="../images/CR_1.jpg" alt="Clash Royale ranking screenshot" style="width: 40%; border-radius: 8px;">
+    <br><br>
+    <img src="../images/CR_2.jpg" alt="Clash Royale University League team photo" style="width: 40%; border-radius: 8px;">
     <br>
-    <br>
-    <img src="../images/CR_2.jpg" style="width: 40%;">
-    <br>
-  
-  - **Battle of Balls**  
+  - **Battle of Balls:**
     - Ranked #7 on the ladder in Zhejiang Province, July 2018.
 
-- 🚆 **Trains**  
-  - A passionate train enthusiast.  
-  <br>
-  <img src="../images/train.jpg" style="width: 40%;">
-
-- 🎣 **Fishing**  
-  - Enjoys fishing during leisure time.  
-  <br>
-  <img src="../images/Fish.jpg" style="width: 40%;">
+- **Hobbies**
+  - **Trains:** A passionate train enthusiast.
+    <br>
+    <img src="../images/train.jpg" alt="A photo of a train" style="width: 40%; border-radius: 8px;">
+    <br>
+  - **Fishing:** Enjoy fishing during my leisure time.
+    <br>
+    <img src="../images/Fish.jpg" alt="A photo of a freshly caught fish" style="width: 40%; border-radius: 8px;">
+    <br>
