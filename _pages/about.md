@@ -142,7 +142,7 @@ Xeron Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Li
   <br>
 
 - **Games**
-- **Clash Royale:**
+  - **Clash Royale:**
     - Achieved Ladder rank #31 and Tournament rank #46 on the Chinese Server. Reached #1 using Evo RG ([video proof](https://www.bilibili.com/video/BV1CS411K7nU)).
     - Won 3rd place in the Clash Royale Chinese University League (CRCUL) with teammates Yikai Zhu, Hao Chen, and others.
     <br>
