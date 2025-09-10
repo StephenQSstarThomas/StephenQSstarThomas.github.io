@@ -10,7 +10,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hi, I'm Shi Qiu (仇是), a junior student at the School of Physics, Peking University. 
+Hi, I'm Shi Qiu (仇是), a senior undergraduate student at the School of Physics, Peking University. 
 
 My research interests focus on **reasoning models and agents**, with a specific emphasis on assessing their interpretability and robust reasoning capabilities. I've also done research in **Large Multimodal Models (LMMs)**, especially their evaluation and application for human society.
 
@@ -19,7 +19,8 @@ I am currently an intern with [Prof. Dawn Song](https://dawnsong.io/)'s team at 
 ---
 
 # 🔥 News
-- **[New]** We released **PHYBench**, the first large-scale reasoning benchmark within a physical context. Follow us for the latest updates!
+- **[Sep 2025]** Our paper, **GLIMPSE**, was accepted by EMNLP 2025 Main Conference!
+- **[May 2025]** We released **PHYBench**, the first large-scale reasoning benchmark within a physical context. Follow us for the latest updates!
 - **[Jan 2025]** Our paper, **MMIE**, was accepted by ICLR 2025 as an **Oral** presentation!
 - **[Feb 2025]** Our paper, **MJ-Video**, was released on arXiv.
 - **[2024]** Honored to receive the Excellence in Research Award for contributions in AI and intelligent systems.
@@ -38,27 +39,30 @@ I am currently an intern with [Prof. Dawn Song](https://dawnsong.io/)'s team at 
 
 # 📝 Publications
 
-*Your name is highlighted in **bold**.*
-
 <br>
 
 [1] **PHYBench: Holistic Evaluation of Physical Perception and Reasoning in Large Language Models** **Shi Qiu**, Shaoyang Guo, Zhuo-Yang Song, Hua-Xing Zhu et al.  
-*Submitted to arXiv, April 2025* [[Paper]](https://arxiv.org/abs/2504.16074) [[Project]](https://phybench-official.github.io/phybench-demo/)
+*Submitted to arXiv, April 2025* 
+[[Paper]](https://arxiv.org/abs/2504.16074) [[Project]](https://phybench-official.github.io/phybench-demo/)
 
-[2] **MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models** Peng Xia, Siwei Han, **Shi Qiu**, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng, Zhaorun Chen, Chenhang Cui, Mingyu Ding, Linjie Li, Lijuan Wang, Huaxiu Yao  
-*ICLR 2025 (Oral)* [[Paper]](https://arxiv.org/abs/2410.10139) [[Project]](https://mmie-bench.github.io/)
+[2] **MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models** Peng Xia*, Siwei Han*, **Shi Qiu***, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng, Zhaorun Chen, Chenhang Cui, Mingyu Ding, Linjie Li, Lijuan Wang, Huaxiu Yao  
+*ICLR 2025 (Oral)* 
+[[Paper]](https://arxiv.org/abs/2410.10139) [[Project]](https://mmie-bench.github.io/)
 
 [3] **Agents: An Open-source Framework for Autonomous Language Agents** Wangchunshu Zhou, Yuchen Eleanor Jiang, Long Li, Jialong Wu, **Shi Qiu**, etc.  
-*ICLR 2024 Workshop on Large Language Models for Agents* [[Paper]](https://arxiv.org/abs/2309.07870) [[Project]](https://github.com/aiwaves-cn/agents)
+*ICLR 2024 Workshop on Large Language Models for Agents* 
+[[Paper]](https://arxiv.org/abs/2309.07870) [[Project]](https://github.com/aiwaves-cn/agents)
 
-[4] **GLIMPSE: Do Large Vision-Language Models Truly Think With Videos or Just Glimpse at Them?** Yiyang Zhou, Linjie Li, **Shi Qiu**, Zhengyuan Yang, Yuyang Zhao, Siwei Han, Yangfan He, Kangqi Li, Haonian Ji, Zihao Zhao, Haibo Tong, Lijuan Wang, Huaxiu Yao  
-*Currently under review*
+[4] **GLIMPSE: Do Large Vision-Language Models Truly Think With Videos or Just Glimpse at Them?** Yiyang Zhou*, Linjie Li*, **Shi Qiu***, Zhengyuan Yang, Yuyang Zhao, Siwei Han, Yangfan He, Kangqi Li, Haonian Ji, Zihao Zhao, Haibo Tong, Lijuan Wang, Huaxiu Yao  
+*EMNLP 2025 Main Conference*
 
 [5] **MJ-VIDEO: Fine-Grained Benchmarking and Rewarding Video Preferences in Video Generation** Haibo Tong, Zhaoyang Wang, Zhaorun Chen, Haonian Ji, **Shi Qiu**, Siwei Han, Zhongkai Xue, Yiyang Zhou, Peng Xia, Kexin Geng, Mingyu Ding, Rafael Rafailov, Chelsea Finn, Huaxiu Yao  
-*Currently under review* [[Paper]](https://arxiv.org/abs/2502.01719)
+*Currently under review* 
+[[Paper]](https://arxiv.org/abs/2502.01719)
 
 [6] **SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines** Xeron Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu, Yiming Liang, Xiaolong Jin, Zhenlin Wei, **Shi Qiu**, ..., Jiaheng Liu, Stephen Huang, Ge Zhang  
-*Currently under review* [[Paper]](https://arxiv.org/abs/2502.14739)
+*Currently under review* 
+[[Paper]](https://arxiv.org/abs/2502.14739)
 
 ---
 
@@ -109,15 +113,14 @@ I am currently an intern with [Prof. Dawn Song](https://dawnsong.io/)'s team at 
 
 ---
 
-# ⚽ Extracurricular Activities & Interests
+# 🏸 Extracurricular Activities & Interests
 
 - **President of the Peking University Jump-Rope Team**
   - **Achievements:**
-    - 29th place in the National Online Jump Rope Competition.
-    - 3rd place in the Beijing Jump Rope Competition.
+    - **National Online Jump Rope Competition:** Ranked #29.
     - **Beijing College League:** First Place (Men’s 30-Second Double Under), Second Place (Mixed 1-on-1 30-Second Single Under, Broke Event Record), Third Place (Consecutive Triple Under).
 
-- **Member of the Badminton Team**
+- **Member of the Badminton Team in Department of Physics**
   - **Achievement:** Contributed to the team's 3rd place victory in the Beijing University Cup Badminton Team Competition.
 
 - **Class Monitor**, Class 8 of the 22nd Undergraduate Cohort
