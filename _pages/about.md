@@ -39,32 +39,34 @@ I am currently an intern with [Prof. Dawn Song](https://dawnsong.io/)'s team at 
 
 # 📝 Publications
 
-<br>
-
-[1] **PHYBench: Holistic Evaluation of Physical Perception and Reasoning in Large Language Models** **Shi Qiu**, Shaoyang Guo, Zhuo-Yang Song, Hua-Xing Zhu et al.  
-*Submitted to arXiv, April 2025* 
+[1] **PHYBench: Holistic Evaluation of Physical Perception and Reasoning in Large Language Models**  
+**Shi Qiu**, Shaoyang Guo, Zhuo-Yang Song, Hua-Xing Zhu et al.  
+*Submitted to arXiv, April 2025*  
 [[Paper]](https://arxiv.org/abs/2504.16074) [[Project]](https://phybench-official.github.io/phybench-demo/)
 
-[2] **MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models** Peng Xia*, Siwei Han*, **Shi Qiu***, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng, Zhaorun Chen, Chenhang Cui, Mingyu Ding, Linjie Li, Lijuan Wang, Huaxiu Yao  
-*ICLR 2025 (Oral)* 
+[2] **MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models**  
+Peng Xia*, Siwei Han*, **Shi Qiu***, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng, Zhaorun Chen, Chenhang Cui, Mingyu Ding, Linjie Li, Lijuan Wang, Huaxiu Yao  
+*ICLR 2025 (Oral)*  
 [[Paper]](https://arxiv.org/abs/2410.10139) [[Project]](https://mmie-bench.github.io/)
 
-[3] **Agents: An Open-source Framework for Autonomous Language Agents** Wangchunshu Zhou, Yuchen Eleanor Jiang, Long Li, Jialong Wu, **Shi Qiu**, etc.  
-*ICLR 2024 Workshop on Large Language Models for Agents* 
+[3] **Agents: An Open-source Framework for Autonomous Language Agents**  
+Wangchunshu Zhou, Yuchen Eleanor Jiang, Long Li, Jialong Wu, **Shi Qiu**, etc.  
+*ICLR 2024 Workshop on Large Language Models for Agents*  
 [[Paper]](https://arxiv.org/abs/2309.07870) [[Project]](https://github.com/aiwaves-cn/agents)
 
-[4] **GLIMPSE: Do Large Vision-Language Models Truly Think With Videos or Just Glimpse at Them?** Yiyang Zhou*, Linjie Li*, **Shi Qiu***, Zhengyuan Yang, Yuyang Zhao, Siwei Han, Yangfan He, Kangqi Li, Haonian Ji, Zihao Zhao, Haibo Tong, Lijuan Wang, Huaxiu Yao  
+[4] **GLIMPSE: Do Large Vision-Language Models Truly Think With Videos or Just Glimpse at Them?**  
+Yiyang Zhou*, Linjie Li*, **Shi Qiu***, Zhengyuan Yang, Yuyang Zhao, Siwei Han, Yangfan He, Kangqi Li, Haonian Ji, Zihao Zhao, Haibo Tong, Lijuan Wang, Huaxiu Yao  
 *EMNLP 2025 Main Conference*
 
-[5] **MJ-VIDEO: Fine-Grained Benchmarking and Rewarding Video Preferences in Video Generation** Haibo Tong, Zhaoyang Wang, Zhaorun Chen, Haonian Ji, **Shi Qiu**, Siwei Han, Zhongkai Xue, Yiyang Zhou, Peng Xia, Kexin Geng, Mingyu Ding, Rafael Rafailov, Chelsea Finn, Huaxiu Yao  
-*Currently under review* 
+[5] **MJ-VIDEO: Fine-Grained Benchmarking and Rewarding Video Preferences in Video Generation**  
+Haibo Tong, Zhaoyang Wang, Zhaorun Chen, Haonian Ji, **Shi Qiu**, Siwei Han, Zhongkai Xue, Yiyang Zhou, Peng Xia, Kexin Geng, Mingyu Ding, Rafael Rafailov, Chelsea Finn, Huaxiu Yao  
+*Currently under review*  
 [[Paper]](https://arxiv.org/abs/2502.01719)
 
-[6] **SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines** Xeron Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu, Yiming Liang, Xiaolong Jin, Zhenlin Wei, **Shi Qiu**, ..., Jiaheng Liu, Stephen Huang, Ge Zhang  
-*Currently under review* 
+[6] **SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines**  
+Xeron Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu, Yiming Liang, Xiaolong Jin, Zhenlin Wei, **Shi Qiu**, ..., Jiaheng Liu, Stephen Huang, Ge Zhang  
+*Currently under review*  
 [[Paper]](https://arxiv.org/abs/2502.14739)
-
----
 
 # 🎖️ Honors and Awards
 - **Excellence in Research Award**, *2024*
