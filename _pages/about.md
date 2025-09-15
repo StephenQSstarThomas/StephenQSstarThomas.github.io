@@ -19,7 +19,7 @@ I am currently an intern with [Prof. Dawn Song](https://dawnsong.io/)'s team at 
 ---
 
 # 🔥 News
-- **[Sep 2025]** Our paper, **GLIMPSE**, was accepted by EMNLP 2025 Main Conference!
+- **[Sep 2025]** Our paper, **GLIMPSE**, was accepted as an **Oral Presentation Paper** of **EMNLP 2025 Main Conference**!
 - **[May 2025]** We released **PHYBench**, the first large-scale reasoning benchmark within a physical context. Follow us for the latest updates!
 - **[Jan 2025]** Our paper, **MMIE**, was accepted by ICLR 2025 as an **Oral** presentation!
 - **[Feb 2025]** Our paper, **MJ-Video**, was released on arXiv.
