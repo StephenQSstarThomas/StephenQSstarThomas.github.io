@@ -19,7 +19,7 @@ I am currently an intern with [Prof. Dawn Song](https://dawnsong.io/)'s team at 
 ---
 
 # 🔥 News
-- **[Sep 2025]** Our paper, **PHYBench**, **MJ-Video** and **SuperGPQA** was accepted by **NeurIPS 2025**! See you all in San Diego in December~
+- **[Sep 2025]** Our paper, **PHYBench**, **MJ-Video**(selected as Spotlight) and **SuperGPQA** was accepted by **NeurIPS 2025**! See you all in San Diego in December~
 - **[Sep 2025]** Our paper, **GLIMPSE**, was accepted as an **Oral Presentation Paper** of **EMNLP 2025 Main Conference**!
 - **[May 2025]** We released **PHYBench**, the first large-scale reasoning benchmark within a physical context. Follow us for the latest updates!
 - **[Jan 2025]** Our paper, **MMIE**, was accepted by ICLR 2025 as an **Oral** presentation!
@@ -42,7 +42,7 @@ I am currently an intern with [Prof. Dawn Song](https://dawnsong.io/)'s team at 
 
 [1] **PHYBench: Holistic Evaluation of Physical Perception and Reasoning in Large Language Models**  
 **Shi Qiu**, Shaoyang Guo, Zhuo-Yang Song, Hua-Xing Zhu et al.  
-*Submitted to arXiv, April 2025*  
+*NeurIPS 2025*  
 [[Paper]](https://arxiv.org/abs/2504.16074) [[Project]](https://phybench-official.github.io/phybench-demo/)
 
 [2] **MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models**  
@@ -57,16 +57,16 @@ Wangchunshu Zhou, Yuchen Eleanor Jiang, Long Li, Jialong Wu, **Shi Qiu**, etc.
 
 [4] **GLIMPSE: Do Large Vision-Language Models Truly Think With Videos or Just Glimpse at Them?**  
 Yiyang Zhou*, Linjie Li*, **Shi Qiu***, Zhengyuan Yang, Yuyang Zhao, Siwei Han, Yangfan He, Kangqi Li, Haonian Ji, Zihao Zhao, Haibo Tong, Lijuan Wang, Huaxiu Yao  
-*EMNLP 2025 Main Conference*
+*EMNLP 2025 Main (Oral)*
 
 [5] **MJ-VIDEO: Fine-Grained Benchmarking and Rewarding Video Preferences in Video Generation**  
 Haibo Tong, Zhaoyang Wang, Zhaorun Chen, Haonian Ji, **Shi Qiu**, Siwei Han, Zhongkai Xue, Yiyang Zhou, Peng Xia, Kexin Geng, Mingyu Ding, Rafael Rafailov, Chelsea Finn, Huaxiu Yao  
-*Currently under review*  
+*NeurIPS 2025 (Spotlight)*   
 [[Paper]](https://arxiv.org/abs/2502.01719)
 
 [6] **SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines**  
 Xeron Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu, Yiming Liang, Xiaolong Jin, Zhenlin Wei, **Shi Qiu**, ..., Jiaheng Liu, Stephen Huang, Ge Zhang  
-*Currently under review*  
+*NeurIPS 2025*   
 [[Paper]](https://arxiv.org/abs/2502.14739)
 
 # 🎖️ Honors and Awards
