@@ -19,7 +19,7 @@ I am currently an intern with [Prof. Dawn Song](https://dawnsong.io/)'s team at 
 ---
 
 # 🔥 News
-- **[Sep 2025]** Honored to receive the National Scholarship award! 
+- **[Sep 2025]** Honored to receive the **National Scholarship** award! 
 - **[Sep 2025]** Our paper, **PHYBench**, **MJ-Video**(selected as Spotlight) and **SuperGPQA** was accepted by **NeurIPS 2025**! See you all in San Diego in December~
 - **[Sep 2025]** Our paper, **GLIMPSE**, was accepted as an **Oral Presentation Paper** of **EMNLP 2025 Main Conference**!
 - **[May 2025]** We released **PHYBench**, the first large-scale reasoning benchmark within a physical context. Follow us for the latest updates!
