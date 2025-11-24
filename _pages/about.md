@@ -14,11 +14,12 @@ Hi, I'm Shi Qiu (仇是), a senior undergraduate student at the School of Physic
 
 My research interests focus on **reasoning models and agents**, with a specific emphasis on assessing their interpretability and robust reasoning capabilities. I've also done research in **Large Multimodal Models (LMMs)**, especially their evaluation and application for human society.
 
-I am currently an intern with [Prof. Dawn Song](https://dawnsong.io/)'s team at UC Berkeley, and with [Prof. Huaxiu Yao](https://www.huaxiuyao.io)'s team at UNC Chapel Hill, where I contribute to cutting-edge AI research. Additionally, I am affiliated with the AI4Physics research group led by Professors Qing-Hong Cao, Hua-Xing Zhu, and Ming-Xing Luo at the School of Physics, Peking University.
+I am currently an intern with [Prof. Dawn Song](https://dawnsong.io/)'s team at UC Berkeley, and with [Prof. Huaxiu Yao](https://www.huaxiuyao.io)'s team at UNC Chapel Hill, where I contribute to cutting-edge AI research. Additionally, I am affiliated with the AI4Physics research group led by Professors Qing-Hong Cao, Hua-Xing Zhu, and Ming-Xing Luo at the School of Physics, Peking University. Also, I'm honored to be the ONLY undergrad advisor of [AlphaXiv](https://www.alphaxiv.org).
 
 ---
 
 # 🔥 News
+- **[Nov 2025]** Honored to be the Advisor of [AlphaXiv](https://www.alphaxiv.org)! Keep going for high fidelity research!
 - **[Sep 2025]** Honored to receive the **National Scholarship** award! 
 - **[Sep 2025]** Our paper, **PHYBench**, **MJ-Video**(selected as Spotlight) and **SuperGPQA** was accepted by **NeurIPS 2025**! See you all in San Diego in December~
 - **[Sep 2025]** Our paper, **GLIMPSE**, was accepted as an **Oral Presentation Paper** of **EMNLP 2025 Main Conference**!
