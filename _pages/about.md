@@ -19,6 +19,7 @@ I am currently an intern with [Prof. Dawn Song](https://dawnsong.io/)'s team at 
 ---
 
 # 🔥 News
+- **[Jan 2026]** Our paper, **EduVisAgent**, was accepted to **ICLR 2026**! But I'll not come to Brazil. See you ONLINE @ICLR 2026!
 - **[Nov 2025]** Honored to be the Advisor of [AlphaXiv](https://www.alphaxiv.org)! Keep going for high fidelity research!
 - **[Sep 2025]** Honored to receive the **National Scholarship** award! 
 - **[Sep 2025]** Our paper, **PHYBench**, **MJ-Video**(selected as Spotlight) and **SuperGPQA** was accepted by **NeurIPS 2025**! See you all in San Diego in December~
