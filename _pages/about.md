@@ -10,15 +10,17 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hi, I'm Shi Qiu (仇是), a senior undergraduate student at the School of Physics, Peking University. 
+Hi, I'm Shi Qiu (仇是), a senior undergraduate student at the School of Physics, Peking University. I'm also an incoming Ph.D in Computer Science at UNC Chapel-Hill, advised by [Prof. Huaxiu Yao](https://www.huaxiuyao.io).
 
-My research focuses on LLM reasoning and agentic AI. My research explores two fundamental directions: (1) Leveraging high-quality physics knowledge to enhance model reasoning beyond superficial pattern-matching, and (2) Developing and evaluating trustworthy agentic frameworks that demonstrate robust performance in real-world applications.
+My research focuses on Agentic AI and AI4Physics. My research explores two fundamental directions: (1) Developing iterative and robust agentic frameworks for frontier scientific research; and (2) Leveraging domain-specific physics knowledge for agentic system development.
 
-I am currently an intern with [Prof. Dawn Song](https://dawnsong.io/)'s team at UC Berkeley, and with [Prof. Huaxiu Yao](https://www.huaxiuyao.io)'s team at UNC Chapel Hill, where I contribute to cutting-edge AI research. Additionally, I am affiliated with the AI4Physics research group led by Professors Qing-Hong Cao, Hua-Xing Zhu, and Ming-Xing Luo at the School of Physics, Peking University. Also, I'm honored to be the ONLY undergrad advisor of [AlphaXiv](https://www.alphaxiv.org).
+Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)'s team at UC Berkeley, and with the AI4Physics research group led by Professors Qing-Hong Cao, Hua-Xing Zhu, and Ming-Xing Luo at the School of Physics, Peking University. Also, I'm honored to be the ONLY undergrad advisor of [AlphaXiv](https://www.alphaxiv.org).
 
 ---
 
 # 🔥 News
+- **[Mar_2026]** Our Projects, **AutoResearchClaw** and **MetaClaw**, are released!
+- **[Jan 2026]** Our paper, **Paper2Figure**, was accepted to **CVPR 2026**!
 - **[Jan 2026]** Our paper, **EduVisAgent**, was accepted to **ICLR 2026**! But I'll not come to Brazil. See you ONLINE @ICLR 2026!
 - **[Nov 2025]** Honored to be the Advisor of [AlphaXiv](https://www.alphaxiv.org)! Keep going for high fidelity research!
 - **[Sep 2025]** Honored to receive the **National Scholarship** award! 
