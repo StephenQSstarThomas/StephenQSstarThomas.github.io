@@ -12,14 +12,18 @@ redirect_from:
 
 Hi, I'm Shi Qiu (仇是), a senior undergraduate student at the School of Physics, Peking University. I'm also an incoming Ph.D in Computer Science at UNC Chapel-Hill, advised by [Prof. Huaxiu Yao](https://www.huaxiuyao.io).
 
-My research focuses on Agentic AI and AI4Physics. My research explores two fundamental directions: (1) Developing iterative and robust agentic frameworks for frontier scientific research; and (2) Leveraging domain-specific physics knowledge for agentic system development.
+My research focuses on **AI Agents** and **AI4Physics**, with a particular emphasis on **self-evolving autoresearch systems for scientific discovery** — agents that iteratively generate hypotheses, design and run experiments, and write papers with minimal human intervention. My work explores two complementary directions: (1) building robust, self-evolving agentic frameworks that automate the full research loop; and (2) leveraging domain-specific physics knowledge to ground agents in rigorous scientific reasoning.
+
+My open-source work has collectively earned **over 22,000 GitHub stars**, and I am a core contributor to [AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw), [MetaClaw](https://github.com/aiming-lab/MetaClaw), and [Agents](https://github.com/aiwaves-cn/agents).
 
 Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)'s team at UC Berkeley, and with the AI4Physics research group led by Professors Qing-Hong Cao, Hua-Xing Zhu, and Ming-Xing Luo at the School of Physics, Peking University. Also, I'm honored to be the ONLY undergrad advisor of [AlphaXiv](https://www.alphaxiv.org).
 
 ---
 
 # 🔥 News
-- **[Mar_2026]** Our Projects, **AutoResearchClaw** and **MetaClaw**, are released!
+- **[May 2026]** Honored to be selected as a **Beijing Municipal Outstanding Graduate**, a **Peking University Outstanding Graduate**, and a **Merit Student Pacesetter (三好学生标兵)**!
+- **[Mar 2026]** Our paper, **MetaClaw**, is out on arXiv — an agent that meta-learns and self-evolves just by talking to it!
+- **[Mar 2026]** Our self-evolving autoresearch projects, **AutoResearchClaw** and **MetaClaw**, are released — together with our open-source ecosystem they have surpassed **22k+ GitHub stars**!
 - **[Jan 2026]** Our paper, **Paper2Figure**, was accepted to **CVPR 2026**!
 - **[Jan 2026]** Our paper, **EduVisAgent**, was accepted to **ICLR 2026**! But I'll not come to Brazil. See you ONLINE @ICLR 2026!
 - **[Nov 2025]** Honored to be the Advisor of [AlphaXiv](https://www.alphaxiv.org)! Keep going for high fidelity research!
@@ -45,36 +49,44 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 
 # 📝 Publications
 
-[1] **PHYBench: Holistic Evaluation of Physical Perception and Reasoning in Large Language Models**  
+[1] **MetaClaw: Just Talk — An Agent That Meta-Learns and Evolves in the Wild**  
+Peng Xia, Jianwen Chen, Xinyu Yang, Haoqin Tu, Jiaqi Liu, Kaiwen Xiong, Siwei Han, **Shi Qiu**, Haonian Ji, Yuyin Zhou, Zeyu Zheng, Cihang Xie, Huaxiu Yao  
+*arXiv 2026*  
+[[Paper]](https://arxiv.org/abs/2603.17187) [[Project]](https://github.com/aiming-lab/MetaClaw)
+
+[2] **PHYBench: Holistic Evaluation of Physical Perception and Reasoning in Large Language Models**  
 **Shi Qiu**, Shaoyang Guo, Zhuo-Yang Song, Hua-Xing Zhu et al.  
 *NeurIPS 2025*  
 [[Paper]](https://arxiv.org/abs/2504.16074) [[Project]](https://phybench-official.github.io/phybench-demo/)
 
-[2] **MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models**  
+[3] **MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models**  
 Peng Xia*, Siwei Han*, **Shi Qiu***, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng, Zhaorun Chen, Chenhang Cui, Mingyu Ding, Linjie Li, Lijuan Wang, Huaxiu Yao  
 *ICLR 2025 (Oral)*  
 [[Paper]](https://arxiv.org/abs/2410.10139) [[Project]](https://mmie-bench.github.io/)
 
-[3] **Agents: An Open-source Framework for Autonomous Language Agents**  
+[4] **Agents: An Open-source Framework for Autonomous Language Agents**  
 Wangchunshu Zhou, Yuchen Eleanor Jiang, Long Li, Jialong Wu, **Shi Qiu**, etc.  
 *ICLR 2024 Workshop on Large Language Models for Agents*  
 [[Paper]](https://arxiv.org/abs/2309.07870) [[Project]](https://github.com/aiwaves-cn/agents)
 
-[4] **GLIMPSE: Do Large Vision-Language Models Truly Think With Videos or Just Glimpse at Them?**  
+[5] **GLIMPSE: Do Large Vision-Language Models Truly Think With Videos or Just Glimpse at Them?**  
 Yiyang Zhou*, Linjie Li*, **Shi Qiu***, Zhengyuan Yang, Yuyang Zhao, Siwei Han, Yangfan He, Kangqi Li, Haonian Ji, Zihao Zhao, Haibo Tong, Lijuan Wang, Huaxiu Yao  
 *EMNLP 2025 Main (Oral)*
 
-[5] **MJ-VIDEO: Fine-Grained Benchmarking and Rewarding Video Preferences in Video Generation**  
+[6] **MJ-VIDEO: Fine-Grained Benchmarking and Rewarding Video Preferences in Video Generation**  
 Haibo Tong, Zhaoyang Wang, Zhaorun Chen, Haonian Ji, **Shi Qiu**, Siwei Han, Zhongkai Xue, Yiyang Zhou, Peng Xia, Kexin Geng, Mingyu Ding, Rafael Rafailov, Chelsea Finn, Huaxiu Yao  
 *NeurIPS 2025 (Spotlight)*   
 [[Paper]](https://arxiv.org/abs/2502.01719)
 
-[6] **SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines**  
+[7] **SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines**  
 Xeron Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu, Yiming Liang, Xiaolong Jin, Zhenlin Wei, **Shi Qiu**, ..., Jiaheng Liu, Stephen Huang, Ge Zhang  
 *NeurIPS 2025*   
 [[Paper]](https://arxiv.org/abs/2502.14739)
 
 # 🎖️ Honors and Awards
+- **Beijing Municipal Outstanding Graduate** (北京市优秀毕业生), *2026*
+- **Peking University Outstanding Graduate** (北京大学优秀毕业生), *2026*
+- **Merit Student Pacesetter** (三好学生标兵), *2026*
 - **National Scholarship**, *2025*
 - **Excellence in Research Award**, *2024*
 - **Peking University Third Class Scholarship**, *2024*
@@ -110,9 +122,15 @@ Xeron Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Li
 
 # 💻 Projects
 
-**[CourseCommunity](https://github.com/StephenQSstarThomas/CourseCommunity)** *March 2024 – Present* An open-source, all-for-free platform providing university course notes and self-study guides.
+**[AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw)** *2025 – Present* A fully autonomous, self-evolving research system that turns an idea into a complete paper — chaining literature review, hypothesis generation, experiment design and execution, analysis, and writing. **12.5k+ stars.**
 
-**[LLM Agent Framework](https://github.com/aiwaves-cn/agents)** *June 2023 – Aug 2023* An open-source framework for building and deploying autonomous language agents.
+**[MetaClaw](https://github.com/aiming-lab/MetaClaw)** *2025 – Present* A meta-learning agent that continuously learns and self-evolves from natural-language interaction — just talk to it. **3.4k+ stars.**
+
+**[ColliderAgent](https://github.com/HET-AGI/ColliderAgent)** *2025 – Present* A decoupled, autonomous agentic architecture for high-energy physics phenomenology, automating the full collider analysis pipeline (model building, event generation, and analysis).
+
+**[Agents](https://github.com/aiwaves-cn/agents)** *June 2023 – Present* An open-source framework for data-centric, self-evolving autonomous language agents. **5.9k+ stars.**
+
+**[CourseCommunity](https://github.com/StephenQSstarThomas/CourseCommunity)** *March 2024 – Present* An open-source, all-for-free platform providing university course notes and self-study guides. **261+ stars.**
 
 ---
 
