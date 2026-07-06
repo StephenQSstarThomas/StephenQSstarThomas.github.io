@@ -10,13 +10,32 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hi, I'm Shi Qiu (仇是), a senior undergraduate student at the School of Physics, Peking University. I'm also an incoming Ph.D in Computer Science at UNC Chapel-Hill, advised by [Prof. Huaxiu Yao](https://www.huaxiuyao.io).
+Hi, I'm <span class="gradient-text">Shi Qiu</span> (仇是), a senior undergraduate student at the School of Physics, Peking University. I'm also an incoming Ph.D in Computer Science at UNC Chapel-Hill, advised by [Prof. Huaxiu Yao](https://www.huaxiuyao.io).
 
 My research focuses on **AI Agents** and **AI4Physics**, with a particular emphasis on **self-evolving autoresearch systems for scientific discovery** — agents that iteratively generate hypotheses, design and run experiments, and write papers with minimal human intervention. My work explores two complementary directions: (1) building robust, self-evolving agentic frameworks that automate the full research loop; and (2) leveraging domain-specific physics knowledge to ground agents in rigorous scientific reasoning.
 
 My open-source work has collectively earned **over 22,000 GitHub stars**, and I am a core contributor to [AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw), [MetaClaw](https://github.com/aiming-lab/MetaClaw), and [Agents](https://github.com/aiwaves-cn/agents).
 
 Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)'s team at UC Berkeley, and with the AI4Physics research group led by Professors Qing-Hong Cao, Hua-Xing Zhu, and Ming-Xing Luo at the School of Physics, Peking University. Also, I'm honored to be the ONLY undergrad advisor of [AlphaXiv](https://www.alphaxiv.org).
+
+<div class="stat-strip">
+  <a class="stat-item" href="https://github.com/StephenQSstarThomas" target="_blank" rel="noopener">
+    <span class="stat-num countup" data-target="22000" data-suffix="+">22,000+</span>
+    <span class="stat-label">GitHub Stars</span>
+  </a>
+  <a class="stat-item" href="#-publications">
+    <span class="stat-num countup" data-target="7">7</span>
+    <span class="stat-label">Publications</span>
+  </a>
+  <a class="stat-item" href="#-publications">
+    <span class="stat-num countup" data-target="3">3</span>
+    <span class="stat-label">Orals &amp; Spotlights</span>
+  </a>
+  <a class="stat-item" href="https://scholar.google.com/citations?user=wScRGY8AAAAJ" target="_blank" rel="noopener">
+    <span class="stat-num">NeurIPS · ICLR</span>
+    <span class="stat-label">CVPR · EMNLP</span>
+  </a>
+</div>
 
 ---
 
@@ -49,39 +68,82 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 
 # 📝 Publications
 
-[1] **MetaClaw: Just Talk — An Agent That Meta-Learns and Evolves in the Wild**  
-Peng Xia, Jianwen Chen, Xinyu Yang, Haoqin Tu, Jiaqi Liu, Kaiwen Xiong, Siwei Han, **Shi Qiu**, Haonian Ji, Yuyin Zhou, Zeyu Zheng, Cihang Xie, Huaxiu Yao  
-*arXiv 2026*  
-[[Paper]](https://arxiv.org/abs/2603.17187) [[Project]](https://github.com/aiming-lab/MetaClaw)
+<div class="paper-box">
+<div class="paper-box-image"><img src="images/pub/metaclaw.png" alt="MetaClaw framework overview"></div>
+<div class="paper-box-text">
+<span class="venue-badge">arXiv 2026</span>
+<div class="pub-title">MetaClaw: Just Talk — An Agent That Meta-Learns and Evolves in the Wild</div>
+<div class="pub-authors">Peng Xia, Jianwen Chen, Xinyu Yang, Haoqin Tu, Jiaqi Liu, Kaiwen Xiong, Siwei Han, <span class="me">Shi Qiu</span>, Haonian Ji, Yuyin Zhou, Zeyu Zheng, Cihang Xie, Huaxiu Yao</div>
+<div class="pub-venue">arXiv preprint, 2026</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2603.17187" target="_blank" rel="noopener">Paper</a><a class="pub-btn" href="https://github.com/aiming-lab/MetaClaw" target="_blank" rel="noopener">Code</a></div>
+</div>
+</div>
 
-[2] **PHYBench: Holistic Evaluation of Physical Perception and Reasoning in Large Language Models**  
-**Shi Qiu**, Shaoyang Guo, Zhuo-Yang Song, Hua-Xing Zhu et al.  
-*NeurIPS 2025*  
-[[Paper]](https://arxiv.org/abs/2504.16074) [[Project]](https://phybench-official.github.io/phybench-demo/)
+<div class="paper-box highlight">
+<div class="paper-box-image"><img src="images/pub/phybench.png" alt="PHYBench evaluation metric example"></div>
+<div class="paper-box-text">
+<span class="venue-badge">NeurIPS 2025</span>
+<div class="pub-title">PHYBench: Holistic Evaluation of Physical Perception and Reasoning in Large Language Models</div>
+<div class="pub-authors"><span class="me">Shi Qiu</span>, Shaoyang Guo, Zhuo-Yang Song, Hua-Xing Zhu et al.</div>
+<div class="pub-venue">NeurIPS 2025</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2504.16074" target="_blank" rel="noopener">Paper</a><a class="pub-btn" href="https://phybench-official.github.io/phybench-demo/" target="_blank" rel="noopener">Project</a></div>
+</div>
+</div>
 
-[3] **MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models**  
-Peng Xia*, Siwei Han*, **Shi Qiu***, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng, Zhaorun Chen, Chenhang Cui, Mingyu Ding, Linjie Li, Lijuan Wang, Huaxiu Yao  
-*ICLR 2025 (Oral)*  
-[[Paper]](https://arxiv.org/abs/2410.10139) [[Project]](https://mmie-bench.github.io/)
+<div class="paper-box highlight">
+<div class="paper-box-image"><img src="images/pub/mmie.jpg" alt="MMIE benchmark overview"></div>
+<div class="paper-box-text">
+<span class="venue-badge">ICLR 2025</span><span class="venue-badge award">Oral</span>
+<div class="pub-title">MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models</div>
+<div class="pub-authors">Peng Xia*, Siwei Han*, <span class="me">Shi Qiu*</span>, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng, Zhaorun Chen, Chenhang Cui, Mingyu Ding, Linjie Li, Lijuan Wang, Huaxiu Yao</div>
+<div class="pub-venue">ICLR 2025 (Oral)</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2410.10139" target="_blank" rel="noopener">Paper</a><a class="pub-btn" href="https://mmie-bench.github.io/" target="_blank" rel="noopener">Project</a></div>
+</div>
+</div>
 
-[4] **Agents: An Open-source Framework for Autonomous Language Agents**  
-Wangchunshu Zhou, Yuchen Eleanor Jiang, Long Li, Jialong Wu, **Shi Qiu**, etc.  
-*ICLR 2024 Workshop on Large Language Models for Agents*  
-[[Paper]](https://arxiv.org/abs/2309.07870) [[Project]](https://github.com/aiwaves-cn/agents)
+<div class="paper-box">
+<div class="paper-box-image"><img src="images/pub/agents.png" alt="Agents framework overview"></div>
+<div class="paper-box-text">
+<span class="venue-badge">ICLR 2024 WS</span>
+<div class="pub-title">Agents: An Open-source Framework for Autonomous Language Agents</div>
+<div class="pub-authors">Wangchunshu Zhou, Yuchen Eleanor Jiang, Long Li, Jialong Wu, <span class="me">Shi Qiu</span>, et al.</div>
+<div class="pub-venue">ICLR 2024 Workshop on Large Language Models for Agents</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2309.07870" target="_blank" rel="noopener">Paper</a><a class="pub-btn" href="https://github.com/aiwaves-cn/agents" target="_blank" rel="noopener">Code</a></div>
+</div>
+</div>
 
-[5] **GLIMPSE: Do Large Vision-Language Models Truly Think With Videos or Just Glimpse at Them?**  
-Yiyang Zhou*, Linjie Li*, **Shi Qiu***, Zhengyuan Yang, Yuyang Zhao, Siwei Han, Yangfan He, Kangqi Li, Haonian Ji, Zihao Zhao, Haibo Tong, Lijuan Wang, Huaxiu Yao  
-*EMNLP 2025 Main (Oral)*
+<div class="paper-box highlight">
+<div class="paper-box-image"><img src="images/pub/glimpse.jpg" alt="GLIMPSE video-reasoning taxonomy"></div>
+<div class="paper-box-text">
+<span class="venue-badge">EMNLP 2025</span><span class="venue-badge award">Oral</span>
+<div class="pub-title">GLIMPSE: Do Large Vision-Language Models Truly Think With Videos or Just Glimpse at Them?</div>
+<div class="pub-authors">Yiyang Zhou*, Linjie Li*, <span class="me">Shi Qiu*</span>, Zhengyuan Yang, Yuyang Zhao, Siwei Han, Yangfan He, Kangqi Li, Haonian Ji, Zihao Zhao, Haibo Tong, Lijuan Wang, Huaxiu Yao</div>
+<div class="pub-venue">EMNLP 2025 Main (Oral)</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2507.09491" target="_blank" rel="noopener">Paper</a></div>
+</div>
+</div>
 
-[6] **MJ-VIDEO: Fine-Grained Benchmarking and Rewarding Video Preferences in Video Generation**  
-Haibo Tong, Zhaoyang Wang, Zhaorun Chen, Haonian Ji, **Shi Qiu**, Siwei Han, Zhongkai Xue, Yiyang Zhou, Peng Xia, Kexin Geng, Mingyu Ding, Rafael Rafailov, Chelsea Finn, Huaxiu Yao  
-*NeurIPS 2025 (Spotlight)*   
-[[Paper]](https://arxiv.org/abs/2502.01719)
+<div class="paper-box">
+<div class="paper-box-image"><img src="images/pub/mjvideo.jpg" alt="MJ-Video evaluation dimensions"></div>
+<div class="paper-box-text">
+<span class="venue-badge">NeurIPS 2025</span><span class="venue-badge award">Spotlight</span>
+<div class="pub-title">MJ-VIDEO: Fine-Grained Benchmarking and Rewarding Video Preferences in Video Generation</div>
+<div class="pub-authors">Haibo Tong, Zhaoyang Wang, Zhaorun Chen, Haonian Ji, <span class="me">Shi Qiu</span>, Siwei Han, Zhongkai Xue, Yiyang Zhou, Peng Xia, Kexin Geng, Mingyu Ding, Rafael Rafailov, Chelsea Finn, Huaxiu Yao</div>
+<div class="pub-venue">NeurIPS 2025 (Spotlight)</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2502.01719" target="_blank" rel="noopener">Paper</a></div>
+</div>
+</div>
 
-[7] **SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines**  
-Xeron Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu, Yiming Liang, Xiaolong Jin, Zhenlin Wei, **Shi Qiu**, ..., Jiaheng Liu, Stephen Huang, Ge Zhang  
-*NeurIPS 2025*   
-[[Paper]](https://arxiv.org/abs/2502.14739)
+<div class="paper-box">
+<div class="paper-box-image"><img src="images/pub/supergpqa.png" alt="SuperGPQA discipline coverage"></div>
+<div class="paper-box-text">
+<span class="venue-badge">NeurIPS 2025</span>
+<div class="pub-title">SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines</div>
+<div class="pub-authors">Xeron Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu, Yiming Liang, Xiaolong Jin, Zhenlin Wei, <span class="me">Shi Qiu</span>, …, Jiaheng Liu, Stephen Huang, Ge Zhang</div>
+<div class="pub-venue">NeurIPS 2025</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2502.14739" target="_blank" rel="noopener">Paper</a></div>
+</div>
+</div>
 
 # 🎖️ Honors and Awards
 - **Beijing Municipal Outstanding Graduate** (北京市优秀毕业生), *2026*
@@ -122,15 +184,38 @@ Xeron Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Li
 
 # 💻 Projects
 
-**[AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw)** *2025 – Present* A fully autonomous, self-evolving research system that turns an idea into a complete paper — chaining literature review, hypothesis generation, experiment design and execution, analysis, and writing. **12.5k+ stars.**
+<div class="project-grid">
 
-**[MetaClaw](https://github.com/aiming-lab/MetaClaw)** *2025 – Present* A meta-learning agent that continuously learns and self-evolves from natural-language interaction — just talk to it. **3.4k+ stars.**
+<a class="project-card" href="https://github.com/aiming-lab/AutoResearchClaw" target="_blank" rel="noopener">
+<div class="pc-head"><span class="pc-name">AutoResearchClaw</span><span class="pc-period">2025 – Present</span></div>
+<div class="pc-desc">A fully autonomous, self-evolving research system that turns an idea into a complete paper — chaining literature review, hypothesis generation, experiment design and execution, analysis, and writing.</div>
+<span class="pc-stars">★ 12.5k+</span>
+</a>
 
-**[ColliderAgent](https://github.com/HET-AGI/ColliderAgent)** *2025 – Present* A decoupled, autonomous agentic architecture for high-energy physics phenomenology, automating the full collider analysis pipeline (model building, event generation, and analysis).
+<a class="project-card" href="https://github.com/aiming-lab/MetaClaw" target="_blank" rel="noopener">
+<div class="pc-head"><span class="pc-name">MetaClaw</span><span class="pc-period">2025 – Present</span></div>
+<div class="pc-desc">A meta-learning agent that continuously learns and self-evolves from natural-language interaction — just talk to it.</div>
+<span class="pc-stars">★ 3.4k+</span>
+</a>
 
-**[Agents](https://github.com/aiwaves-cn/agents)** *June 2023 – Present* An open-source framework for data-centric, self-evolving autonomous language agents. **5.9k+ stars.**
+<a class="project-card" href="https://github.com/HET-AGI/ColliderAgent" target="_blank" rel="noopener">
+<div class="pc-head"><span class="pc-name">ColliderAgent</span><span class="pc-period">2025 – Present</span></div>
+<div class="pc-desc">A decoupled, autonomous agentic architecture for high-energy physics phenomenology, automating the full collider analysis pipeline — model building, event generation, and analysis.</div>
+</a>
 
-**[CourseCommunity](https://github.com/StephenQSstarThomas/CourseCommunity)** *March 2024 – Present* An open-source, all-for-free platform providing university course notes and self-study guides. **261+ stars.**
+<a class="project-card" href="https://github.com/aiwaves-cn/agents" target="_blank" rel="noopener">
+<div class="pc-head"><span class="pc-name">Agents</span><span class="pc-period">Jun 2023 – Present</span></div>
+<div class="pc-desc">An open-source framework for data-centric, self-evolving autonomous language agents.</div>
+<span class="pc-stars">★ 5.9k+</span>
+</a>
+
+<a class="project-card" href="https://github.com/StephenQSstarThomas/CourseCommunity" target="_blank" rel="noopener">
+<div class="pc-head"><span class="pc-name">CourseCommunity</span><span class="pc-period">Mar 2024 – Present</span></div>
+<div class="pc-desc">An open-source, all-for-free platform providing university course notes and self-study guides.</div>
+<span class="pc-stars">★ 261+</span>
+</a>
+
+</div>
 
 ---
 

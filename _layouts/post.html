@@ -1,0 +1,48 @@
+---
+layout: compress
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body>
+
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    <div id="main" role="main">
+      {% include sidebar.html %}
+
+      <article class="page post-single" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="page__inner-wrap">
+          <header class="post-header reveal">
+            <a class="post-back" href="{{ '/blog/' | relative_url }}">← All posts</a>
+            <h1 class="post-title" itemprop="headline">{{ page.title }}</h1>
+            <p class="post-meta">
+              <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
+              {% if page.tags %}
+                <span class="post-meta-sep">·</span>
+                {% for tag in page.tags %}<span class="post-tag">{{ tag }}</span>{% endfor %}
+              {% endif %}
+            </p>
+          </header>
+
+          <section class="page__content post-body reveal" itemprop="articleBody">
+            {{ content }}
+          </section>
+
+          <footer class="post-footer reveal">
+            <a class="post-back" href="{{ '/blog/' | relative_url }}">← Back to all posts</a>
+          </footer>
+        </div>
+      </article>
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
+</html>

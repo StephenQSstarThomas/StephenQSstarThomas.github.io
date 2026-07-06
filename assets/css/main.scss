@@ -40,70 +40,274 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
+/* ==========================================================================
+   CUSTOM THEME LAYER — dynamic factors + modern publication / project cards.
+   One accent color, transform/opacity-only motion, graceful degradation.
+   ========================================================================== */
+
+:root {
+  --accent:      #2563eb;   /* single link/badge accent (calm blue) */
+  --accent-hover:#ea580c;   /* warm hover (Barron-style flip)       */
+  --accent-soft: #eef3fd;   /* pale accent tint for badges/rows     */
+  --award:       #c05600;   /* warm secondary for Oral/Spotlight    */
+  --award-soft:  #fff3e0;
+  --ink:         #24292f;
+  --muted:       #6b7280;
+  --hairline:    #e7ebf0;
+  --g1:#2563eb; --g2:#7c3aed; --g3:#db2777; /* gradient-text stops */
+}
+
+/* ---- link accent (overrides theme teal) ---- */
+.page__content a:not(.pub-btn):not(.post-card):not(.post-back):not(.stat-item) {
+  color: var(--accent);
+  transition: color .2s ease;
+}
+.page__content a:not(.pub-btn):not(.post-card):not(.post-back):not(.stat-item):hover {
+  color: var(--accent-hover);
+}
+
+/* ==========================================================================
+   Scroll-reveal — hidden states ONLY under html.js-reveal (never hide w/o JS)
+   ========================================================================== */
+html.js-reveal .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .6s ease, transform .6s cubic-bezier(.22,1,.36,1);
+  will-change: opacity, transform;
+}
+html.js-reveal .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ==========================================================================
+   Publication cards — image-left / text-right (Barron layout), hover-lift+zoom
+   ========================================================================== */
 .paper-box {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom: 1px var(--hairline) solid;
+  padding: 1.6em 0;
+  border-radius: 10px;
+  transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+
+  .paper-box-image {
+    justify-content: center;
     display: flex;
-    justify-content: left;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border-bottom: 1px #efefef solid;
-    padding: 2em 0 2em 0;
-    
-
-    .paper-box-image{
-        justify-content: center;
-        display: flex;
-        width: 100%;
-        order: 2;
-        img {
-            max-width: 400px;
-            box-shadow: 3px 3px 6px #888;
-            object-fit: cover;
-        }
+    width: 100%;
+    order: 2;
+    overflow: hidden;
+    border-radius: 8px;
+    img {
+      max-width: 400px;
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 3px 14px rgba(20,30,60,.14);
+      object-fit: cover;
+      transition: transform .4s ease;
+      transform-origin: center;
     }
-    
-    .paper-box-text{
-        max-width: 100%;
-        order: 1;
-    }
-    
-    @include breakpoint($medium) {
-        .paper-box-image{
-            justify-content: left;
-            min-width: 200px;
-            max-width: 40%;
-            order: 1;
-        }
-        
-        .paper-box-text{
-            justify-content: left;
-            padding-left: 2em;
-            max-width: 60%;
-            order: 2;
-        }
+  }
+  .paper-box-text { max-width: 100%; order: 1; }
 
-    }
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(20,30,60,.10);
+    background-color: #fcfdff;
+  }
+  &:hover .paper-box-image img { transform: scale(1.05); }
 
-
+  @include breakpoint($medium) {
+    padding: 1.8em 1em;
+    .paper-box-image { justify-content: left; min-width: 200px; max-width: 38%; order: 1; }
+    .paper-box-text  { justify-content: left; padding-left: 2em; max-width: 62%; order: 2; }
+  }
 }
 
+/* highlighted (selected) paper row */
+.paper-box.highlight { background-color: #fffdf3; }
+.paper-box.highlight:hover { background-color: #fffbe9; }
+
+/* citation title / authors / venue */
+.pub-title  { font-weight: 700; font-size: 1.06em; line-height: 1.35; margin: .1em 0 .35em; color: var(--ink); }
+.pub-authors{ font-size: .92em; color: #444; margin: 0 0 .3em; line-height: 1.5; }
+.pub-authors .me { color: var(--ink); font-weight: 700; }
+.pub-venue  { font-size: .9em; color: var(--muted); font-style: italic; margin: 0 0 .6em; }
+
+/* venue + award badges */
+.venue-badge {
+  display: inline-block; font-size: .68rem; font-weight: 700; letter-spacing: .04em;
+  text-transform: uppercase; padding: .18rem .5rem; border-radius: 5px;
+  background: var(--accent-soft); color: var(--accent); margin: 0 .35rem .5rem 0; vertical-align: middle;
+}
+.venue-badge.award { background: var(--award-soft); color: var(--award); }
+
+/* pill resource buttons: [Paper] [Project] [Code] */
+.pub-links { margin-top: .2em; }
+.pub-btn {
+  display: inline-block; font-size: .74rem; font-family: $monospace;
+  padding: .16rem .62rem; margin: .25rem .35rem 0 0; border: 1px solid var(--accent);
+  border-radius: 999px; color: var(--accent) !important; text-decoration: none;
+  transition: background-color .2s ease, color .2s ease, transform .2s ease;
+}
+.pub-btn:hover { background: var(--accent); color: #fff !important; transform: translateY(-1px); }
+
+/* ==========================================================================
+   Impact stat strip (animated count-up)
+   ========================================================================== */
+.stat-strip {
+  display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.4em 0 .6em; padding: 0;
+}
+.stat-item {
+  flex: 1 1 120px; text-align: center; padding: .9rem .6rem;
+  border: 1px solid var(--hairline); border-radius: 12px; background: #fbfcfe;
+  transition: transform .25s ease, box-shadow .25s ease;
+  text-decoration: none;
+}
+.stat-item:hover { transform: translateY(-4px); box-shadow: 0 12px 26px rgba(20,30,60,.10); }
+.stat-num {
+  display: block; font-size: 1.7rem; font-weight: 800; line-height: 1.1;
+  color: var(--accent); font-variant-numeric: tabular-nums;
+}
+.stat-label { display: block; font-size: .78rem; color: var(--muted); margin-top: .25rem; letter-spacing: .02em; }
+
+/* ==========================================================================
+   Project cards
+   ========================================================================== */
+.project-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 1em 0; }
+@media (min-width: 34em) { .project-grid { grid-template-columns: 1fr 1fr; } }
+.project-card {
+  display: block; padding: 1.1rem 1.2rem; border: 1px solid var(--hairline);
+  border-radius: 12px; background: #fff; text-decoration: none !important; color: inherit;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.project-card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(20,30,60,.10); border-color: #d7e0ee; }
+.project-card .pc-head { display: flex; align-items: baseline; justify-content: space-between; gap: .6rem; flex-wrap: wrap; }
+.project-card .pc-name { font-weight: 700; color: var(--accent); font-size: 1.02rem; }
+.project-card .pc-period { font-size: .72rem; color: var(--muted); white-space: nowrap; }
+.project-card .pc-desc { font-size: .9em; color: #454b54; margin: .5rem 0 .6rem; line-height: 1.55; }
+.project-card .pc-stars {
+  display: inline-block; font-size: .74rem; font-weight: 700; color: var(--award);
+  background: var(--award-soft); padding: .12rem .5rem; border-radius: 999px;
+}
+
+/* ==========================================================================
+   Gradient headline + underline-grow links
+   ========================================================================== */
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .gradient-text {
+    background: linear-gradient(90deg, var(--g1), var(--g2), var(--g3), var(--g1));
+    background-size: 300% 100%;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+    animation: gt-shift 9s linear infinite; font-weight: 800;
+  }
+}
+@keyframes gt-shift { to { background-position: 300% 0; } }
+
+.u-grow {
+  text-decoration: none;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-size: 0% 2px; background-repeat: no-repeat; background-position: 0 100%;
+  transition: background-size .3s ease; padding-bottom: 1px;
+}
+.u-grow:hover, .u-grow:focus-visible { background-size: 100% 2px; }
+
+/* ==========================================================================
+   Scroll progress bar + back-to-top (JS-injected)
+   ========================================================================== */
+#scroll-progress {
+  position: fixed; top: 0; left: 0; width: 100%; height: 3px;
+  transform: scaleX(0); transform-origin: 0 0;
+  background: linear-gradient(90deg, var(--g1), var(--g2), var(--g3));
+  z-index: 1000; pointer-events: none;
+}
+#back-top {
+  position: fixed; right: 1.25rem; bottom: 1.25rem; width: 44px; height: 44px;
+  border-radius: 50%; border: none; background: var(--accent); color: #fff;
+  font-size: 1.2rem; line-height: 1; cursor: pointer; opacity: 0; visibility: hidden;
+  transform: translateY(8px); transition: opacity .3s, transform .3s, visibility .3s, background-color .2s;
+  z-index: 1000; box-shadow: 0 4px 14px rgba(20,30,60,.28);
+}
+#back-top.show { opacity: 1; visibility: visible; transform: none; }
+#back-top:hover { background: var(--accent-hover); }
+#back-top:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ==========================================================================
+   Blog — quiet, homepage-matching (hero + post cards + single post)
+   ========================================================================== */
+.blog-hero { margin: .3em 0 1.6em; }
+.blog-hero-title { font-size: 2rem; margin: 0 0 .35rem; }
+.blog-hero-sub { color: var(--muted); font-size: 1.02rem; line-height: 1.65; max-width: 42rem; }
+
+.post-list { display: flex; flex-direction: column; gap: 1.1rem; }
+.post-card {
+  display: flex; gap: 1.2rem; align-items: stretch; padding: 1rem 1.1rem;
+  border: 1px solid var(--hairline); border-radius: 14px; background: #fff;
+  text-decoration: none !important; color: inherit;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.post-card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(20,30,60,.10); border-color: #d7e0ee; }
+.post-card-media { flex: 0 0 150px; overflow: hidden; border-radius: 10px; align-self: center; }
+.post-card-media img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.post-card:hover .post-card-media img { transform: scale(1.05); }
+.post-card-body { flex: 1 1 auto; min-width: 0; }
+.post-card-meta { font-size: .78rem; color: var(--muted); margin-bottom: .3rem; font-variant-numeric: tabular-nums; }
+.post-card-meta .post-card-tag { color: var(--accent); font-weight: 600; }
+.post-card-title { font-size: 1.22rem; margin: 0 0 .35rem; line-height: 1.3; color: var(--ink); }
+.post-card:hover .post-card-title { color: var(--accent); }
+.post-card-excerpt { font-size: .92rem; color: #57606a; line-height: 1.55; margin: 0 0 .5rem; }
+.post-card-more { font-size: .82rem; font-weight: 600; color: var(--accent); }
+.post-meta-sep { margin: 0 .4rem; color: #c7ccd3; }
+@media (max-width: 34em) {
+  .post-card { flex-direction: column; }
+  .post-card-media { flex-basis: auto; width: 100%; height: 160px; }
+}
+
+/* single post */
+.post-single .page__inner-wrap { max-width: 46rem; }
+.post-header { margin-bottom: 1.4em; }
+.post-back { font-size: .82rem; color: var(--accent) !important; text-decoration: none; font-weight: 600; }
+.post-back:hover { color: var(--accent-hover) !important; }
+.post-title { font-size: 2rem; line-height: 1.25; margin: .5rem 0 .4rem; }
+.post-meta { color: var(--muted); font-size: .86rem; }
+.post-meta .post-tag { color: var(--accent); font-weight: 600; margin-right: .4rem; }
+.post-body { font-size: 1.02rem; line-height: 1.75; }
+.post-body h2 { margin-top: 1.9em; font-size: 1.35rem; }
+.post-body blockquote { border-left: 3px solid var(--accent); background: var(--accent-soft); padding: .6em 1em; border-radius: 0 6px 6px 0; color: #3a4048; }
+.post-footer { margin-top: 2.4em; padding-top: 1.2em; border-top: 1px solid var(--hairline); }
+
+/* ==========================================================================
+   Section anchor offset (keep) + section heading rhythm
+   ========================================================================== */
 $scroll_offset : 2em;
-h1:before, .anchor:before { 
-    content: ''; 
-    display: block; 
-    position: relative; 
-    width: 0; 
-    height: $scroll_offset; 
-    margin-top: -$scroll_offset;
+h1:before, .anchor:before {
+  content: ''; display: block; position: relative;
+  width: 0; height: $scroll_offset; margin-top: -$scroll_offset;
 }
+.page__content h1 { border-top: 1px solid var(--hairline); padding-top: .8em; margin-top: 1.5em; }
+.page__content h1:first-of-type { border-top: 0; }
 
 .badge {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    position: absolute;
-    margin-top: .5em;
-    margin-left: -.5em;
-    color: white;
-    background-color: #00369f;
-    font-size: .8em;
+  padding-left: 1rem; padding-right: 1rem; position: absolute;
+  margin-top: .5em; margin-left: -.5em; color: white;
+  background-color: #00369f; font-size: .8em;
+}
+
+/* ==========================================================================
+   Reduced-motion kill switch (wins — placed last)
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html.js-reveal .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .gradient-text { animation: none !important; }
+  #scroll-progress { transition: none !important; }
+  .paper-box, .paper-box:hover, .paper-box .paper-box-image img,
+  .project-card:hover, .stat-item:hover, .post-card:hover,
+  .post-card-media img, .paper-box:hover .paper-box-image img {
+    transform: none !important;
+  }
+  * { scroll-behavior: auto !important; }
 }
