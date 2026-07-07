@@ -42,6 +42,32 @@
       list.classList.add("reveal"); // reuse the reveal observer to trigger the cascade
     });
 
+    /* ---------- Bilingual containers: language toggle (persisted, shared) ---------- */
+    (function () {
+      var containers = document.querySelectorAll(".bilingual");
+      if (!containers.length) return;
+      function apply(lang) {
+        Array.prototype.forEach.call(containers, function (c) {
+          c.setAttribute("data-lang", lang);
+          Array.prototype.forEach.call(c.querySelectorAll(".lang-btn"), function (b) {
+            b.classList.toggle("is-active", b.getAttribute("data-set-lang") === lang);
+          });
+        });
+        // the visible section headings changed — re-map the squirrel rail's acorns
+        if (window.__refreshRail) setTimeout(window.__refreshRail, 40);
+      }
+      var saved = null;
+      try { saved = localStorage.getItem("blog-lang"); } catch (e) {}
+      apply(saved || containers[0].getAttribute("data-lang") || "en");
+      Array.prototype.forEach.call(document.querySelectorAll(".lang-btn"), function (b) {
+        b.addEventListener("click", function () {
+          var lang = b.getAttribute("data-set-lang");
+          apply(lang);
+          try { localStorage.setItem("blog-lang", lang); } catch (e) {}
+        });
+      });
+    })();
+
     /* ---------- 1. Scroll reveal (IntersectionObserver) ---------- */
     var revealEls = Array.prototype.slice.call(
       document.querySelectorAll(".reveal")
@@ -147,11 +173,69 @@
       });
     }
 
-    /* ---------- 3. Scroll progress bar ---------- */
-    var bar = document.createElement("div");
-    bar.id = "scroll-progress";
-    bar.setAttribute("aria-hidden", "true");
-    document.body.appendChild(bar);
+    /* ---------- 3. Reading progress: a squirrel rail on posts, else a slim bar ---------- */
+    var postBody = document.querySelector(".post-body");
+    var bar = null, rail = null, railFill = null, railSquirrel = null, acorns = [];
+
+    if (postBody) {
+      rail = document.createElement("div");
+      rail.id = "reading-rail";
+      rail.setAttribute("aria-hidden", "true");
+      rail.innerHTML =
+        '<div class="rail-track"></div><div class="rail-fill"></div><span class="rail-squirrel">🐿️</span>';
+      document.body.appendChild(rail);
+      document.body.classList.add("has-rail");
+      railFill = rail.querySelector(".rail-fill");
+      railSquirrel = rail.querySelector(".rail-squirrel");
+
+      // Only the visible language's headings count (the other is display:none).
+      var visibleHeads = function () {
+        return Array.prototype.filter.call(
+          postBody.querySelectorAll("h3"),
+          function (h) { return h.offsetParent !== null; }
+        );
+      };
+      // Build one acorn per section; re-map them to the visible language on refresh.
+      var n = visibleHeads().length;
+      for (var k = 0; k < n; k++) {
+        var a = document.createElement("button");
+        a.className = "rail-acorn";
+        a.type = "button";
+        a.textContent = "🌰";
+        (function (idx) {
+          a.addEventListener("click", function () {
+            var o = acorns[idx];
+            if (o.head) o.head.scrollIntoView({ behavior: REDUCED ? "auto" : "smooth", block: "start" });
+          });
+        })(k);
+        rail.appendChild(a);
+        acorns.push({ el: a, head: null, pct: 0 });
+      }
+
+      var placeAcorns = function () {
+        var vis = visibleHeads();
+        var max = document.documentElement.scrollHeight - window.innerHeight;
+        for (var i = 0; i < acorns.length; i++) {
+          var h = vis[i];
+          if (!h) { acorns[i].el.style.display = "none"; continue; }
+          acorns[i].el.style.display = "";
+          acorns[i].head = h;
+          acorns[i].el.setAttribute("aria-label", h.textContent.replace(/\s+/g, " ").trim());
+          var top = h.getBoundingClientRect().top + window.pageYOffset;
+          acorns[i].pct = max > 0 ? Math.min(top / max, 1) * 100 : 0;
+          acorns[i].el.style.left = acorns[i].pct + "%";
+        }
+      };
+      placeAcorns();
+      window.addEventListener("resize", placeAcorns, { passive: true });
+      setTimeout(placeAcorns, 900); // after fonts/images settle
+      window.__refreshRail = placeAcorns; // language toggle calls this
+    } else {
+      bar = document.createElement("div");
+      bar.id = "scroll-progress";
+      bar.setAttribute("aria-hidden", "true");
+      document.body.appendChild(bar);
+    }
 
     /* ---------- 4. Back-to-top button ---------- */
     var toTop = document.createElement("button");
@@ -168,11 +252,19 @@
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(function () {
-        var doc = document.documentElement;
-        var scrollTop = doc.scrollTop || document.body.scrollTop;
-        var max = doc.scrollHeight - doc.clientHeight;
+        var d = document.documentElement;
+        var scrollTop = d.scrollTop || document.body.scrollTop;
+        var max = d.scrollHeight - d.clientHeight;
         var ratio = max > 0 ? scrollTop / max : 0;
-        bar.style.transform = "scaleX(" + ratio + ")";
+        var pctv = ratio * 100;
+        if (bar) bar.style.transform = "scaleX(" + ratio + ")";
+        if (rail) {
+          railFill.style.width = pctv + "%";
+          railSquirrel.style.left = pctv + "%";
+          for (var i = 0; i < acorns.length; i++) {
+            acorns[i].el.classList.toggle("reached", pctv >= acorns[i].pct - 0.3);
+          }
+        }
         if (scrollTop > 600) toTop.classList.add("show");
         else toTop.classList.remove("show");
         ticking = false;

@@ -78,6 +78,28 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 
 # 📝 Publications
 
+<div class="paper-box highlight">
+<div class="paper-box-image"><img src="images/pub/phybench.png" alt="PHYBench teaser" loading="lazy"></div>
+<div class="paper-box-text">
+<span class="venue-badge">NeurIPS 2025</span>
+<div class="pub-title">PHYBench: Holistic Evaluation of Physical Perception and Reasoning in Large Language Models</div>
+<div class="pub-authors"><span class="me">Shi Qiu</span>, Shaoyang Guo, Zhuo-Yang Song, Yunbo Sun, Zeyu Cai, Jiashen Wei, Hua-Xing Zhu et al.</div>
+<div class="pub-venue">NeurIPS 2025</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2504.16074" target="_blank" rel="noopener">Paper</a><a class="pub-btn" href="https://phybench-official.github.io/phybench-demo/" target="_blank" rel="noopener">Project</a></div>
+</div>
+</div>
+
+<div class="paper-box">
+<div class="paper-box-image"><img src="images/pub/autoresearchclaw.jpg" alt="AutoResearchClaw teaser" loading="lazy"></div>
+<div class="paper-box-text">
+<span class="venue-badge">arXiv 2026</span>
+<div class="pub-title">AutoResearchClaw: Self-Reinforcing Autonomous Research with Human-AI Collaboration</div>
+<div class="pub-authors">Jiaqi Liu, <span class="me">Shi Qiu</span>, Mairui Li, Bingzhou Li, James Zou, Caiming Xiong, Huaxiu Yao et al.</div>
+<div class="pub-venue">arXiv preprint, 2026</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2605.20025" target="_blank" rel="noopener">Paper</a><a class="pub-btn" href="https://github.com/aiming-lab/AutoResearchClaw" target="_blank" rel="noopener">Code</a></div>
+</div>
+</div>
+
 <div class="paper-box">
 <div class="paper-box-image"><img src="images/pub/agents.png" alt="Agents teaser" loading="lazy"></div>
 <div class="paper-box-text">
@@ -100,16 +122,6 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 </div>
 </div>
 
-<div class="paper-box highlight">
-<div class="paper-box-image"><img src="images/pub/phybench.png" alt="PHYBench teaser" loading="lazy"></div>
-<div class="paper-box-text">
-<span class="venue-badge">NeurIPS 2025</span>
-<div class="pub-title">PHYBench: Holistic Evaluation of Physical Perception and Reasoning in Large Language Models</div>
-<div class="pub-authors"><span class="me">Shi Qiu</span>, Shaoyang Guo, Zhuo-Yang Song, Yang Sun, Zhi-Cheng Wei, Hua-Xing Zhu et al.</div>
-<div class="pub-venue">NeurIPS 2025</div>
-<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2504.16074" target="_blank" rel="noopener">Paper</a><a class="pub-btn" href="https://phybench-official.github.io/phybench-demo/" target="_blank" rel="noopener">Project</a></div>
-</div>
-</div>
 
 <div class="paper-box highlight">
 <div class="paper-box-image"><img src="images/pub/mmie.jpg" alt="MMIE teaser" loading="lazy"></div>
@@ -177,23 +189,12 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 </div>
 </div>
 
-<div class="paper-box">
-<div class="paper-box-image"><img src="images/pub/autoresearchclaw.jpg" alt="AutoResearchClaw teaser" loading="lazy"></div>
-<div class="paper-box-text">
-<span class="venue-badge">arXiv 2026</span>
-<div class="pub-title">AutoResearchClaw: Self-Reinforcing Autonomous Research with Human-AI Collaboration</div>
-<div class="pub-authors">Jiaqi Liu, <span class="me">Shi Qiu</span>, Mingda Li, Bo Li, Haonian Ji, Siwei Han, Xiang Ye, Peng Xia, Zhen Dong, Chi Zhang, et al.</div>
-<div class="pub-venue">arXiv preprint, 2026</div>
-<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2605.20025" target="_blank" rel="noopener">Paper</a><a class="pub-btn" href="https://github.com/aiming-lab/AutoResearchClaw" target="_blank" rel="noopener">Code</a></div>
-</div>
-</div>
-
 <div class="paper-box highlight">
 <div class="paper-box-image"><img src="images/pub/collider.jpg" alt="An End-to-End Architecture for Collider Physics and Beyond teaser" loading="lazy"></div>
 <div class="paper-box-text">
 <span class="venue-badge">arXiv 2026</span>
 <div class="pub-title">An End-to-End Architecture for Collider Physics and Beyond</div>
-<div class="pub-authors"><span class="me">Shi Qiu</span>, Zhijie Cai, Junjie Wei, Zhongtian Li, Yang Yin, Qing-Hong Cao, Chang Liu, Ming-Xing Luo, Xiao-Bo Yuan, Hua-Xing Zhu</div>
+<div class="pub-authors"><span class="me">Shi Qiu</span>, Zeyu Cai, Jiashen Wei, Zeyu Li, Yixuan Yin, Qing-Hong Cao, Chang Liu, Ming-xing Luo, Xing-Bo Yuan, Hua Xing Zhu</div>
 <div class="pub-venue">arXiv preprint, 2026</div>
 <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2603.14553" target="_blank" rel="noopener">Paper</a><a class="pub-btn" href="https://github.com/HET-AGI/ColliderAgent" target="_blank" rel="noopener">Code</a></div>
 </div>
@@ -204,7 +205,7 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 <div class="paper-box-text">
 <span class="venue-badge">arXiv 2026</span>
 <div class="pub-title">OmniMem: Autoresearch-Guided Discovery of Lifelong Multimodal Agent Memory</div>
-<div class="pub-authors">Jiaqi Liu, Zhaoyang Ling, <span class="me">Shi Qiu</span>, Yang Liu, Siwei Han, Peng Xia, Haoqin Tu, Zeyu Zheng, Cihang Xie, Chris Fleming, et al.</div>
+<div class="pub-authors">Jiaqi Liu, Zipeng Ling, <span class="me">Shi Qiu</span>, Yanqing Liu, Siwei Han, Peng Xia, Haoqin Tu, Zeyu Zheng, Cihang Xie, Charles Fleming, Mingyu Ding, Huaxiu Yao</div>
 <div class="pub-venue">arXiv preprint, 2026</div>
 <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2604.01007" target="_blank" rel="noopener">Paper</a></div>
 </div>
@@ -215,7 +216,7 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 <div class="paper-box-text">
 <span class="venue-badge">ICLR 2026</span>
 <div class="pub-title">From EduVisBench to EduVisAgent: A Benchmark and Multi-Agent Framework for Pedagogical Visualization</div>
-<div class="pub-authors">Haonian Ji, <span class="me">Shi Qiu</span>, Siwei Xin, Siwei Han, Zhaorun Chen, Hongyi Wang, Dake Zhang, Huaxiu Yao</div>
+<div class="pub-authors">Haonian Ji, <span class="me">Shi Qiu</span>, Siyang Xin, Siwei Han, Zhaorun Chen, Hongyi Wang, Dake Zhang, Huaxiu Yao</div>
 <div class="pub-venue">ICLR 2026</div>
 <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2505.16832" target="_blank" rel="noopener">Paper</a></div>
 </div>
@@ -226,7 +227,7 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 <div class="paper-box-text">
 <span class="venue-badge">arXiv 2026</span>
 <div class="pub-title">PRBench: End-to-End Paper Reproduction in Physics Research</div>
-<div class="pub-authors"><span class="me">Shi Qiu</span>, Jiajun Deng, Yizhou Deng, Hangrui Dong, Jian Fu, Mingda Li, Zhongtian Li, Zhaokai Zhang, Hao Zheng, Lei Bao, et al.</div>
+<div class="pub-authors"><span class="me">Shi Qiu</span>, Junyi Deng, Yiwei Deng, Haoran Dong, Jieyu Fu, Mao Li, Zeyu Li, Hua Xing Zhu et al.</div>
 <div class="pub-venue">arXiv preprint, 2026</div>
 <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2603.27646" target="_blank" rel="noopener">Paper</a></div>
 </div>
@@ -237,7 +238,7 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 <div class="paper-box-text">
 <span class="venue-badge">arXiv 2025</span>
 <div class="pub-title">Iterated Agent for Symbolic Regression</div>
-<div class="pub-authors">Zhuo-Yang Song, Zhijie Cai, Shutao Zhang, Junjie Wei, Jiashen Pan, <span class="me">Shi Qiu</span>, Qing-Hong Cao, Tie-Jiun Hou, Xiaohui Liu, et al.</div>
+<div class="pub-authors">Zhuo-Yang Song, Zeyu Cai, Shutao Zhang, Jiashen Wei, Jichen Pan, <span class="me">Shi Qiu</span>, Qing-Hong Cao, Tie-Jiun Hou, Xiaohui Liu, Ming-xing Luo, Hua Xing Zhu</div>
 <div class="pub-venue">arXiv preprint, 2025</div>
 <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2510.08317" target="_blank" rel="noopener">Paper</a></div>
 </div>

@@ -17,19 +17,40 @@ layout: compress
     <div id="main" role="main">
       {% include sidebar.html %}
 
-      <article class="page post-single" itemscope itemtype="http://schema.org/BlogPosting">
+      <article class="page post-single{% if page.bilingual %} bilingual{% endif %}" data-lang="{{ page.default_lang | default: 'en' }}" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="page__inner-wrap">
           <header class="post-header reveal">
-            <a class="post-back" href="{{ '/blog/' | relative_url }}">← All posts</a>
-            <h1 class="post-title" itemprop="headline">{{ page.title }}</h1>
-            <p class="post-meta">
-              <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
-              {% if page.tags %}
-                <span class="post-meta-sep">·</span>
-                {% for tag in page.tags %}<span class="post-tag">{{ tag }}</span>{% endfor %}
+            <div class="post-topline">
+              <a class="post-back" href="{{ '/blog/' | relative_url }}">← All posts</a>
+              {% if page.series %}<span class="post-series">{{ page.series }}</span>{% endif %}
+            </div>
+            {% if page.bilingual and page.title_zh %}
+              <h1 class="post-title" itemprop="headline"><span class="lang lang-en">{{ page.title }}</span><span class="lang lang-zh">{{ page.title_zh }}</span></h1>
+            {% else %}
+              <h1 class="post-title" itemprop="headline">{{ page.title }}</h1>
+            {% endif %}
+            <div class="post-meta-row">
+              <p class="post-meta">
+                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
+                {% if page.tags %}
+                  <span class="post-meta-sep">·</span>
+                  {% for tag in page.tags %}<span class="post-tag">{{ tag }}</span>{% endfor %}
+                {% endif %}
+              </p>
+              {% if page.bilingual %}
+              <div class="lang-toggle" role="group" aria-label="Language">
+                <button type="button" class="lang-btn" data-set-lang="en">EN</button>
+                <button type="button" class="lang-btn" data-set-lang="zh">中文</button>
+              </div>
               {% endif %}
-            </p>
+            </div>
           </header>
+
+          {% if page.header.teaser %}
+          <div class="post-hero reveal">
+            <img src="{{ page.header.teaser | relative_url }}" alt="{{ page.title | escape }}">
+          </div>
+          {% endif %}
 
           <section class="page__content post-body reveal" itemprop="articleBody">
             {{ content }}
