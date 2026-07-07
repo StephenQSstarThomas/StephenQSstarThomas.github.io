@@ -38,7 +38,7 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 
 ---
 
-# 🔥 News
+# {% include hemoji.html n="fire" %} News {#news}
 
 <div class="timeline">
 <div class="tl-item"><span class="tl-date">May 2026</span><span class="tl-text">Honored to be selected as a <strong>Beijing Municipal Outstanding Graduate</strong>, a <strong>Peking University Outstanding Graduate</strong>, and a <strong>Merit Student Pacesetter (三好学生标兵)</strong>!</span></div>
@@ -62,7 +62,7 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 
 ---
 
-# ✉️ Contact
+# {% include hemoji.html n="loveletter" %} Contact {#contact}
 
 <div class="contact-row">
 <a class="contact-chip" href="https://x.com/StephenQS0710" target="_blank" rel="noopener"><i class="fab fa-twitter"></i> X <span class="cc-val">@StephenQS0710</span></a>
@@ -76,7 +76,7 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 
 ---
 
-# 📝 Publications
+# {% include hemoji.html n="books" %} Publications {#publications}
 
 <div class="paper-box highlight">
 <div class="paper-box-image"><img src="images/pub/phybench.png" alt="PHYBench teaser" loading="lazy"></div>
@@ -255,7 +255,7 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 </div>
 </div>
 
-# 🎖️ Honors and Awards
+# {% include hemoji.html n="trophy" %} Honors and Awards {#honors}
 
 <div class="honor-list">
 <div class="honor-item"><i class="fas fa-trophy"></i><span class="honor-name">Beijing Municipal Outstanding Graduate (北京市优秀毕业生)</span><span class="honor-year">2026</span></div>
@@ -270,7 +270,7 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 
 ---
 
-# 📖 Education
+# {% include hemoji.html n="graduation" %} Education {#education}
 
 <div class="edu-card">
 <div class="edu-logo"><img src="/images/pku.png" alt="Peking University"></div>
@@ -283,7 +283,7 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 
 ---
 
-# 💼 Research Experience
+# {% include hemoji.html n="brain" %} Research Experience {#experience}
 
 <div class="exp-list">
 
@@ -314,7 +314,7 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 
 ---
 
-# 💻 Projects
+# {% include hemoji.html n="rocket" %} Projects {#projects}
 
 <div class="project-grid">
 
@@ -351,7 +351,7 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 
 ---
 
-# 🗺️ Skills
+# {% include hemoji.html n="tools" %} Skills {#skills}
 
 <div class="skill-group">
 <div class="skill-group-label">Research</div>
@@ -384,7 +384,7 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 
 ---
 
-# 🏸 Extracurricular Activities & Interests
+# {% include hemoji.html n="party" %} Extracurricular Activities & Interests {#interests}
 
 <div class="interest" markdown="1">
 <div class="interest-title" markdown="0"><i class="fas fa-medal"></i> Athletics</div>

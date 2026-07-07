@@ -332,7 +332,17 @@ html.js-reveal .stagger.is-visible > * { opacity: 1; transform: none; }
 /* ---- JollySammy preface ---- */
 .preface-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: .5rem; }
 .preface-brand { display: flex; align-items: center; gap: .85rem; }
-.preface-squirrel { font-size: 2.5rem; line-height: 1; display: inline-block; animation: squirrel-bob 3.6s ease-in-out infinite; transform-origin: 60% 90%; }
+.preface-squirrel { line-height: 1; display: inline-block; }
+.preface-squirrel .h-emoji img { height: 2.7rem; vertical-align: middle; margin: 0; }
+
+/* ---- Premium animated header emojis (Noto animated, self-hosted) ---- */
+.h-emoji { line-height: 0; }
+.h-emoji img {
+  height: 1.15em; width: auto; vertical-align: -0.24em; margin-right: .12em;
+  display: inline-block; transition: transform .22s cubic-bezier(.34,1.56,.64,1);
+}
+.page__content h1:hover .h-emoji img { transform: scale(1.18) rotate(-5deg); }
+.blog-hero-title .h-emoji img { height: 1.1em; vertical-align: -0.2em; }
 @keyframes squirrel-bob { 0%, 100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-6px) rotate(4deg); } }
 .preface-kicker { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: .15rem; }
 .preface .collection-title { margin: 0; }

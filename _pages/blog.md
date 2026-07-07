@@ -9,7 +9,7 @@ layout: default
 <span class='anchor' id='blog'></span>
 
 <div class="blog-hero reveal">
-  <h1 class="blog-hero-title">✍️ <span class="gradient-text">Blog</span></h1>
+  <h1 class="blog-hero-title">{% include hemoji.html n="writing" %} <span class="gradient-text">Blog</span></h1>
   <p class="blog-hero-sub">Working notes and hard-won lessons from building agent systems. Organized into <strong>collections</strong> — each a running series on one theme.</p>
 </div>
 
@@ -20,7 +20,7 @@ layout: default
   <div class="bilingual preface" data-lang="en">
     <div class="preface-top">
       <div class="preface-brand">
-        <span class="preface-squirrel" aria-hidden="true">🐿️</span>
+        <span class="preface-squirrel" aria-hidden="true">{% include hemoji.html n="chipmunk" %}</span>
         <div>
           <div class="preface-kicker">A collection by JollySammy</div>
           <h2 class="collection-title"><span class="gradient-text">Agent Harness</span> Notes</h2>
