@@ -34,6 +34,14 @@
       });
     }
 
+    /* ---------- Stagger containers: set per-child index for cascade ---------- */
+    Array.prototype.forEach.call(document.querySelectorAll(".stagger"), function (list) {
+      Array.prototype.forEach.call(list.children, function (c, i) {
+        c.style.setProperty("--i", Math.min(i, 10));
+      });
+      list.classList.add("reveal"); // reuse the reveal observer to trigger the cascade
+    });
+
     /* ---------- 1. Scroll reveal (IntersectionObserver) ---------- */
     var revealEls = Array.prototype.slice.call(
       document.querySelectorAll(".reveal")
@@ -91,6 +99,10 @@
       requestAnimationFrame(step);
     }
 
+    // Exposed so the async Google-Scholar fetch can animate live values
+    // (citations / publications) once the JSON resolves.
+    window.animateCountEl = animateCount;
+
     var counters = Array.prototype.slice.call(
       document.querySelectorAll(".countup")
     );
@@ -113,6 +125,26 @@
           cio.observe(el);
         });
       }
+    }
+
+    /* ---------- Signature: header aurora (skip if reduced motion) ---------- */
+    if (!REDUCED) {
+      var aurora = document.createElement("div");
+      aurora.id = "aurora";
+      aurora.setAttribute("aria-hidden", "true");
+      document.body.insertBefore(aurora, document.body.firstChild);
+    }
+
+    /* ---------- Signature: pointer-tracked spotlight on cards ---------- */
+    if (!REDUCED && window.matchMedia && window.matchMedia("(hover: hover)").matches) {
+      var cards = document.querySelectorAll(".paper-box, .project-card, .post-card");
+      Array.prototype.forEach.call(cards, function (card) {
+        card.addEventListener("pointermove", function (e) {
+          var r = card.getBoundingClientRect();
+          card.style.setProperty("--mx", (e.clientX - r.left) + "px");
+          card.style.setProperty("--my", (e.clientY - r.top) + "px");
+        });
+      });
     }
 
     /* ---------- 3. Scroll progress bar ---------- */

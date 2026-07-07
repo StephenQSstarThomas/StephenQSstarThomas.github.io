@@ -20,78 +20,99 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 
 <div class="stat-strip">
   <a class="stat-item" href="https://github.com/StephenQSstarThomas" target="_blank" rel="noopener">
+    <span class="stat-icon" aria-hidden="true"><i class="fab fa-github"></i></span>
     <span class="stat-num countup" data-target="22000" data-suffix="+">22,000+</span>
     <span class="stat-label">GitHub Stars</span>
   </a>
-  <a class="stat-item" href="#-publications">
-    <span class="stat-num countup" data-target="7">7</span>
-    <span class="stat-label">Publications</span>
-  </a>
-  <a class="stat-item" href="#-publications">
-    <span class="stat-num countup" data-target="3">3</span>
-    <span class="stat-label">Orals &amp; Spotlights</span>
+  <a class="stat-item" href="https://scholar.google.com/citations?user=wScRGY8AAAAJ" target="_blank" rel="noopener">
+    <span class="stat-icon" aria-hidden="true"><i class="fas fa-quote-right"></i></span>
+    <span class="stat-num" id="stat-citations" data-suffix="+">482</span>
+    <span class="stat-label">Citations</span>
   </a>
   <a class="stat-item" href="https://scholar.google.com/citations?user=wScRGY8AAAAJ" target="_blank" rel="noopener">
-    <span class="stat-num">NeurIPS · ICLR</span>
-    <span class="stat-label">CVPR · EMNLP</span>
+    <span class="stat-icon" aria-hidden="true"><i class="fas fa-book-open"></i></span>
+    <span class="stat-num" id="stat-pubs">16</span>
+    <span class="stat-label">Publications</span>
   </a>
 </div>
 
 ---
 
 # 🔥 News
-- **[May 2026]** Honored to be selected as a **Beijing Municipal Outstanding Graduate**, a **Peking University Outstanding Graduate**, and a **Merit Student Pacesetter (三好学生标兵)**!
-- **[Mar 2026]** Our paper, **MetaClaw**, is out on arXiv — an agent that meta-learns and self-evolves just by talking to it!
-- **[Mar 2026]** Our self-evolving autoresearch projects, **AutoResearchClaw** and **MetaClaw**, are released — together with our open-source ecosystem they have surpassed **22k+ GitHub stars**!
-- **[Jan 2026]** Our paper, **Paper2Figure**, was accepted to **CVPR 2026**!
-- **[Jan 2026]** Our paper, **EduVisAgent**, was accepted to **ICLR 2026**! But I'll not come to Brazil. See you ONLINE @ICLR 2026!
-- **[Nov 2025]** Honored to be the Advisor of [AlphaXiv](https://www.alphaxiv.org)! Keep going for high fidelity research!
-- **[Sep 2025]** Honored to receive the **National Scholarship** award! 
-- **[Sep 2025]** Our paper, **PHYBench**, **MJ-Video**(selected as Spotlight) and **SuperGPQA** was accepted by **NeurIPS 2025**! See you all in San Diego in December~
-- **[Sep 2025]** Our paper, **GLIMPSE**, was accepted as an **Oral Presentation Paper** of **EMNLP 2025 Main Conference**!
-- **[May 2025]** We released **PHYBench**, the first large-scale reasoning benchmark within a physical context. Follow us for the latest updates!
-- **[Jan 2025]** Our paper, **MMIE**, was accepted by ICLR 2025 as an **Oral** presentation!
-- **[Feb 2025]** Our paper, **MJ-Video**, was released on arXiv.
-- **[2024]** Honored to receive the Excellence in Research Award for contributions in AI and intelligent systems.
+
+<div class="timeline">
+<div class="tl-item"><span class="tl-date">May 2026</span><span class="tl-text">Honored to be selected as a <strong>Beijing Municipal Outstanding Graduate</strong>, a <strong>Peking University Outstanding Graduate</strong>, and a <strong>Merit Student Pacesetter (三好学生标兵)</strong>!</span></div>
+<div class="tl-item"><span class="tl-date">Mar 2026</span><span class="tl-text">Our paper <strong>MetaClaw</strong> is out on arXiv — an agent that meta-learns and self-evolves just by talking to it!</span></div>
+<div class="tl-item"><span class="tl-date">Mar 2026</span><span class="tl-text">Our self-evolving autoresearch projects <strong>AutoResearchClaw</strong> and <strong>MetaClaw</strong> are released — together with our open-source ecosystem they have surpassed <strong>22k+ GitHub stars</strong>!</span></div>
+<div class="tl-item"><span class="tl-date">Jan 2026</span><span class="tl-text">Our paper <strong>Paper2Figure</strong> was accepted to <strong>CVPR 2026</strong>!</span></div>
+<div class="tl-item"><span class="tl-date">Jan 2026</span><span class="tl-text">Our paper <strong>EduVisAgent</strong> was accepted to <strong>ICLR 2026</strong>! I'll not come to Brazil — see you ONLINE @ICLR 2026!</span></div>
+<div class="tl-item"><span class="tl-date">Nov 2025</span><span class="tl-text">Honored to be the Advisor of <a href="https://www.alphaxiv.org" target="_blank" rel="noopener">AlphaXiv</a>! Keep going for high-fidelity research!</span></div>
+
+<details>
+<summary>Show earlier news ↓</summary>
+<div class="tl-item"><span class="tl-date">Sep 2025</span><span class="tl-text">Honored to receive the <strong>National Scholarship</strong> award!</span></div>
+<div class="tl-item"><span class="tl-date">Sep 2025</span><span class="tl-text">Our papers <strong>PHYBench</strong>, <strong>MJ-Video</strong> (Spotlight) and <strong>SuperGPQA</strong> were accepted by <strong>NeurIPS 2025</strong>! See you all in San Diego in December~</span></div>
+<div class="tl-item"><span class="tl-date">Sep 2025</span><span class="tl-text">Our paper <strong>GLIMPSE</strong> was accepted as an <strong>Oral</strong> at <strong>EMNLP 2025 Main Conference</strong>!</span></div>
+<div class="tl-item"><span class="tl-date">May 2025</span><span class="tl-text">We released <strong>PHYBench</strong>, the first large-scale reasoning benchmark within a physical context.</span></div>
+<div class="tl-item"><span class="tl-date">Jan 2025</span><span class="tl-text">Our paper <strong>MMIE</strong> was accepted by <strong>ICLR 2025</strong> as an <strong>Oral</strong> presentation!</span></div>
+<div class="tl-item"><span class="tl-date">Feb 2025</span><span class="tl-text">Our paper <strong>MJ-Video</strong> was released on arXiv.</span></div>
+<div class="tl-item"><span class="tl-date">2024</span><span class="tl-text">Honored to receive the <strong>Excellence in Research Award</strong> for contributions in AI and intelligent systems.</span></div>
+</details>
+</div>
 
 ---
 
 # ✉️ Contact
-- **X (Twitter):** [@StephenQS0710](https://x.com/StephenQS0710)
-- **Hugging Face:** [StarThomas1002](https://huggingface.co/StarThomas1002)
-- **Discord:** `stephen_17949`
-- **WeChat:** StephenQSqiuqiu
-- **小红书:** 是是是一只吃播萨米
-- **CV:** [View my Personal CV](https://github.com/StephenQSstarThomas/backup_personal_files/blob/main/qs_cv.pdf)
+
+<div class="contact-row">
+<a class="contact-chip" href="https://x.com/StephenQS0710" target="_blank" rel="noopener"><i class="fab fa-twitter"></i> X <span class="cc-val">@StephenQS0710</span></a>
+<a class="contact-chip" href="https://huggingface.co/StarThomas1002" target="_blank" rel="noopener"><span aria-hidden="true">🤗</span> Hugging Face <span class="cc-val">StarThomas1002</span></a>
+<a class="contact-chip" href="mailto:stephenshiqiu@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+<span class="contact-chip"><i class="fab fa-discord"></i> Discord <span class="cc-val">stephen_17949</span></span>
+<span class="contact-chip"><i class="fab fa-weixin"></i> WeChat <span class="cc-val">StephenQSqiuqiu</span></span>
+<span class="contact-chip"><span aria-hidden="true">📕</span> 小红书 <span class="cc-val">是是是一只吃播萨米</span></span>
+<a class="contact-chip" href="https://github.com/StephenQSstarThomas/backup_personal_files/blob/main/qs_cv.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> CV</a>
+</div>
 
 ---
 
 # 📝 Publications
 
 <div class="paper-box">
-<div class="paper-box-image"><img src="images/pub/metaclaw.png" alt="MetaClaw framework overview"></div>
+<div class="paper-box-image"><img src="images/pub/agents.png" alt="Agents teaser" loading="lazy"></div>
 <div class="paper-box-text">
-<span class="venue-badge">arXiv 2026</span>
-<div class="pub-title">MetaClaw: Just Talk — An Agent That Meta-Learns and Evolves in the Wild</div>
-<div class="pub-authors">Peng Xia, Jianwen Chen, Xinyu Yang, Haoqin Tu, Jiaqi Liu, Kaiwen Xiong, Siwei Han, <span class="me">Shi Qiu</span>, Haonian Ji, Yuyin Zhou, Zeyu Zheng, Cihang Xie, Huaxiu Yao</div>
-<div class="pub-venue">arXiv preprint, 2026</div>
-<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2603.17187" target="_blank" rel="noopener">Paper</a><a class="pub-btn" href="https://github.com/aiming-lab/MetaClaw" target="_blank" rel="noopener">Code</a></div>
+<span class="venue-badge">ICLR 2024 WS</span>
+<div class="pub-title">Agents: An Open-source Framework for Autonomous Language Agents</div>
+<div class="pub-authors">Wangchunshu Zhou, Yuchen Eleanor Jiang, Long Li, Jialong Wu, <span class="me">Shi Qiu</span>, et al.</div>
+<div class="pub-venue">ICLR 2024 Workshop on LLM Agents</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2309.07870" target="_blank" rel="noopener">Paper</a><a class="pub-btn" href="https://github.com/aiwaves-cn/agents" target="_blank" rel="noopener">Code</a></div>
+</div>
+</div>
+
+<div class="paper-box">
+<div class="paper-box-image"><img src="images/pub/supergpqa.png" alt="SuperGPQA teaser" loading="lazy"></div>
+<div class="paper-box-text">
+<span class="venue-badge">NeurIPS 2025</span>
+<div class="pub-title">SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines</div>
+<div class="pub-authors">Xeron Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu, Yiming Liang, Xiaolong Jin, Zhenlin Wei, <span class="me">Shi Qiu</span>, …, Jiaheng Liu, Ge Zhang</div>
+<div class="pub-venue">NeurIPS 2025</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2502.14739" target="_blank" rel="noopener">Paper</a></div>
 </div>
 </div>
 
 <div class="paper-box highlight">
-<div class="paper-box-image"><img src="images/pub/phybench.png" alt="PHYBench evaluation metric example"></div>
+<div class="paper-box-image"><img src="images/pub/phybench.png" alt="PHYBench teaser" loading="lazy"></div>
 <div class="paper-box-text">
 <span class="venue-badge">NeurIPS 2025</span>
 <div class="pub-title">PHYBench: Holistic Evaluation of Physical Perception and Reasoning in Large Language Models</div>
-<div class="pub-authors"><span class="me">Shi Qiu</span>, Shaoyang Guo, Zhuo-Yang Song, Hua-Xing Zhu et al.</div>
+<div class="pub-authors"><span class="me">Shi Qiu</span>, Shaoyang Guo, Zhuo-Yang Song, Yang Sun, Zhi-Cheng Wei, Hua-Xing Zhu et al.</div>
 <div class="pub-venue">NeurIPS 2025</div>
 <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2504.16074" target="_blank" rel="noopener">Paper</a><a class="pub-btn" href="https://phybench-official.github.io/phybench-demo/" target="_blank" rel="noopener">Project</a></div>
 </div>
 </div>
 
 <div class="paper-box highlight">
-<div class="paper-box-image"><img src="images/pub/mmie.jpg" alt="MMIE benchmark overview"></div>
+<div class="paper-box-image"><img src="images/pub/mmie.jpg" alt="MMIE teaser" loading="lazy"></div>
 <div class="paper-box-text">
 <span class="venue-badge">ICLR 2025</span><span class="venue-badge award">Oral</span>
 <div class="pub-title">MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models</div>
@@ -102,18 +123,51 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 </div>
 
 <div class="paper-box">
-<div class="paper-box-image"><img src="images/pub/agents.png" alt="Agents framework overview"></div>
+<div class="paper-box-image"><img src="images/pub/metaclaw.png" alt="MetaClaw teaser" loading="lazy"></div>
 <div class="paper-box-text">
-<span class="venue-badge">ICLR 2024 WS</span>
-<div class="pub-title">Agents: An Open-source Framework for Autonomous Language Agents</div>
-<div class="pub-authors">Wangchunshu Zhou, Yuchen Eleanor Jiang, Long Li, Jialong Wu, <span class="me">Shi Qiu</span>, et al.</div>
-<div class="pub-venue">ICLR 2024 Workshop on Large Language Models for Agents</div>
-<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2309.07870" target="_blank" rel="noopener">Paper</a><a class="pub-btn" href="https://github.com/aiwaves-cn/agents" target="_blank" rel="noopener">Code</a></div>
+<span class="venue-badge">arXiv 2026</span>
+<div class="pub-title">MetaClaw: Just Talk — An Agent That Meta-Learns and Evolves in the Wild</div>
+<div class="pub-authors">Peng Xia, Jianwen Chen, Xinyu Yang, Haoqin Tu, Jiaqi Liu, Kaiwen Xiong, Siwei Han, <span class="me">Shi Qiu</span>, Haonian Ji, Yuyin Zhou, Zeyu Zheng, Cihang Xie, Huaxiu Yao</div>
+<div class="pub-venue">arXiv preprint, 2026</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2603.17187" target="_blank" rel="noopener">Paper</a><a class="pub-btn" href="https://github.com/aiming-lab/MetaClaw" target="_blank" rel="noopener">Code</a></div>
+</div>
+</div>
+
+<div class="paper-box">
+<div class="paper-box-image"><img src="images/pub/attackdef.jpg" alt="The Attack and Defense Landscape of Agentic AI teaser" loading="lazy"></div>
+<div class="paper-box-text">
+<span class="venue-badge">arXiv 2026</span><span class="venue-badge award">Survey</span>
+<div class="pub-title">The Attack and Defense Landscape of Agentic AI: A Comprehensive Survey</div>
+<div class="pub-authors">Jaewoo Kim, Xiangru Liu, Zhun Wang, <span class="me">Shi Qiu</span>, Bo Li, Wenbo Guo, Dawn Song</div>
+<div class="pub-venue">arXiv preprint, 2026</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2603.11088" target="_blank" rel="noopener">Paper</a></div>
+</div>
+</div>
+
+<div class="paper-box">
+<div class="paper-box-image"><img src="images/pub/mjvideo.jpg" alt="MJ-Video teaser" loading="lazy"></div>
+<div class="paper-box-text">
+<span class="venue-badge">NeurIPS 2025</span><span class="venue-badge award">Spotlight</span>
+<div class="pub-title">MJ-Video: Fine-Grained Benchmarking and Rewarding Video Preferences in Video Generation</div>
+<div class="pub-authors">Haibo Tong, Zhaoyang Wang, Zhaorun Chen, Haonian Ji, <span class="me">Shi Qiu</span>, Siwei Han, Kexin Geng, Zhongkai Xue, Yiyang Zhou, Peng Xia, Mingyu Ding, Rafael Rafailov, Chelsea Finn, Huaxiu Yao</div>
+<div class="pub-venue">NeurIPS 2025 (Spotlight)</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2502.01719" target="_blank" rel="noopener">Paper</a></div>
+</div>
+</div>
+
+<div class="paper-box">
+<div class="paper-box-image"><img src="images/pub/clawarena.jpg" alt="ClawArena teaser" loading="lazy"></div>
+<div class="paper-box-text">
+<span class="venue-badge">arXiv 2026</span>
+<div class="pub-title">ClawArena: Benchmarking AI Agents in Evolving Information Environments</div>
+<div class="pub-authors">Haonian Ji, Kaiwen Xiong, Siwei Han, Peng Xia, <span class="me">Shi Qiu</span>, Yiyang Zhou, Jiaqi Liu, Bo Li, Zeyu Zheng, Cihang Xie, et al.</div>
+<div class="pub-venue">arXiv preprint, 2026</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2604.04202" target="_blank" rel="noopener">Paper</a></div>
 </div>
 </div>
 
 <div class="paper-box highlight">
-<div class="paper-box-image"><img src="images/pub/glimpse.jpg" alt="GLIMPSE video-reasoning taxonomy"></div>
+<div class="paper-box-image"><img src="images/pub/glimpse.jpg" alt="GLIMPSE teaser" loading="lazy"></div>
 <div class="paper-box-text">
 <span class="venue-badge">EMNLP 2025</span><span class="venue-badge award">Oral</span>
 <div class="pub-title">GLIMPSE: Do Large Vision-Language Models Truly Think With Videos or Just Glimpse at Them?</div>
@@ -124,61 +178,138 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 </div>
 
 <div class="paper-box">
-<div class="paper-box-image"><img src="images/pub/mjvideo.jpg" alt="MJ-Video evaluation dimensions"></div>
+<div class="paper-box-image"><img src="images/pub/autoresearchclaw.jpg" alt="AutoResearchClaw teaser" loading="lazy"></div>
 <div class="paper-box-text">
-<span class="venue-badge">NeurIPS 2025</span><span class="venue-badge award">Spotlight</span>
-<div class="pub-title">MJ-VIDEO: Fine-Grained Benchmarking and Rewarding Video Preferences in Video Generation</div>
-<div class="pub-authors">Haibo Tong, Zhaoyang Wang, Zhaorun Chen, Haonian Ji, <span class="me">Shi Qiu</span>, Siwei Han, Zhongkai Xue, Yiyang Zhou, Peng Xia, Kexin Geng, Mingyu Ding, Rafael Rafailov, Chelsea Finn, Huaxiu Yao</div>
-<div class="pub-venue">NeurIPS 2025 (Spotlight)</div>
-<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2502.01719" target="_blank" rel="noopener">Paper</a></div>
+<span class="venue-badge">arXiv 2026</span>
+<div class="pub-title">AutoResearchClaw: Self-Reinforcing Autonomous Research with Human-AI Collaboration</div>
+<div class="pub-authors">Jiaqi Liu, <span class="me">Shi Qiu</span>, Mingda Li, Bo Li, Haonian Ji, Siwei Han, Xiang Ye, Peng Xia, Zhen Dong, Chi Zhang, et al.</div>
+<div class="pub-venue">arXiv preprint, 2026</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2605.20025" target="_blank" rel="noopener">Paper</a><a class="pub-btn" href="https://github.com/aiming-lab/AutoResearchClaw" target="_blank" rel="noopener">Code</a></div>
+</div>
+</div>
+
+<div class="paper-box highlight">
+<div class="paper-box-image"><img src="images/pub/collider.jpg" alt="An End-to-End Architecture for Collider Physics and Beyond teaser" loading="lazy"></div>
+<div class="paper-box-text">
+<span class="venue-badge">arXiv 2026</span>
+<div class="pub-title">An End-to-End Architecture for Collider Physics and Beyond</div>
+<div class="pub-authors"><span class="me">Shi Qiu</span>, Zhijie Cai, Junjie Wei, Zhongtian Li, Yang Yin, Qing-Hong Cao, Chang Liu, Ming-Xing Luo, Xiao-Bo Yuan, Hua-Xing Zhu</div>
+<div class="pub-venue">arXiv preprint, 2026</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2603.14553" target="_blank" rel="noopener">Paper</a><a class="pub-btn" href="https://github.com/HET-AGI/ColliderAgent" target="_blank" rel="noopener">Code</a></div>
 </div>
 </div>
 
 <div class="paper-box">
-<div class="paper-box-image"><img src="images/pub/supergpqa.png" alt="SuperGPQA discipline coverage"></div>
+<div class="paper-box-image"><img src="images/pub/omnimem.jpg" alt="OmniMem teaser" loading="lazy"></div>
 <div class="paper-box-text">
-<span class="venue-badge">NeurIPS 2025</span>
-<div class="pub-title">SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines</div>
-<div class="pub-authors">Xeron Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu, Yiming Liang, Xiaolong Jin, Zhenlin Wei, <span class="me">Shi Qiu</span>, …, Jiaheng Liu, Stephen Huang, Ge Zhang</div>
-<div class="pub-venue">NeurIPS 2025</div>
-<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2502.14739" target="_blank" rel="noopener">Paper</a></div>
+<span class="venue-badge">arXiv 2026</span>
+<div class="pub-title">OmniMem: Autoresearch-Guided Discovery of Lifelong Multimodal Agent Memory</div>
+<div class="pub-authors">Jiaqi Liu, Zhaoyang Ling, <span class="me">Shi Qiu</span>, Yang Liu, Siwei Han, Peng Xia, Haoqin Tu, Zeyu Zheng, Cihang Xie, Chris Fleming, et al.</div>
+<div class="pub-venue">arXiv preprint, 2026</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2604.01007" target="_blank" rel="noopener">Paper</a></div>
+</div>
+</div>
+
+<div class="paper-box">
+<div class="paper-box-image"><img src="images/pub/eduvisagent.jpg" alt="From EduVisBench to EduVisAgent teaser" loading="lazy"></div>
+<div class="paper-box-text">
+<span class="venue-badge">ICLR 2026</span>
+<div class="pub-title">From EduVisBench to EduVisAgent: A Benchmark and Multi-Agent Framework for Pedagogical Visualization</div>
+<div class="pub-authors">Haonian Ji, <span class="me">Shi Qiu</span>, Siwei Xin, Siwei Han, Zhaorun Chen, Hongyi Wang, Dake Zhang, Huaxiu Yao</div>
+<div class="pub-venue">ICLR 2026</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2505.16832" target="_blank" rel="noopener">Paper</a></div>
+</div>
+</div>
+
+<div class="paper-box highlight">
+<div class="paper-box-image"><img src="images/pub/prbench.jpg" alt="PRBench teaser" loading="lazy"></div>
+<div class="paper-box-text">
+<span class="venue-badge">arXiv 2026</span>
+<div class="pub-title">PRBench: End-to-End Paper Reproduction in Physics Research</div>
+<div class="pub-authors"><span class="me">Shi Qiu</span>, Jiajun Deng, Yizhou Deng, Hangrui Dong, Jian Fu, Mingda Li, Zhongtian Li, Zhaokai Zhang, Hao Zheng, Lei Bao, et al.</div>
+<div class="pub-venue">arXiv preprint, 2026</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2603.27646" target="_blank" rel="noopener">Paper</a></div>
+</div>
+</div>
+
+<div class="paper-box">
+<div class="paper-box-image"><img src="images/pub/iteratedagent.jpg" alt="Iterated Agent for Symbolic Regression teaser" loading="lazy"></div>
+<div class="paper-box-text">
+<span class="venue-badge">arXiv 2025</span>
+<div class="pub-title">Iterated Agent for Symbolic Regression</div>
+<div class="pub-authors">Zhuo-Yang Song, Zhijie Cai, Shutao Zhang, Junjie Wei, Jiashen Pan, <span class="me">Shi Qiu</span>, Qing-Hong Cao, Tie-Jiun Hou, Xiaohui Liu, et al.</div>
+<div class="pub-venue">arXiv preprint, 2025</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2510.08317" target="_blank" rel="noopener">Paper</a></div>
+</div>
+</div>
+
+<div class="paper-box">
+<div class="paper-box-image"><img src="images/pub/minos.jpg" alt="Minos teaser" loading="lazy"></div>
+<div class="paper-box-text">
+<span class="venue-badge">arXiv 2025</span>
+<div class="pub-title">Minos: A Multimodal Evaluation Model for Bidirectional Generation Between Image and Text</div>
+<div class="pub-authors">Junzhe Zhang, Huixuan Zhang, Xinyu Hu, Li Lin, Mingqi Gao, <span class="me">Shi Qiu</span>, Xiaojun Wan</div>
+<div class="pub-venue">arXiv preprint, 2025</div>
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2506.02494" target="_blank" rel="noopener">Paper</a></div>
 </div>
 </div>
 
 # 🎖️ Honors and Awards
-- **Beijing Municipal Outstanding Graduate** (北京市优秀毕业生), *2026*
-- **Peking University Outstanding Graduate** (北京大学优秀毕业生), *2026*
-- **Merit Student Pacesetter** (三好学生标兵), *2026*
-- **National Scholarship**, *2025*
-- **Excellence in Research Award**, *2024*
-- **Peking University Third Class Scholarship**, *2024*
-- **Shu Qi Scholarship**, *2023*
-- **Youth Award for Athletics**, *2023*
+
+<div class="honor-list">
+<div class="honor-item"><i class="fas fa-trophy"></i><span class="honor-name">Beijing Municipal Outstanding Graduate (北京市优秀毕业生)</span><span class="honor-year">2026</span></div>
+<div class="honor-item"><i class="fas fa-trophy"></i><span class="honor-name">Peking University Outstanding Graduate (北京大学优秀毕业生)</span><span class="honor-year">2026</span></div>
+<div class="honor-item"><i class="fas fa-award"></i><span class="honor-name">Merit Student Pacesetter (三好学生标兵)</span><span class="honor-year">2026</span></div>
+<div class="honor-item"><i class="fas fa-medal"></i><span class="honor-name">National Scholarship</span><span class="honor-year">2025</span></div>
+<div class="honor-item"><i class="fas fa-star"></i><span class="honor-name">Excellence in Research Award</span><span class="honor-year">2024</span></div>
+<div class="honor-item"><i class="fas fa-award"></i><span class="honor-name">Peking University Third Class Scholarship</span><span class="honor-year">2024</span></div>
+<div class="honor-item"><i class="fas fa-award"></i><span class="honor-name">Shu Qi Scholarship</span><span class="honor-year">2023</span></div>
+<div class="honor-item"><i class="fas fa-running"></i><span class="honor-name">Youth Award for Athletics</span><span class="honor-year">2023</span></div>
+</div>
 
 ---
 
 # 📖 Education
-**Peking University** *Beijing, China* *B.S. in Astronomy, School of Physics* *2022 – Present*
-- Overall GPA: 3.64/4.0
+
+<div class="edu-card">
+<div class="edu-logo"><img src="/images/pku.png" alt="Peking University"></div>
+<div class="edu-body">
+<div class="edu-school">Peking University</div>
+<div class="edu-degree">B.S. in Astronomy · School of Physics</div>
+<div class="edu-meta">Beijing, China · 2022 – Present · Overall GPA <span class="edu-gpa">3.64/4.0</span></div>
+</div>
+</div>
 
 ---
 
 # 💼 Research Experience
 
-**Undergraduate Researcher** | UNC Chapel Hill  
-*Advisor: [Prof. Huaxiu Yao](https://www.huaxiuyao.io)* *June 2024 – Aug 2024*
-- Contributed to multiple research projects in large multimodal models and AI agents as a summer research assistant.
+<div class="exp-list">
 
-**Research Intern** | AIWaves  
-*June 2023 – Aug 2023*
-- Contributed to the core development of the open-source framework for autonomous language agents.
-- Co-authored the paper "Agents: An Open-source Framework for Autonomous Language Agents".
-- Project reached over 5,000 stars on GitHub: [[Project Link]](https://github.com/aiwaves-cn/agents)
+<div class="exp-item">
+<div class="exp-head"><span><span class="exp-role">Undergraduate Researcher</span> · <span class="exp-org">UNC Chapel Hill</span></span><span class="exp-date">Jun 2024 – Aug 2024</span></div>
+<div class="exp-note">Advisor: <a href="https://www.huaxiuyao.io" target="_blank" rel="noopener">Prof. Huaxiu Yao</a></div>
+<ul><li>Contributed to multiple research projects in large multimodal models and AI agents as a summer research assistant.</li></ul>
+</div>
 
-**CUPT Competition Team** | Peking University  
-*March 2023 – May 2023*
-- Served as a Main Speaker for the team.
-- Awarded Third Prize in the China Undergraduate Physics Tournament (CUPT) school-wide competition.
+<div class="exp-item">
+<div class="exp-head"><span><span class="exp-role">Research Intern</span> · <span class="exp-org">AIWaves</span></span><span class="exp-date">Jun 2023 – Aug 2023</span></div>
+<ul>
+<li>Contributed to the core development of the open-source framework for autonomous language agents.</li>
+<li>Co-authored the paper "Agents: An Open-source Framework for Autonomous Language Agents".</li>
+<li>Project reached over 5,000 stars on GitHub: <a href="https://github.com/aiwaves-cn/agents" target="_blank" rel="noopener">Project Link</a>.</li>
+</ul>
+</div>
+
+<div class="exp-item">
+<div class="exp-head"><span><span class="exp-role">CUPT Competition Team</span> · <span class="exp-org">Peking University</span></span><span class="exp-date">Mar 2023 – May 2023</span></div>
+<ul>
+<li>Served as a Main Speaker for the team.</li>
+<li>Awarded Third Prize in the China Undergraduate Physics Tournament (CUPT) school-wide competition.</li>
+</ul>
+</div>
+
+</div>
 
 ---
 
@@ -220,56 +351,86 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 ---
 
 # 🗺️ Skills
-- **Programming:** Python, LaTeX, Markdown
-- **Languages:** Native Mandarin, Fluent English (TOEFL 112, CET-6 696)
+
+<div class="skill-group">
+<div class="skill-group-label">Research</div>
+<div class="skill-pills stagger">
+<span class="skill-pill">AI Agents</span>
+<span class="skill-pill">Self-Evolving Autoresearch</span>
+<span class="skill-pill">Multimodal LLMs</span>
+<span class="skill-pill">AI4Physics</span>
+<span class="skill-pill">LLM Evaluation</span>
+</div>
+</div>
+
+<div class="skill-group">
+<div class="skill-group-label">Programming</div>
+<div class="skill-pills stagger">
+<span class="skill-pill">Python</span>
+<span class="skill-pill">LaTeX</span>
+<span class="skill-pill">Markdown</span>
+</div>
+</div>
+
+<div class="skill-group">
+<div class="skill-group-label">Languages</div>
+<div class="skill-pills stagger">
+<span class="skill-pill">Native Mandarin</span>
+<span class="skill-pill">Fluent English · TOEFL 112</span>
+<span class="skill-pill">CET-6 696</span>
+</div>
+</div>
 
 ---
 
 # 🏸 Extracurricular Activities & Interests
 
-- **President of the Peking University Jump-Rope Team**
-  - **Achievements:**
-    - **National Online Jump Rope Competition:** Ranked #29.
-    - **Beijing College League:** First Place (Men’s 30-Second Double Under), Second Place (Mixed 1-on-1 30-Second Single Under, Broke Event Record), Third Place (Consecutive Triple Under).
+<div class="interest" markdown="1">
+<div class="interest-title" markdown="0"><i class="fas fa-medal"></i> Athletics</div>
 
-- **Member of the Badminton Team in Department of Physics**
-  - **Achievement:** Contributed to the team's 3rd place victory in the Beijing University Cup Badminton Team Competition.
+- **President of the Peking University Jump-Rope Team** — National Online Jump Rope Competition: Ranked **#29**; Beijing College League: **1st Place** (Men's 30s Double Under), **2nd Place** (Mixed 1-on-1 30s Single Under, *broke the event record*), **3rd Place** (Consecutive Triple Under).
+- **Member of the Physics Dept. Badminton Team** — contributed to the team's **3rd place** in the Beijing University Cup Badminton Team Competition.
+</div>
 
-- **Class Monitor**, Class 8 of the 22nd Undergraduate Cohort
-  - Managed class responsibilities, organized events, and facilitated communication between students and faculty.
+<div class="interest" markdown="1">
+<div class="interest-title" markdown="0"><i class="fas fa-users"></i> Leadership & Community</div>
 
-- **Key Member of the Peking University Blockchain Association**
-  - Actively engaged in discussions on blockchain technology and its applications.
+- **Class Monitor**, Class 8 of the 22nd Undergraduate Cohort — organized events and facilitated communication between students and faculty.
+- **Key Member of the Peking University Blockchain Association** — engaged in discussions on blockchain technology and its applications.
+</div>
 
-- **Literature & Writing**
-  - Published a personal collection of essays, available at my [[Literature]](https://github.com/StephenQSstarThomas/Literature) repository.
-  - **Favorite Authors:** [Richard Powers](https://richardpowers.net), [Amor Towles](https://www.amortowles.com), and [Anthony Doerr](https://www.anthonydoerr.com).
+<div class="interest" markdown="1">
+<div class="interest-title" markdown="0"><i class="fas fa-feather"></i> Literature & Writing</div>
 
-- **Photography**
-  - Collaborated with Mengshu Yu and Dannni Luo to create a unique series of self-made postcards. View them here: [[Postcards]](https://github.com/StephenQSstarThomas/Postcards).
-  <br>
-  <img src="../images/post.jpg" alt="A collage of artistic postcards" style="width: 60%; border-radius: 8px;">
-  <br>
+- Published a personal collection of essays at my [Literature](https://github.com/StephenQSstarThomas/Literature) repository.
+- **Favorite authors:** [Richard Powers](https://richardpowers.net), [Amor Towles](https://www.amortowles.com), and [Anthony Doerr](https://www.anthonydoerr.com).
+</div>
 
-- **Games**
-  - **Clash Royale:**
-    - Achieved Ladder rank #31 and Tournament rank #46 on the Chinese Server. Reached #1 using Evo RG ([video proof](https://www.bilibili.com/video/BV1CS411K7nU)).
-    - Won 3rd place in the Clash Royale Chinese University League (CRCUL) with teammates Yikai Zhu, Hao Chen, and others.
-    <br>
-    <div style="display: flex; gap: 20px; align-items: center;">
-        <img src="../images/CR_1.jpg" alt="Clash Royale ranking screenshot" style="width: 40%; border-radius: 8px;">
-        <img src="../images/CR_2.jpg" alt="Clash Royale University League team photo" style="width: 40%; border-radius: 8px;">
-    </div>
-    <br>
-  - **Battle of Balls:**
-    - Ranked #7 on the ladder in Zhejiang Province, July 2018.
+<div class="interest" markdown="1">
+<div class="interest-title" markdown="0"><i class="fas fa-camera"></i> Photography</div>
+Collaborated with Mengshu Yu and Dannni Luo on a series of self-made postcards — see the <a href="https://github.com/StephenQSstarThomas/Postcards" target="_blank" rel="noopener">Postcards</a> collection.
+<div class="gallery two">
+<a href="/images/post.jpg" data-cap="A collage of self-made artistic postcards"><img src="/images/post.jpg" alt="A collage of artistic postcards" loading="lazy"></a>
+</div>
+</div>
 
-- **Hobbies**
-  - **Trains:** A passionate train enthusiast.
-    <br>
-    <img src="../images/train.jpg" alt="A photo of a train" style="width: 40%; border-radius: 8px;">
-    <br>
-  - **Fishing:** Enjoy fishing during my leisure time.
-    <br>
-    <img src="../images/Fish.jpg" alt="A photo of a freshly caught fish" style="width: 40%; border-radius: 8px;">
-    <br>
+<div class="interest" markdown="1">
+<div class="interest-title" markdown="0"><i class="fas fa-gamepad"></i> Games</div>
+
+- **Clash Royale** — Ladder rank **#31** and Tournament rank **#46** on the Chinese Server; reached **#1** using Evo RG (<a href="https://www.bilibili.com/video/BV1CS411K7nU" target="_blank" rel="noopener">video proof</a>). Won **3rd place** in the Clash Royale Chinese University League (CRCUL).
+- **Battle of Balls** — Ranked **#7** on the Zhejiang Province ladder, July 2018.
+
+<div class="gallery two">
+<a href="/images/CR_1.jpg" data-cap="Clash Royale ladder ranking"><img src="/images/CR_1.jpg" alt="Clash Royale ranking screenshot" loading="lazy"></a>
+<a href="/images/CR_2.jpg" data-cap="CRCUL university-league team"><img src="/images/CR_2.jpg" alt="Clash Royale University League team photo" loading="lazy"></a>
+</div>
+</div>
+
+<div class="interest" markdown="1">
+<div class="interest-title" markdown="0"><i class="fas fa-train"></i> Trains &amp; Fishing</div>
+A passionate train enthusiast, and I enjoy fishing in my leisure time.
+<div class="gallery two">
+<a href="/images/train.jpg" data-cap="Trainspotting"><img src="/images/train.jpg" alt="A photo of a train" loading="lazy"></a>
+<a href="/images/Fish.jpg" data-cap="A good day fishing"><img src="/images/Fish.jpg" alt="A freshly caught fish" loading="lazy"></a>
+</div>
+</div>
