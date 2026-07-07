@@ -513,25 +513,38 @@ $mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospac
   border-radius: 5px; font-size: .82em; font-weight: 500;
 }
 
-/* fenced code blocks: framed, rounded, quiet, with a language chip */
+/* fenced code blocks: framed, rounded, HORIZONTALLY SCROLLABLE, language chip */
 .post-body div.highlighter-rouge, .post-body figure.highlight {
-  position: relative;
-  border: 1px solid #e6ebf3; border-radius: 12px; overflow: hidden;
-  margin: 1.2em 0; box-shadow: 0 1px 3px rgba(20,30,60,.05);
+  position: relative; padding: 0; margin: 1.2em 0;      /* drop theme's 1em wrapper padding */
+  border: 1px solid #e6ebf3; border-radius: 12px; overflow: hidden;  /* clip rounded corners only */
+  background: #fbfcff; box-shadow: 0 1px 3px rgba(20,30,60,.05);
 }
+.post-body div.highlighter-rouge::before { display: none; }  /* hide theme's fontawesome code icon */
 .post-body div.highlighter-rouge::after {
-  position: absolute; top: 0; right: 0; z-index: 1; padding: .12rem .5rem;
+  position: absolute; top: 0; right: 0; z-index: 2; padding: .12rem .5rem;
   font-family: $mono; font-size: .6rem; font-weight: 700; letter-spacing: .09em;
   text-transform: uppercase; color: #9aa6b8; background: #eef2f8;
   border-bottom-left-radius: 9px; pointer-events: none; user-select: none;
 }
 .post-body .language-json::after { content: "json"; }
 .post-body .language-text::after { content: "flow"; }
-.post-body div.highlighter-rouge .highlight,
-.post-body div.highlighter-rouge pre.highlight { margin: 0; background: #fbfcff; }
-.post-body div.highlighter-rouge pre.highlight,
-.post-body pre.highlight { padding: .95rem 1.1rem; font-size: .85rem; line-height: 1.62; border-radius: 12px; }
-.post-body div.highlighter-rouge :not(pre) { background: transparent; }
+.post-body div.highlighter-rouge .highlight { margin: 0; background: transparent; }
+/* the <pre> is the scroll container */
+.post-body div.highlighter-rouge pre.highlight, .post-body pre.highlight {
+  margin: 0; padding: .95rem 1.1rem; font-size: .85rem; line-height: 1.62;
+  overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin; scrollbar-color: #c1cbd9 transparent;
+}
+/* make the horizontal scrollbar clearly visible so it's obviously draggable */
+.post-body pre.highlight::-webkit-scrollbar { height: 10px; }
+.post-body pre.highlight::-webkit-scrollbar-thumb { background: #c7d0dd; border-radius: 10px; border: 2px solid #fbfcff; }
+.post-body pre.highlight::-webkit-scrollbar-thumb:hover { background: #a9b6ca; }
+.post-body pre.highlight::-webkit-scrollbar-track { background: transparent; }
+.post-body div.highlighter-rouge :not(pre):not(code) { background: transparent; }
+/* guarantee everything in a post is selectable/copyable (defensive) */
+.post-body, .post-body p, .post-body li, .post-body pre, .post-body code, .post-body .highlight, .post-body .highlight * {
+  -webkit-user-select: text; -moz-user-select: text; user-select: text;
+}
 
 /* ==========================================================================
    Section anchor offset (keep) + section heading rhythm
