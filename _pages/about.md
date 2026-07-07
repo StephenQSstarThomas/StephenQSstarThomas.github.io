@@ -41,6 +41,7 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 # {% include hemoji.html n="fire" %} News {#news}
 
 <div class="timeline">
+<div class="tl-item"><span class="tl-date">Jul 2026</span><span class="tl-text">I've launched a <strong>blog</strong> — a running collection of <strong>Agent Harness</strong> notes, kicking off with a deep dive on streaming reconstruction. Come take a look → <a href="/blog/">JollySammy's blog</a>. Everyone's welcome! 🐿️</span></div>
 <div class="tl-item"><span class="tl-date">May 2026</span><span class="tl-text">Honored to be selected as a <strong>Beijing Municipal Outstanding Graduate</strong>, a <strong>Peking University Outstanding Graduate</strong>, and a <strong>Merit Student Pacesetter (三好学生标兵)</strong>!</span></div>
 <div class="tl-item"><span class="tl-date">Mar 2026</span><span class="tl-text">Our paper <strong>MetaClaw</strong> is out on arXiv — an agent that meta-learns and self-evolves just by talking to it!</span></div>
 <div class="tl-item"><span class="tl-date">Mar 2026</span><span class="tl-text">Our self-evolving autoresearch projects <strong>AutoResearchClaw</strong> and <strong>MetaClaw</strong> are released — together with our open-source ecosystem they have surpassed <strong>22k+ GitHub stars</strong>!</span></div>

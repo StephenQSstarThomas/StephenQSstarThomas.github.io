@@ -415,6 +415,21 @@ html.js-reveal .stagger.is-visible > * { opacity: 1; transform: none; }
   color: var(--accent); background: var(--accent-soft); padding: .2rem .6rem; border-radius: 999px; white-space: nowrap;
 }
 .post-meta-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.post-meta-left { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.post-meta-left .post-meta { margin: 0; }
+
+/* view + like counters */
+.post-stats { display: inline-flex; align-items: center; gap: .7rem; }
+.pstat { display: inline-flex; align-items: center; gap: .33rem; font-size: .82rem; color: var(--muted); font-variant-numeric: tabular-nums; line-height: 1; }
+.pstat-views i { color: var(--accent); opacity: .85; }
+.pstat-like { background: none; border: 1px solid var(--hairline); border-radius: 999px; padding: .24rem .62rem; cursor: pointer; font-family: $ui; color: var(--muted); transition: border-color .2s ease, color .2s ease, background-color .2s ease; }
+.pstat-like i { color: #c7ccd3; transition: color .2s ease, transform .2s ease; }
+.pstat-like:hover { border-color: #f2b8c6; background: #fff5f8; }
+.pstat-like:hover i { color: #e0245e; }
+.pstat-like.liked { border-color: #f6c1cf; color: #e0245e; background: #fff2f6; }
+.pstat-like.liked i { color: #e0245e; }
+.pstat-like.pop i { animation: like-pop .4s ease; }
+@keyframes like-pop { 0% { transform: scale(1); } 40% { transform: scale(1.45); } 70% { transform: scale(.9); } 100% { transform: scale(1); } }
 
 /* ==========================================================================
    Bilingual post — in-page language toggle
@@ -742,6 +757,7 @@ body.has-rail #back-top { bottom: 3.4rem; }
   .preface-squirrel { animation: none !important; }
   .squirrel-strip a:hover img { transform: none !important; }
   .rail-squirrel { transition: none !important; }
+  .pstat-like.pop i { animation: none !important; }
   .paper-box::before, .project-card::before, .post-card::before { display: none !important; }
   html.js-reveal .stagger > * { opacity: 1 !important; transform: none !important; transition: none !important; }
   .paper-box, .paper-box:hover, .paper-box .paper-box-image img,
