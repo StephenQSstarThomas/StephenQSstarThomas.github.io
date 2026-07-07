@@ -68,20 +68,17 @@
       });
     })();
 
-    /* ---------- Post view + like counters (Abacus, no signup) ---------- */
+    /* ---------- Post view counter (Abacus, no signup) — reactions are giscus ---------- */
     (function () {
       var stats = document.querySelector(".post-stats");
       if (!stats || !window.fetch) return;
       var ns = stats.getAttribute("data-ns");
       var key = (stats.getAttribute("data-key") || "post").replace(/[^a-z0-9_-]/gi, "-");
-      var base = "https://abacus.jasoncameron.dev";
       var viewsEl = stats.querySelector('[data-role="views"]');
-      var likesEl = stats.querySelector('[data-role="likes"]');
-      var likeBtn = stats.querySelector(".pstat-like");
-      var likeKey = key + "-likes";
+      if (!viewsEl) return;
+      var base = "https://abacus.jasoncameron.dev";
       function fmt(n) { return typeof n === "number" ? n.toLocaleString() : "—"; }
-
-      // Views: count once per browser session (refresh doesn't inflate)
+      // Count once per browser session (a refresh doesn't inflate the count)
       var counted = false;
       try { counted = sessionStorage.getItem("viewed-" + key) === "1"; } catch (e) {}
       fetch(base + (counted ? "/get/" : "/hit/") + ns + "/" + key)
@@ -91,24 +88,6 @@
           if (!counted) { try { sessionStorage.setItem("viewed-" + key, "1"); } catch (e) {} }
         })
         .catch(function () { viewsEl.textContent = "—"; });
-
-      // Likes: read current total (404 = nobody yet → 0)
-      fetch(base + "/get/" + ns + "/" + likeKey)
-        .then(function (r) { return r.ok ? r.json() : { value: 0 }; })
-        .then(function (d) { likesEl.textContent = fmt(d.value || 0); })
-        .catch(function () { likesEl.textContent = "—"; });
-
-      try { if (localStorage.getItem("liked-" + key) === "1") likeBtn.classList.add("liked"); } catch (e) {}
-
-      likeBtn.addEventListener("click", function () {
-        if (likeBtn.classList.contains("liked")) return; // one like per browser
-        likeBtn.classList.add("liked", "pop");
-        try { localStorage.setItem("liked-" + key, "1"); } catch (e) {}
-        fetch(base + "/hit/" + ns + "/" + likeKey)
-          .then(function (r) { return r.json(); })
-          .then(function (d) { likesEl.textContent = fmt(d.value); })
-          .catch(function () {});
-      });
     })();
 
     /* ---------- 1. Scroll reveal (IntersectionObserver) ---------- */

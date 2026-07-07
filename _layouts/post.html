@@ -40,7 +40,7 @@ layout: compress
                 </p>
                 <span class="post-stats" data-ns="stephenqs-blog" data-key="{{ page.slug }}">
                   <span class="pstat pstat-views" title="Views"><i class="fas fa-eye" aria-hidden="true"></i> <span class="pstat-num" data-role="views">···</span></span>
-                  <button type="button" class="pstat pstat-like" aria-label="Like this post"><i class="fas fa-heart" aria-hidden="true"></i> <span class="pstat-num" data-role="likes">···</span></button>
+                  <a class="pstat pstat-jump" href="#comments" title="Reactions & comments"><i class="fas fa-heart" aria-hidden="true"></i> React</a>
                 </span>
               </div>
               {% if page.bilingual %}
@@ -60,6 +60,27 @@ layout: compress
 
           <section class="page__content post-body reveal" itemprop="articleBody">
             {{ content }}
+          </section>
+
+          <section class="post-comments reveal" id="comments">
+            <h2 class="comments-title"><i class="fas fa-heart" aria-hidden="true"></i> Reactions &amp; Comments</h2>
+            <p class="comments-sub">Drop a reaction or leave a note — comments are powered by GitHub Discussions, so you just sign in with GitHub.</p>
+            <script src="https://giscus.app/client.js"
+                    data-repo="StephenQSstarThomas/StephenQSstarThomas.github.io"
+                    data-repo-id="R_kgDOM7sdHA"
+                    data-category="Announcements"
+                    data-category-id="DIC_kwDOM7sdHM4DArUM"
+                    data-mapping="pathname"
+                    data-strict="0"
+                    data-reactions-enabled="1"
+                    data-emit-metadata="0"
+                    data-input-position="top"
+                    data-theme="light"
+                    data-lang="en"
+                    data-loading="lazy"
+                    crossorigin="anonymous"
+                    async>
+            </script>
           </section>
 
           <footer class="post-footer reveal">

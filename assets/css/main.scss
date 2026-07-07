@@ -445,6 +445,22 @@ html.js-reveal .stagger.is-visible > * { opacity: 1; transform: none; }
 .pstat-like.pop i { animation: like-pop .4s ease; }
 @keyframes like-pop { 0% { transform: scale(1); } 40% { transform: scale(1.45); } 70% { transform: scale(.9); } 100% { transform: scale(1); } }
 
+/* "React" link (jumps to giscus) */
+.pstat-jump {
+  color: var(--muted) !important; text-decoration: none !important; font-weight: 600;
+  border: 1px solid var(--hairline); border-radius: 999px; padding: .22rem .62rem;
+  transition: border-color .2s ease, background-color .2s ease, color .2s ease;
+}
+.pstat-jump i { color: #e0245e; }
+.pstat-jump:hover { border-color: #f2b8c6; background: #fff5f8; color: #e0245e !important; }
+
+/* giscus comments section */
+.post-comments { max-width: 46rem; margin: 2.8em 0 1em; scroll-margin-top: 5rem; }
+.comments-title { font-size: 1.35rem; margin: 0 0 .3rem; font-family: $disp; }
+.comments-title i { color: #e0245e; }
+.comments-sub { color: var(--muted); font-size: .9rem; margin: 0 0 1.3em; }
+.post-comments .giscus, .post-comments .giscus-frame { width: 100%; }
+
 /* ==========================================================================
    Bilingual post — in-page language toggle
    ========================================================================== */
