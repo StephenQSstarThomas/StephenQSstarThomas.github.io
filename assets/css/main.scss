@@ -116,8 +116,11 @@ html.js-reveal .reveal {
   opacity: 0;
   transform: translateY(18px);
   transition: opacity .6s ease, transform .6s cubic-bezier(.22,1,.36,1);
-  will-change: opacity, transform;
 }
+/* once revealed, drop the transform entirely so the element is a plain,
+   selectable box again (a lingering transform/will-change layer can break
+   text selection + overflow scrolling of descendants like code blocks) */
+html.js-reveal .reveal.is-visible { transform: none; will-change: auto; }
 html.js-reveal .reveal.is-visible {
   opacity: 1;
   transform: none;
