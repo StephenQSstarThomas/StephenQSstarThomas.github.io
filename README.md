@@ -1,72 +1,54 @@
-
-<h1 align="center">
-AcadHomepage
-</h1>
-
-<div align="center">
-
-[![](https://img.shields.io/github/stars/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/forks/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/issues/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/license/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io/blob/main/LICENSE)  | [中文文档](./docs/README-zh.md) 
-</div>
-
-<p align="center">A Modern and Responsive Academic Personal Homepage</p>
+<h1 align="center">Shi Qiu · Academic Homepage &amp; Blog</h1>
 
 <p align="center">
-    <br>
-    <img src="docs/screenshot.png" width="100%"/>
-    <br>
+  <a href="https://stephenqsstarthomas.github.io/"><b>stephenqsstarthomas.github.io</b></a>
 </p>
 
-Some examples:
-- [Demo Page](https://rayeren.github.io/acad-homepage.github.io/)
-- [Personal Homepage of the author](https://rayeren.github.io/)
+<p align="center">
+  The personal homepage of <b>Shi Qiu (仇是)</b> — incoming CS PhD @ UNC-Chapel Hill,
+  working on AI Agents &amp; AI4Physics — together with <b>JollySammy's</b> running
+  blog of <b>Agent Harness</b> notes.
+</p>
 
-## Key Features
-- **Automatically update google scholar citations**: using the google scholar crawler and github action, this REPO can update the author citations and publication citations automatically.
-- **Support Google analytics**: you can trace the traffics of your homepage by easy configuration.
-- **Responsive**: this homepage automatically adjust for different screen sizes and viewports.
-- **Beautiful and Simple Design**: this homepage is beautiful and simple, which is very suitable for academic personal homepage.
-- **SEO**: search Engine Optimization (SEO) helps search engines find the information you publish on your homepage easily, then rank it against similar websites.
+---
 
-## Quick Start
+This started from the [`acad-homepage`](https://github.com/RayeRen/acad-homepage.github.io)
+Jekyll template, but the layout, interaction, and rendering have been substantially
+rebuilt into a personal site + a bilingual technical blog. It's a plain Jekyll site
+(no build step, no npm) that deploys straight to GitHub Pages.
 
-1. Fork this REPO and rename to `USERNAME.github.io`, where `USERNAME` is your github USERNAME.
-1. Configure the google scholar citation crawler:
-    1. Find your google scholar ID in the url of your google scholar page (e.g., https://scholar.google.com/citations?user=SCHOLAR_ID), where `SCHOLAR_ID` is your google scholar ID.
-    1. Set GOOGLE_SCHOLAR_ID variable to your google scholar ID in `Settings -> Secrets -> Actions -> New repository secret` of the REPO website with `name=GOOGLE_SCHOLAR_ID` and `value=SCHOLAR_ID`.
-    1. Click the `Action` of the REPO website and enable the workflows by clicking *"I understand my workflows, go ahead and enable them"*. This github action will generate google scholar citation stats data `gs_data.json` in `google-scholar-stats` branch of your REPO. When you update your main branch, this action will be triggered. This action will also be trigger 08:00 UTC everyday.
-1. Generate favicon using [favicon-generator](https://redketchup.io/favicon-generator) and download all generated files to `REPO/images`.
-1. Modify the configuration of your homepage `_config.yml`:
-    1. `title`: the title of your homepage
-    1. `description`: the description of your homepage
-    1. `repository`: USER_NAME/REPO_NAME  
-    1. `google_analytics_id` (optional): google analytics ID
-    1. SEO Related keys (optional): get these keys from search engine consoles (e.g. Google, Bing and Baidu) and paste here.
-    1. `author`: the author information of this homepage, including some other websites, emails, city and univeristy.
-    1. More configuration details are described in the comments.
-1. Add your homepage content in `_pages/about.md`.
-    1. You can use html+markdown syntax just same as jekyll.
-    1. You can use a `<span>` tag with class `show_paper_citations` and attribute `data` to display the citations of your paper. Set the data to the google scholar paper ID. For
-        ```html
-        <span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span>
-        ``` 
-        > Q: How to get the google scholar paper ID?   
-        > A: Enter your google scholar homepage and click the paper name. Then you can see the paper ID from `citation_for_view=XXXX`, where `XXXX` is the required paper ID.
-1. Your page will be published at `https://USERNAME.github.io`.
+## ✨ What's custom here
 
-## Debug Locally
+**Homepage**
+- **Image-card publications** — each paper shown with its real arXiv teaser figure, venue/award badges, and pill links, ordered and highlighted by contribution.
+- **Google Scholar sync** — the citation and publication tiles update live from a nightly Scholar crawl.
+- **Dynamic factors** — scroll-reveal, hover-lift cards, animated count-up stats, a gradient headline, a pointer-tracked card spotlight, and a header aurora — all `transform`/`opacity`-only, with `prefers-reduced-motion` and no-JS fallbacks.
+- **Redesigned sections** — a News timeline, contact chips, honor/award cards, an education card, a research-experience timeline, skill pills, and lightbox photo galleries.
+- **Premium animated section emojis** (self-hosted Noto) and **self-hosted fonts** (Inter + Fraunces + JetBrains Mono for code).
 
-1. Clone your REPO to local using `git clone`.
-1. Install Jekyll building environment, including `Ruby`, `RubyGems`, `GCC` and `Make` following [the installation guide](https://jekyllrb.com/docs/installation/#requirements).
-1. Run `bash run_server.sh` to start Jekyll livereload server.
-1. Open http://127.0.0.1:4000 in your browser.
-1. If you change the source code of the website, the livereload server will automatically refresh.
-1. When you finish the modification of your homepage, `commit` your changings and `push` to your remote REPO using `git` command.
+**Blog — *JollySammy's Agent Harness Notes***
+- A **collection** landing page with a squirrel-persona preface.
+- Fully **bilingual (EN / 中文) posts** with an in-page language toggle.
+- A **dynamic squirrel reading-progress rail** — a squirrel runs along the bottom as you read, dropping acorns per section (click to jump).
+- Framed code blocks with language chips, a per-post **view counter**, and **giscus reactions + comments** (backed by GitHub Discussions).
 
-# Acknowledges
+## 🛠 Tech
+Jekyll · Sass · vanilla JS (jQuery only where the base theme uses it) · GitHub Pages · giscus · a Google Scholar crawler (GitHub Actions).
 
-- AcadHomepage incorporates Font Awesome, which is distributed under the terms of the SIL OFL 1.1 and MIT License.
-- AcadHomepage is influenced by the github repo [mmistakes/minimal-mistakes](https://github.com/mmistakes/minimal-mistakes), which is distributed under the MIT License.
-- AcadHomepage is influenced by the github repo [academicpages/academicpages.github.io](https://github.com/academicpages/academicpages.github.io), which is distributed under the MIT License.
+## 🚀 Local preview
+```bash
+# gems live in a user dir; the github-pages Gemfile is moved aside for a plain build
+export GEM_HOME="$HOME/.local/share/gem-jekyll"; export PATH="$GEM_HOME/bin:$PATH"
+gem install --no-document 'jekyll:4.3.3' jekyll-paginate jekyll-sitemap jekyll-feed jekyll-redirect-from jekyll-gist jemoji
+mv Gemfile /tmp/_g && mv Gemfile.lock /tmp/_gl        # avoid the github-pages pins locally
+jekyll serve                                          # → http://localhost:4000
+mv /tmp/_g Gemfile && mv /tmp/_gl Gemfile.lock
+```
+
+## 🙏 Credits &amp; license
+Built on the MIT-licensed [`acad-homepage`](https://github.com/RayeRen/acad-homepage.github.io)
+template by **Yi Ren (RayeRen)** — thank you. Emojis are Google **Noto Emoji**; squirrel
+photos are from **Wikimedia Commons** (CC BY / CC BY-SA, credited on the blog).
+
+Code is MIT (see [`LICENSE`](./LICENSE)). Site **content** — biography, blog posts,
+figures, and photos — is © Shi Qiu, all rights reserved.

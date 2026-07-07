@@ -742,6 +742,18 @@ div.author__avatar:hover > img { transform: scale(1.03); box-shadow: 0 10px 30px
 .stat-icon { display: block; font-size: 1rem; color: var(--accent); margin-bottom: .3rem; opacity: .85; }
 
 /* ==========================================================================
+   Site footer (copyright)
+   ========================================================================== */
+.site-footer {
+  clear: both; position: relative; z-index: 1;
+  margin-top: 3.5rem; padding: 1.7rem 1.25rem 4.5rem; border-top: 1px solid var(--hairline);
+  text-align: center;
+}
+.site-footer p { margin: 0 auto; max-width: 54rem; font-size: .8rem; line-height: 1.65; color: var(--muted); }
+.site-footer strong { color: var(--ink); }
+.site-footer a { color: var(--accent); }
+
+/* ==========================================================================
    Squirrel reading-progress rail (post pages)
    ========================================================================== */
 #reading-rail {
