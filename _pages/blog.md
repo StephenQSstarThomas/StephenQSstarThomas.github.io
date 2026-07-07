@@ -11,6 +11,10 @@ layout: default
 <div class="blog-hero reveal">
   <h1 class="blog-hero-title">{% include hemoji.html n="writing" %} <span class="gradient-text">Blog</span></h1>
   <p class="blog-hero-sub">Working notes and hard-won lessons from building agent systems. Organized into <strong>collections</strong> — each a running series on one theme.</p>
+  <div class="blog-hero-links">
+    <a class="blog-hero-link" href="{{ '/feed.xml' | relative_url }}" target="_blank" rel="noopener"><i class="fas fa-rss" aria-hidden="true"></i> Subscribe (RSS)</a>
+    <a class="blog-hero-link" href="https://github.com/StephenQSstarThomas/StephenQSstarThomas.github.io" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Source &amp; ★ Star</a>
+  </div>
 </div>
 
 {% assign ah = site.categories['agent-harness'] %}

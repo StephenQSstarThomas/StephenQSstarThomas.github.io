@@ -294,6 +294,20 @@ html.js-reveal .stagger.is-visible > * { opacity: 1; transform: none; }
 .blog-hero { margin: .3em 0 1.6em; }
 .blog-hero-title { font-size: 2rem; margin: 0 0 .35rem; }
 .blog-hero-sub { color: var(--muted); font-size: 1.02rem; line-height: 1.65; max-width: 42rem; }
+.blog-hero-links { display: flex; gap: .6rem; margin-top: 1rem; flex-wrap: wrap; }
+.blog-hero-link {
+  display: inline-flex; align-items: center; gap: .4rem; font-size: .82rem; font-weight: 600;
+  padding: .35rem .8rem; border: 1px solid var(--hairline); border-radius: 999px;
+  color: var(--ink) !important; text-decoration: none !important;
+  transition: transform .2s ease, border-color .2s ease, color .2s ease, background-color .2s ease;
+}
+.blog-hero-link:hover { transform: translateY(-2px); color: var(--accent) !important; border-color: #c7d7f5; background: #fafcff; }
+.blog-hero-link i { color: var(--accent); }
+
+/* post footer: back link + source note */
+.post-footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.post-footer-note { font-size: .82rem; color: var(--muted); }
+.post-footer-note a { color: var(--accent); font-weight: 600; white-space: nowrap; }
 
 /* ---- Collection (series) ---- */
 .collection {
