@@ -17,8 +17,8 @@ $ink:         #2c2a26;   /* warm near-black text */
 $muted:       #8a8377;   /* warm gray — secondary text */
 $faint:       #b6ad9e;   /* fainter gray — separators, numerals */
 $hairline:    #e6dfd2;   /* warm hairline */
-$accent:      #3b4d72;   /* muted indigo-navy — MUJI kraft+navy, echoes the night-sky strip */
-$accent-deep: #2c3a58;
+$accent:      #1b62cf;   /* vivid, legible blue for links (pops against dark ink) */
+$accent-deep: #134a9e;
 $bg:          $paper;    /* alias kept for existing rules */
 $code-bg:     #f0ebe0;   /* warm code background */
 $night:       #0b0f1c;   /* Milky-Way strip sky */
@@ -356,28 +356,33 @@ h1[id], h2[id], h3[id] { scroll-margin-top: 1.5rem; }
 
 /* ---------- Milky-Way top strip (A4-headband) ---------- */
 .hero-strip {
+  position: relative;
   width: 100%;
-  height: 72px;                         /* inner pages: a thin decorative band */
+  height: 92px;                         /* inner pages: a light decorative band */
   overflow: hidden;
-  background: $night;
-  border-bottom: 1px solid rgba(0,0,0,0.22);
+  border-bottom: 1px solid $hairline;
   line-height: 0;
+  background: #e9edf1;                   /* soft sky tone while the photo loads */
 }
-.is-home .hero-strip { height: 136px; }
-.hero-sky { display: block; width: 100%; height: 100%; }
+.is-home .hero-strip { height: 168px; }
+.hero-img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 58%; }
+.hero-strip::after {                     /* melt gently into the paper */
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(to bottom, rgba(246,243,236,0) 55%, rgba(246,243,236,0.62) 100%);
+}
 @media (max-width: 40em) {
-  .hero-strip { height: 56px; }
-  .is-home .hero-strip { height: 96px; }
+  .hero-strip { height: 76px; }
+  .is-home .hero-strip { height: 120px; }
 }
 
 /* ---------- Homepage: left overview rail + content ---------- */
 .home {
-  max-width: clamp(52rem, 92vw, 71rem);
+  max-width: clamp(50rem, 90vw, 64rem);
   margin: 0 auto;
-  padding: 2.6rem 1.5rem 4rem;
+  padding: 2.4rem 1.6rem 4rem;
   display: grid;
-  grid-template-columns: 15.5rem 1fr;
-  gap: 3.2rem;
+  grid-template-columns: 14rem 1fr;
+  gap: 2.4rem;
   align-items: start;
 }
 .home-side { position: sticky; top: 1.6rem; }
@@ -445,6 +450,11 @@ h1[id], h2[id], h3[id] { scroll-margin-top: 1.5rem; }
 /* ---------- Masthead: serif wordmark ---------- */
 .site-title { font-family: $serif; font-weight: 600; }
 
+/* ---------- Footer photo credit ---------- */
+.footer-credit { font-size: 0.72rem; color: $faint; margin: 0.4em auto 0; }
+.footer-credit a { color: $faint; text-decoration: underline; }
+.footer-credit a:hover { color: $muted; }
+
 /* ---------- Warm callouts / quotes / selection ---------- */
 .qbox, .answerbox { background: $surface; border-left: 3px solid $faint; }
 .qbox-label, .answerbox-label { color: $muted; }
@@ -482,6 +492,24 @@ blockquote { color: #6b6459; border-left-color: $hairline; }
 @media (max-width: 40em) { .post-toc ol { columns: 1; } }
 
 .post-body h2, .post-body h3 { scroll-margin-top: 1.3rem; }
+/* section headings: a small accent tick marks each numbered section */
+.post-body h3 {
+  font-size: 1.2rem;
+  margin-top: 2.7em;
+}
+.post-body h3::before {
+  content: ""; display: block;
+  width: 1.7rem; height: 2px; border-radius: 2px;
+  background: $accent; opacity: 0.85;
+  margin-bottom: 0.8em;
+}
+.post-body h2 {
+  margin-top: 2.6em; padding-bottom: 0.3em;
+  border-bottom: 1px solid $hairline;
+}
+/* opening question = quiet; closing summary = the emphasised takeaway */
+.answerbox { border-left: 3px solid $accent; }
+.answerbox-label { color: $accent; }
 
 /* ---------- Section anchor offset ---------- */
 h1[id], h2[id], h3[id] { scroll-margin-top: 1.5rem; }
