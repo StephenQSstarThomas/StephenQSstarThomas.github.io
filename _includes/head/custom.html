@@ -7,13 +7,14 @@
 <meta name="msapplication-TileImage" content="{{ '/images/mstile-144x144.png' | relative_url }}?v=M44lzPylqQ">
 <meta name="msapplication-config" content="{{ '/images/browserconfig.xml' | relative_url }}?v=M44lzPylqQ">
 <meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="{{ '/assets/css/academicons.css' | relative_url }}"/>
 
-<!-- Self-hosted fonts (Inter + Fraunces) -->
+<!-- Self-hosted fonts (Inter body + JetBrains Mono code) -->
 <link rel="preload" href="{{ '/assets/fonts/self/inter-400-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{ '/assets/fonts/self/inter-600-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/self/inter-700-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ '/assets/fonts/self/fonts.css' | relative_url }}"/>
 
+{% if page.math %}
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -24,5 +25,6 @@
   });
 </script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+{% endif %}
 
 <!-- end custom head snippets -->

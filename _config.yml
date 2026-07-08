@@ -9,7 +9,16 @@
 title                    : "Shi Qiu"
 description              : "Shi Qiu's Homepage "
 repository               : "StephenQSstarThomas/StephenQSstarThomas.github.io"
-google_scholar_stats_use_cdn : true
+
+# giscus comments (GitHub Discussions) — used by _layouts/post.html
+giscus:
+  repo        : "StephenQSstarThomas/StephenQSstarThomas.github.io"
+  repo_id     : "R_kgDOM7sdHA"
+  category    : "Announcements"
+  category_id : "DIC_kwDOM7sdHM4DArUM"
+
+# Abacus view-counter namespace — used by _layouts/post.html + dynamic.js
+views_namespace          : "stephenqs-blog"
 
 # google analytics
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/

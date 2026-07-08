@@ -1,0 +1,6 @@
+{%- comment -%}
+Render a language-switchable text pair. Usage:
+  {% include lang-pair.html en=page.title zh=page.title_zh %}
+Falls back to plain `en` text when no `zh` is given.
+{%- endcomment -%}
+{%- if include.zh -%}<span class="lang lang-en">{{ include.en | strip_html | strip }}</span><span class="lang lang-zh">{{ include.zh | strip_html | strip }}</span>{%- else -%}{{ include.en | strip_html | strip }}{%- endif -%}

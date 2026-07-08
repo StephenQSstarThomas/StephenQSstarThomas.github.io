@@ -2,38 +2,20 @@
 permalink: /blog/
 title: ""
 excerpt: "Blog"
-author_profile: true
 layout: default
 ---
 
-<span class='anchor' id='blog'></span>
-
-<div class="blog-hero reveal">
-  <h1 class="blog-hero-title">{% include hemoji.html n="writing" %} <span class="gradient-text">Blog</span></h1>
-  <p class="blog-hero-sub">Working notes and hard-won lessons from building agent systems. Organized into <strong>collections</strong> — each a running series on one theme.</p>
-  <div class="blog-hero-links">
-    <a class="blog-hero-link" href="https://github.com/StephenQSstarThomas/StephenQSstarThomas.github.io" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Source &amp; ★ Star</a>
-  </div>
-</div>
+<h1 class="page-title">Blog</h1>
+<p class="page-sub">Working notes and hard-won lessons from building agent systems.</p>
 
 {% assign ah = site.categories['agent-harness'] %}
 
-<section class="collection reveal">
+<section class="bilingual" data-lang="en">
 
-  <div class="bilingual preface" data-lang="en">
-    <div class="preface-top">
-      <div class="preface-brand">
-        <span class="preface-squirrel" aria-hidden="true">{% include hemoji.html n="chipmunk" %}</span>
-        <div>
-          <div class="preface-kicker">A collection by JollySammy</div>
-          <h2 class="collection-title"><span class="gradient-text">Agent Harness</span> Notes</h2>
-        </div>
-      </div>
-      <div class="lang-toggle" role="group" aria-label="Language">
-        <button type="button" class="lang-btn" data-set-lang="en">EN</button>
-        <button type="button" class="lang-btn" data-set-lang="zh">中文</button>
-      </div>
-    </div>
+  <div class="collection-head">
+    <h2>Agent Harness Notes</h2>
+    {% include lang-toggle.html %}
+  </div>
 
 <div class="lang lang-en" markdown="1">
 Hi there — welcome to 🐿️ **JollySammy's** Agent Harness world.
@@ -63,50 +45,18 @@ What follows is my stash: a running set of notes and answers on the problems I f
 下面是我的存货：一份持续更新的笔记与解答，记录我在搭 agent、造 harness 时觉得有意思的问题。有的松果肥美，有的基本是树皮。随便啃。🌰
 </div>
 
-    <div class="squirrel-strip stagger">
-      <a href="/images/blog/squirrel/sq1.jpg" data-cap="Autumn forager · Stowe Gardens"><img src="/images/blog/squirrel/sq1.jpg" alt="Eastern gray squirrel foraging in autumn" loading="lazy"></a>
-      <a href="/images/blog/squirrel/sq2.jpg" data-cap="Heading down for the stash"><img src="/images/blog/squirrel/sq2.jpg" alt="Eastern gray squirrel climbing down a tree" loading="lazy"></a>
-      <a href="/images/blog/squirrel/sq3.jpg" data-cap="City squirrel, London"><img src="/images/blog/squirrel/sq3.jpg" alt="Eastern gray squirrel in the city" loading="lazy"></a>
-      <a href="/images/blog/squirrel/sq4.jpg" data-cap="Mid-scurry"><img src="/images/blog/squirrel/sq4.jpg" alt="Eastern gray squirrel scurrying" loading="lazy"></a>
-      <a href="/images/blog/squirrel/sq5.jpg" data-cap="Classic gray squirrel"><img src="/images/blog/squirrel/sq5.jpg" alt="Eastern gray squirrel portrait" loading="lazy"></a>
-    </div>
-    <p class="squirrel-credit">Eastern gray squirrels (<em>Sciurus carolinensis</em>) via Wikimedia Commons — © Julian Herzog, Rhododendrites, لا روسا &amp; Charles J. Sharp, CC&nbsp;BY / CC&nbsp;BY-SA.</p>
-
-    <div class="collection-meta">
-      <span class="collection-count"><span class="countup" data-target="{{ ah | size }}">{{ ah | size }}</span> note{% unless ah.size == 1 %}s{% endunless %}</span>
-      <span class="post-meta-sep">·</span>
-      <span class="collection-updated">updated {{ ah.first.date | date: "%b %Y" }}</span>
-    </div>
-  </div>
-
-  <div class="topic-chips stagger">
-    <span class="topic-chip">Streaming</span>
-    <span class="topic-chip">Tool Design</span>
-    <span class="topic-chip">Context Engineering</span>
-    <span class="topic-chip">Verification Loops</span>
-    <span class="topic-chip">Control Flow</span>
-    <span class="topic-chip">Multi-Agent</span>
-  </div>
-
-  <div class="post-list">
+  <ul class="post-list">
   {% for post in ah %}
-    <a class="post-card reveal" href="{{ post.url | relative_url }}">
-      {% if post.header.teaser %}
-        <div class="post-card-media">
-          <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title | escape }}" loading="lazy">
-        </div>
-      {% endif %}
-      <div class="post-card-body">
-        <div class="post-card-meta">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-          {% if post.bilingual %}<span class="post-meta-sep">·</span><span class="post-card-bi">EN / 中文</span>{% endif %}
-          {% if post.tags %}<span class="post-meta-sep">·</span><span class="post-card-tag">{{ post.tags | first }}</span>{% endif %}
-        </div>
-        <h3 class="post-card-title">{{ post.title }}</h3>
-        <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 180 }}</p>
-        <span class="post-card-more">Read more →</span>
-      </div>
-    </a>
+    <li>
+      <a class="post-link" href="{{ post.url | relative_url }}">{% include lang-pair.html en=post.title zh=post.title_zh %}</a>
+      <p class="post-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        {% if post.bilingual %}<span class="post-meta-sep">&middot;</span>EN / 中文{% endif %}
+        {% if post.tags and post.tags != empty %}<span class="post-meta-sep">&middot;</span>{{ post.tags | first }}{% endif %}
+      </p>
+      <p class="post-excerpt">{% include lang-pair.html en=post.excerpt zh=post.excerpt_zh %}</p>
+    </li>
   {% endfor %}
-  </div>
+  </ul>
+
 </section>
