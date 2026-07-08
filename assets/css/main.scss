@@ -23,7 +23,7 @@ $sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
        Helvetica, Arial, sans-serif;
 $mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-$content-width: 44rem;
+$content-width: 50rem;   /* ~800px, lil-log's column — ≈55–65% of a laptop viewport */
 
 /* ---------- Reset (small) ---------- */
 *, *::before, *::after { box-sizing: border-box; }
