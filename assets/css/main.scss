@@ -425,14 +425,24 @@ h1[id], h2[id], h3[id] { scroll-margin-top: 1.5rem; }
 .side-nav a:hover { color: $ink; text-decoration: none; }
 .side-nav a.is-active { color: $accent; border-left-color: $accent; font-weight: 600; }
 
-.side-foot {
-  margin-top: 1.4rem; padding-top: 1.05rem;
-  border-top: 1px solid $hairline;
-  font-size: 0.82rem; color: $muted;
+/* prominent Blog / CV calls-to-action */
+.side-cta {
+  margin: 1.2rem auto 0;
+  max-width: 20rem;
+  display: flex; flex-direction: column; gap: 0.55rem;
 }
-.side-foot a { color: $muted; }
-.side-foot a:hover { color: $accent; text-decoration: none; }
-.side-foot span { color: $faint; margin: 0 0.4rem; }
+.cta {
+  display: block; padding: 0.62rem 0.9rem;
+  border-radius: 7px; line-height: 1.2; text-align: left;
+}
+.cta:hover { text-decoration: none; }
+.cta-label { display: block; font-weight: 600; font-size: 1.02rem; letter-spacing: -0.005em; }
+.cta-sub { display: block; font-size: 0.76rem; margin-top: 0.14rem; opacity: 0.9; }
+.cta-primary { background: $accent; color: #fff; }
+.cta-primary:hover { background: $accent-deep; }
+.cta-ghost { border: 1px solid $hairline; background: $surface; color: $ink; }
+.cta-ghost:hover { border-color: $accent; color: $accent; }
+.cta-ghost .cta-sub { color: $muted; }
 
 @media (max-width: 60em) {
   .home { grid-template-columns: 1fr; gap: 1.4rem; padding-top: 1.9rem; }
