@@ -138,6 +138,8 @@ when a tool starts, becomes:
 
 and is appended to `accumulated_content`.
 
+{% include fig-stream.html caption="Figure — the reconstructor accumulates each delta into a pending buffer, then flushes it to a finalized block at every boundary, so the assistant message keeps the model's true output order." %}
+
 ### 3. Why blockwise archiving matters
 
 Because text, thinking, and tool calls carry ordering semantics. Say the model's real output order is:
@@ -159,6 +161,17 @@ You must reconstruct it as:
 ```
 
 not as something that scrambles the model's true output order. So the rule is: when a `TEXT_DELTA` arrives while thinking is still accumulating, finalize the thinking first; when a `THINKING_DELTA` arrives while text is accumulating, finalize the text first; before a tool starts, both text and thinking must be finalized. That way every block boundary lines up with the real switch point in the stream. In fact we should also guarantee that thinking aggregates into a *single* block rather than one-block-per-delta. The thinking signature (`SIGNATURE_DELTA`) may also arrive incrementally, and is finalized together with the thinking at the next archiving boundary.
+
+To pull the rules together, here is where each streamed event goes and when it gets finalized:
+
+| Stream event | Accumulates into | Finalized when |
+|---|---|---|
+| text delta | `pending_text` | a thinking/tool block starts, or message stop |
+| thinking delta | `pending_thinking` | a text/tool block starts, or message stop |
+| signature delta | `pending_signature` | together with its thinking block |
+| tool-use start | a new `current_tool` | the next tool start, or message stop |
+| tool-input delta | `current_tool` buffer | the tool block ends, then parsed in one `json.loads` |
+| usage | the usage totals | latest non-zero value wins, per field |
 
 ### 4. A concrete example: text + thinking + tool call
 
@@ -240,6 +253,16 @@ on MESSAGE_STOP:
 ```
 
 In one sentence: *OpenAI has no "tool end" event; the next tool start, or message stop, is the previous tool's end.* So — plenty of the *lucky folks who've only ever used a single SDK, or a single official-API quota* assume tool calls naturally arrive as complete objects. But in production you routinely get a string of half-formed incremental events.
+
+Side by side, the two protocols differ exactly where it hurts:
+
+|  | Anthropic-style | OpenAI-style (& proxies) |
+|---|---|---|
+| Shape | block-structured | flat `delta` patches |
+| Tool start | explicit `content_block_start` | inferred from the first `tool_calls[i]` |
+| Tool end | explicit `content_block_stop` | **none** — next tool start, or message stop |
+| Arguments | delta on a known block | appended to `tool_calls[i].arguments` |
+| In practice | tidy | may miss / duplicate / reorder events |
 
 ### 6. Can you execute tools *while* still streaming?
 
@@ -550,6 +573,8 @@ pending_text = "Let me read the file first."
 
 然后追加到 `accumulated_content`。
 
+{% include fig-stream.html caption="图 — 重建器把每个 delta 累积进对应的 pending 缓冲区，在每个块边界把它定稿成正式的内容块，从而让 assistant 消息保持模型真实的输出顺序。" %}
+
 ### 3. Blockwise的归档意义
 
 正常来说，文本、thinking、工具调用之间有顺序语义。比如模型实际输出顺序是：
@@ -571,6 +596,17 @@ tool_use: Read(...)
 ```
 
 这一步是万万不能把模型真实输出顺序弄乱的。所以规则是：当 `TEXT_DELTA` 来时，如果前面正在攒 thinking，就先把 thinking 定稿；当 `THINKING_DELTA` 来时，如果前面正在攒 text，就先把 text 定稿；当工具开始前，text 和 thinking 都要先定稿。这样每个内容块的边界，就和流里内容真实切换的位置一致。我们需要同时保证 thinking 聚合成*单个块*而不是每个 delta 一块。thinking 的签名（`SIGNATURE_DELTA`）也可能增量到达，和 thinking 一起在下一个冲刷边界定稿。
+
+把规则汇总起来，每个流式事件累积到哪里、何时定稿：
+
+| 流式事件 | 累积到 | 何时定稿 |
+|---|---|---|
+| 文本 delta | `pending_text` | thinking／工具块开始，或 message stop |
+| thinking delta | `pending_thinking` | 文本／工具块开始，或 message stop |
+| signature delta | `pending_signature` | 和它的 thinking 块一起 |
+| 工具开始 | 新的 `current_tool` | 下一个工具开始，或 message stop |
+| 工具参数 delta | `current_tool` 缓冲区 | 工具块结束时，再一次性 `json.loads` |
+| usage | usage 累计 | 每字段取最新的非零值 |
 
 ### 4. 具体例子：文本 + thinking + 工具调用
 
@@ -645,6 +681,16 @@ on MESSAGE_STOP:
 ```
 
 所以说，很多*只用过单一SDK或者单一官方API额度*的富哥富姐们会以为工具调用自然有完整对象，但生产环境里，你经常拿到的是一串半残的增量事件。
+
+两种协议的差异，恰好都落在最咬人的地方：
+
+|  | Anthropic 系 | OpenAI 系（及代理） |
+|---|---|---|
+| 形态 | 块状结构 | 扁平 `delta` 补丁 |
+| 工具开始 | 显式 `content_block_start` | 由首个 `tool_calls[i]` 推断 |
+| 工具结束 | 显式 `content_block_stop` | **没有** — 下一个工具开始，或 message stop |
+| 参数 | 已知块上的 delta | 追加到 `tool_calls[i].arguments` |
+| 实际情况 | 规整 | 可能漏发／重发／乱序 |
 
 ### 6. 可以边流式输出边执行工具吗？
 
