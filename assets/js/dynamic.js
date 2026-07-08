@@ -59,5 +59,74 @@
         })
         .catch(function () {});
     })();
+
+    /* ---------- Homepage: highlight the section rail on scroll ---------- */
+    (function () {
+      var nav = document.querySelector(".side-nav");
+      if (!nav) return;
+      var links = Array.prototype.slice.call(nav.querySelectorAll("a"));
+      var secs = links.map(function (a) {
+        var h = a.getAttribute("href");
+        return h && h.charAt(0) === "#" ? document.getElementById(h.slice(1)) : null;
+      });
+      function onScroll() {
+        var y = window.scrollY + window.innerHeight * 0.28;
+        var idx = 0;
+        for (var i = 0; i < secs.length; i++) {
+          if (secs[i] && secs[i].offsetTop <= y) idx = i;
+        }
+        links.forEach(function (a, i) { a.classList.toggle("is-active", i === idx); });
+      }
+      var t = null;
+      window.addEventListener("scroll", function () {
+        if (t) return;
+        t = setTimeout(function () { t = null; onScroll(); }, 80);
+      }, { passive: true });
+      onScroll();
+    })();
+
+    /* ---------- Long posts: auto table of contents (bilingual-aware) ---------- */
+    (function () {
+      var body = document.querySelector(".post-body");
+      var header = document.querySelector(".post-header");
+      if (!body || !header) return;
+      var article = document.querySelector(".post.bilingual");
+
+      function scope() {
+        if (!article) return body;
+        var lang = article.getAttribute("data-lang") || "en";
+        return body.querySelector(".lang-" + lang) || body;
+      }
+
+      var toc = document.createElement("nav");
+      toc.className = "post-toc";
+      toc.setAttribute("aria-label", "Table of contents");
+
+      function build() {
+        var sc = scope();
+        var hs = Array.prototype.slice.call(sc.querySelectorAll("h2, h3"));
+        if (hs.length < 3) { toc.style.display = "none"; return; }
+        toc.style.display = "";
+        var lang = article ? (article.getAttribute("data-lang") || "en") : "en";
+        var label = lang === "zh" ? "目录" : "Contents";
+        var out = '<p class="post-toc-h">' + label + "</p><ol>";
+        hs.forEach(function (h, i) {
+          if (!h.id) h.id = "sec-" + lang + "-" + i;
+          var m = h.textContent.match(/^\s*(\d+)\./);
+          var num = m ? m[1] : "";
+          var text = h.textContent.replace(/^\s*\d+\.\s*/, "");
+          out += "<li>" + (num ? '<span class="post-toc-num">' + num + "</span>" : "") +
+                 '<a href="#' + h.id + '">' + text + "</a></li>";
+        });
+        out += "</ol>";
+        toc.innerHTML = out;
+      }
+
+      build();
+      header.parentNode.insertBefore(toc, header.nextSibling);
+      Array.prototype.forEach.call(document.querySelectorAll(".lang-btn"), function (b) {
+        b.addEventListener("click", function () { setTimeout(build, 0); });
+      });
+    })();
   });
 })();

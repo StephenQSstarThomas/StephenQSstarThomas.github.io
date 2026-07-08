@@ -1,0 +1,58 @@
+<figure class="post-figure">
+<svg class="flowfig" viewBox="0 0 760 424" xmlns="http://www.w3.org/2000/svg" role="img">
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#b0a897"/>
+    </marker>
+  </defs>
+
+  <!-- title -->
+  <rect x="30" y="16" width="700" height="42" rx="6" fill="#fdfbf6" stroke="#e6dfd2"/>
+  <text x="380" y="42" text-anchor="middle" font-size="13" fill="#2c2a26">assistant message · block order = model output order</text>
+
+  <!-- fan-out arrows -->
+  <path d="M110,60 L110,108" stroke="#b0a897" fill="none" marker-end="url(#ah)"/>
+  <path d="M270,60 L270,108" stroke="#b0a897" fill="none" marker-end="url(#ah)"/>
+  <path d="M430,60 L430,108" stroke="#b0a897" fill="none" marker-end="url(#ah)"/>
+  <path d="M635,60 L635,108" stroke="#b0a897" fill="none" marker-end="url(#ah)"/>
+
+  <!-- concurrency-safe batch -->
+  <text x="26" y="88" font-size="11" fill="#8a8377">concurrency-safe batch — running together</text>
+  <rect x="22" y="96" width="500" height="72" rx="7" fill="none" stroke="#cfc6b6" stroke-dasharray="4 3"/>
+  <rect x="36" y="110" width="148" height="44" rx="6" fill="#fdfbf6" stroke="#e6dfd2"/>
+  <text x="110" y="137" text-anchor="middle" font-size="13" fill="#2c2a26">tool_1 Read</text>
+  <rect x="196" y="110" width="148" height="44" rx="6" fill="#fdfbf6" stroke="#e6dfd2"/>
+  <text x="270" y="137" text-anchor="middle" font-size="13" fill="#2c2a26">tool_2 Grep</text>
+  <rect x="356" y="110" width="148" height="44" rx="6" fill="#fdfbf6" stroke="#e6dfd2"/>
+  <text x="430" y="137" text-anchor="middle" font-size="13" fill="#2c2a26">tool_3 Read</text>
+
+  <!-- unsafe tool, queued -->
+  <rect x="560" y="110" width="150" height="44" rx="6" fill="#fdfbf6" stroke="#b5794f" stroke-dasharray="4 3"/>
+  <text x="635" y="137" text-anchor="middle" font-size="13" fill="#2c2a26">tool_4 Bash</text>
+  <text x="635" y="182" text-anchor="middle" font-size="11" fill="#8a8377">queued · _can_execute waits</text>
+
+  <!-- join to results -->
+  <path d="M270,168 L270,202" stroke="#b0a897" fill="none" marker-end="url(#ah)"/>
+  <path d="M635,154 L635,190 L560,190" stroke="#b0a897" fill="none"/>
+  <path d="M270,196 L270,202" stroke="#b0a897" fill="none"/>
+  <rect x="30" y="204" width="700" height="44" rx="6" fill="#fdfbf6" stroke="#e6dfd2"/>
+  <text x="380" y="231" text-anchor="middle" font-size="13" fill="#2c2a26">tool_results — each carries its own tool_use_id</text>
+
+  <!-- invariant 1 -->
+  <path d="M380,248 L380,282" stroke="#b0a897" fill="none" marker-end="url(#ah)"/>
+  <text x="398" y="270" font-size="12" fill="#3b4d72">pair by id ⇒ finish order may scramble, still correct</text>
+
+  <!-- fill gaps -->
+  <rect x="120" y="284" width="520" height="42" rx="6" fill="#fdfbf6" stroke="#e6dfd2"/>
+  <text x="380" y="310" text-anchor="middle" font-size="13" fill="#2c2a26">make_missing_tool_results — fill any gap with is_error</text>
+
+  <!-- invariant 2 -->
+  <path d="M380,326 L380,358" stroke="#b0a897" fill="none" marker-end="url(#ah)"/>
+  <text x="398" y="347" font-size="12" fill="#3b4d72">exactly one result per call ⇒ history stays closed</text>
+
+  <!-- next turn -->
+  <rect x="30" y="360" width="700" height="44" rx="6" fill="#f0ebe0" stroke="#e6dfd2"/>
+  <text x="380" y="387" text-anchor="middle" font-size="13" fill="#2c2a26">next turn: [ history · assistant · results ] → normalize → API (matched by id)</text>
+</svg>
+<figcaption>{{ include.caption }}</figcaption>
+</figure>

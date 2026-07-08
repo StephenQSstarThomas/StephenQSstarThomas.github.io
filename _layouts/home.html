@@ -5,13 +5,17 @@
     {% include head/custom.html %}
   </head>
 
-  <body class="is-inner">
+  <body class="is-home">
     {% include hero-strip.html %}
-    {% include masthead.html %}
 
-    <main id="main" class="content{% if page.wide %} content--wide{% endif %}">
-      {{ content }}
-    </main>
+    <div class="home">
+      <aside class="home-side">
+        {% include home-sidebar.html %}
+      </aside>
+      <main id="main" class="home-main">
+        {{ content }}
+      </main>
+    </div>
 
     {% include site-footer.html %}
     {% include scripts.html %}

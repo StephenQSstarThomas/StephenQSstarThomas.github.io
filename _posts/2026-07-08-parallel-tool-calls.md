@@ -69,9 +69,11 @@ The tempting design is a static table hard-wired somewhere: a fixed directive of
 
 The `Tool` base class follows three decision rules:
 
-- Read-only tools (`Read` / `Grep` / `Glob` / `WebFetch`) parallelize naturally. They change nothing, so running them side by side can't interfere.
-- Tools with potential side effects (`Write` / `Edit` / `Bash`) serialize by default.
-- A tool that *usually* has side effects but happens not to conflict this time (say, writing two different files at once) can override `is_concurrency_safe` and let itself through, judged by its input.
+| Tool class | Default | Why |
+|---|---|---|
+| Read-only — `Read` `Grep` `Glob` `WebFetch` | **parallel** | changes nothing, so siblings can't interfere |
+| Side-effecting — `Write` `Edit` `Bash` | **serial** | a write or command must not race another |
+| Conditionally safe — e.g. writing two *different* files | **per-input** | overrides `is_concurrency_safe`, judged on this call's args |
 
 Note that the check receives the **parsed** input — the orchestrator first validates the raw argument JSON into a structured object (via pydantic) before asking. If the arguments won't even parse, it plays it safe, treats the call as unsafe, and serializes it.
 
@@ -107,6 +109,8 @@ Read done, Grep done:   executing = []             -> Bash starts alone
 This check is re-run every time a tool finishes, by the routine that walks the queue. And when it scans the queue and hits the first unsafe tool that still can't start, it *stops* there — so that serial point becomes a natural barrier: nothing behind it jumps ahead of it.
 
 Inside a parallel batch there's one more governor: a semaphore caps how many tools run at once, its capacity set by the `MAX_TOOL_CONCURRENCY` environment variable, default 10.
+
+{% include fig-fanout.html caption="Figure — a single turn's tool calls fan out into a concurrency-safe batch (Bash waits its turn), finish in any order, pair back by tool_use_id, get their gaps filled, then fold into the next turn." %}
 
 ### 4. "No chaos," layer one: results pair by id, not by position
 
@@ -250,11 +254,13 @@ JollySammy 的[**流式输出状态机**]({% post_url 2026-07-06-streaming-recon
 
 一个容易想当然的设计是：维护一张静态表，说明工具并行的指示。JollySammy 觉得这么做不太好。他喜欢的这份 harness 则是把决定权交给每个工具，并且针对*每一次调用的具体输入*来判断。
 
-`Tool` 基类遵循以下三种判定规则：
+`Tool` 基类遵循以下三条判定规则：
 
-- 只读的工具（`Read` / `Grep` / `Glob` / `WebFetch`）天然可以并行。它们不改任何东西，同时跑互不干扰；
-- 有潜在副作用的工具（`Write` / `Edit` / `Bash`）天然串行；
-- 一个有副作用、但这次调用恰好不冲突的工具（比如并发写两个不同文件），可以自己重写 `is_concurrency_safe`，按输入放行。
+| 工具类别 | 默认 | 为什么 |
+|---|---|---|
+| 只读 — `Read` `Grep` `Glob` `WebFetch` | **并行** | 什么都不改，兄弟工具同时跑互不干扰 |
+| 有副作用 — `Write` `Edit` `Bash` | **串行** | 写入或命令不能和别人抢 |
+| 视输入而定 — 例如并发写两个*不同*文件 | **按输入** | 重写 `is_concurrency_safe`，按这次调用的参数判断 |
 
 注意判定方法收到的是**解析后的**输入。编排器会先用 pydantic 把参数 JSON 校验成结构化对象再去问。如果参数根本解析不了，就保守地当成不安全，串行处理。
 
@@ -290,6 +296,8 @@ Read 完成, Grep 完成: executing = []            -> Bash 独占开跑
 这个检查在每个工具完成时都会被“走一遍队列”的例程重新做一次。而当它扫队列扫到第一个还不能启动的不安全工具，就*停在那里*——于是这个串行点天然成了一道屏障：它后面的工具都不会越过它提前跑。
 
 并行批内部还有一层限流：一个信号量控制同时在跑的工具数，容量由环境变量 `MAX_TOOL_CONCURRENCY` 控制，默认 10。
+
+{% include fig-fanout.html caption="图 — 一回合里的多个工具调用扇出成一个并发批次（Bash 需要等待），可以乱序完成，靠 tool_use_id 配对，缺口被补齐，最后并入下一回合。" %}
 
 ### 4. *不乱*之一：结果配对靠 id，不靠位置
 

@@ -8,10 +8,9 @@
 <meta name="msapplication-config" content="{{ '/images/browserconfig.xml' | relative_url }}?v=M44lzPylqQ">
 <meta name="theme-color" content="#ffffff">
 
-<!-- Self-hosted fonts (Inter body + JetBrains Mono code) -->
-<link rel="preload" href="{{ '/assets/fonts/self/inter-400-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{{ '/assets/fonts/self/inter-600-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{{ '/assets/fonts/self/inter-700-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<!-- Self-hosted fonts (Satoshi body + Newsreader serif display + LXGW WenKai CJK + JetBrains Mono) -->
+<link rel="preload" href="{{ '/assets/fonts/self/satoshi-variable.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/self/newsreader-400-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ '/assets/fonts/self/fonts.css' | relative_url }}?v={{ site.time | date: '%s' }}"/>
 
 {% if page.math %}

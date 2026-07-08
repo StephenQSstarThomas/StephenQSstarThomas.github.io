@@ -2,13 +2,13 @@
 permalink: /
 title: ""
 excerpt: ""
-wide: true
+layout: home
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-<img class="avatar" src="{{ '/images/android-chrome-512x512.png' | relative_url }}" alt="Portrait of Shi Qiu">
+## About {#about}
 
 Hi, I'm **Shi Qiu** (仇是), a senior undergraduate student at the School of Physics, Peking University. I'm also an incoming Ph.D in Computer Science at UNC Chapel-Hill, advised by [Prof. Huaxiu Yao](https://www.huaxiuyao.io).
 

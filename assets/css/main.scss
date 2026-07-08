@@ -10,20 +10,26 @@
 
 @import "rouge-github";
 
-/* ---------- Tokens ---------- */
-$ink:      #1a1a1a;
-$muted:    #6e6e6e;
-$hairline: #e8e8e8;
-$accent:   #0b6e99;           /* single link accent (calm cyan-blue) */
-$bg:       #fdfdfd;
-$code-bg:  #f6f6f6;
+/* ---------- Tokens (MUJI-warm: quiet, natural, tidy) ---------- */
+$paper:       #f6f3ec;   /* page background — warm paper */
+$surface:     #fdfbf6;   /* raised surfaces / callouts / cards */
+$ink:         #2c2a26;   /* warm near-black text */
+$muted:       #8a8377;   /* warm gray — secondary text */
+$faint:       #b6ad9e;   /* fainter gray — separators, numerals */
+$hairline:    #e6dfd2;   /* warm hairline */
+$accent:      #3b4d72;   /* muted indigo-navy — MUJI kraft+navy, echoes the night-sky strip */
+$accent-deep: #2c3a58;
+$bg:          $paper;    /* alias kept for existing rules */
+$code-bg:     #f0ebe0;   /* warm code background */
+$night:       #0b0f1c;   /* Milky-Way strip sky */
 
-$sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-       'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC',
-       Helvetica, Arial, sans-serif;
-$mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+/* Serif display (headings/name), Sans body, Mono code — CJK always LXGW WenKai */
+$serif: 'Newsreader', 'LXGW WenKai', Georgia, 'Songti SC', 'Noto Serif SC', serif;
+$sans:  'Satoshi', 'LXGW WenKai', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', Helvetica, Arial, sans-serif;
+$mono:  'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-$content-width: 50rem;   /* ~800px, lil-log's column — ≈55–65% of a laptop viewport */
+$content-width: 50rem;   /* ~800px reading column */
 
 /* ---------- Reset (small) ---------- */
 *, *::before, *::after { box-sizing: border-box; }
@@ -39,17 +45,17 @@ html {
   html { scroll-behavior: smooth; }
 }
 body {
-  font: 400 16.5px/1.75 $sans;
+  font: 400 16.75px/1.8 $sans;
   color: $ink;
   background: $bg;
-  letter-spacing: -0.003em;
+  letter-spacing: 0;
 }
 
-h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.3; letter-spacing: -0.012em; }
+h1, h2, h3, h4, h5, h6 { font-family: $serif; font-weight: 600; line-height: 1.28; letter-spacing: -0.004em; }
 h1, h2 { text-wrap: balance; }
-h1 { font-size: 1.7rem; }
-h2 { font-size: 1.3rem; margin: 2.8em 0 0.8em; }
-h3 { font-size: 1.1rem; margin: 2em 0 0.6em; }
+h1 { font-size: 1.85rem; }
+h2 { font-size: 1.42rem; margin: 2.6em 0 0.7em; }
+h3 { font-size: 1.13rem; margin: 2em 0 0.55em; }
 
 p, ul, ol, blockquote, pre, table, .highlighter-rouge { margin-bottom: 1.05em; }
 ul, ol { padding-left: 1.4em; }
@@ -344,7 +350,145 @@ pre::-webkit-scrollbar-track { background: transparent; }
 /* ---------- Section anchor offset ---------- */
 h1[id], h2[id], h3[id] { scroll-margin-top: 1.5rem; }
 
+/* ==========================================================================
+   MUJI layer — Milky-Way strip, home sidebar layout, warm callouts, figures
+   ========================================================================== */
+
+/* ---------- Milky-Way top strip (A4-headband) ---------- */
+.hero-strip {
+  width: 100%;
+  height: 72px;                         /* inner pages: a thin decorative band */
+  overflow: hidden;
+  background: $night;
+  border-bottom: 1px solid rgba(0,0,0,0.22);
+  line-height: 0;
+}
+.is-home .hero-strip { height: 136px; }
+.hero-sky { display: block; width: 100%; height: 100%; }
+@media (max-width: 40em) {
+  .hero-strip { height: 56px; }
+  .is-home .hero-strip { height: 96px; }
+}
+
+/* ---------- Homepage: left overview rail + content ---------- */
+.home {
+  max-width: clamp(52rem, 92vw, 71rem);
+  margin: 0 auto;
+  padding: 2.6rem 1.5rem 4rem;
+  display: grid;
+  grid-template-columns: 15.5rem 1fr;
+  gap: 3.2rem;
+  align-items: start;
+}
+.home-side { position: sticky; top: 1.6rem; }
+.home-main { min-width: 0; max-width: 44rem; }
+.home-main > *:first-child { margin-top: 0; }
+.home-main h2 {
+  font-size: 1.26rem;
+  margin: 2.4em 0 0.85em;
+  padding-bottom: 0.32em;
+  border-bottom: 1px solid $hairline;
+  scroll-margin-top: 1.3rem;
+}
+
+/* profile card */
+.side-avatar {
+  width: 108px; height: 108px; border-radius: 50%;
+  object-fit: cover; display: block;
+  border: 1px solid $hairline;
+}
+.side-name { font-size: 1.5rem; margin: 0.75rem 0 0; line-height: 1.1; letter-spacing: -0.01em; }
+.side-name-zh { font-family: $serif; color: $muted; font-size: 1.02rem; margin: 0.12rem 0 0; }
+.side-role { font-size: 0.85rem; color: $muted; line-height: 1.5; margin: 0.6rem 0 0; }
+.side-links { list-style: none; padding: 0; margin: 0.85rem 0 0; font-size: 0.85rem; line-height: 1.95; }
+.side-links li { display: inline; }
+.side-links li:not(:first-child)::before { content: "·"; color: $faint; margin: 0 0.45rem; }
+.side-links a { color: $muted; }
+.side-links a:hover { color: $accent; text-decoration: none; }
+
+/* section overview nav */
+.side-nav {
+  margin-top: 1.5rem; padding-top: 1.2rem;
+  border-top: 1px solid $hairline;
+  display: flex; flex-direction: column; gap: 0.05rem;
+}
+.side-nav a {
+  font-size: 0.92rem; color: $muted;
+  padding: 0.3rem 0 0.3rem 0.85rem;
+  border-left: 2px solid transparent; line-height: 1.35;
+}
+.side-nav a:hover { color: $ink; text-decoration: none; }
+.side-nav a.is-active { color: $accent; border-left-color: $accent; font-weight: 600; }
+
+.side-foot {
+  margin-top: 1.4rem; padding-top: 1.05rem;
+  border-top: 1px solid $hairline;
+  font-size: 0.82rem; color: $muted;
+}
+.side-foot a { color: $muted; }
+.side-foot a:hover { color: $accent; text-decoration: none; }
+.side-foot span { color: $faint; margin: 0 0.4rem; }
+
+@media (max-width: 60em) {
+  .home { grid-template-columns: 1fr; gap: 1.4rem; padding-top: 1.9rem; }
+  .home-side { position: static; text-align: center; }
+  .side-avatar { margin: 0 auto; }
+  .side-nav {
+    flex-direction: row; flex-wrap: wrap; justify-content: center;
+    gap: 0.25rem 1rem; margin-top: 1.2rem; padding-top: 1rem;
+  }
+  .side-nav a { border-left: 0; padding: 0.15rem 0; }
+  .side-nav a.is-active { border-left: 0; }
+  .home-main { max-width: none; }
+}
+
+/* ---------- Masthead: serif wordmark ---------- */
+.site-title { font-family: $serif; font-weight: 600; }
+
+/* ---------- Warm callouts / quotes / selection ---------- */
+.qbox, .answerbox { background: $surface; border-left: 3px solid $faint; }
+.qbox-label, .answerbox-label { color: $muted; }
+blockquote { color: #6b6459; border-left-color: $hairline; }
+::selection { background: #ece1cf; }
+.lang-toggle { border-color: $hairline; }
+.lang-btn { + .lang-btn { border-left-color: $hairline; } &.is-active { background: $ink; } }
+
+/* ---------- Figures ---------- */
+.post-figure { margin: 2em 0; text-align: center; }
+.post-figure svg, .post-figure img { max-width: 100%; height: auto; }
+.post-figure figcaption {
+  font-size: 0.82rem; color: $muted; line-height: 1.5;
+  margin-top: 0.75em; text-align: center;
+}
+.flowfig text { font-family: $mono; }
+
+/* ---------- In-post table of contents ---------- */
+.post-toc {
+  margin: 1.8em 0 2.4em;
+  padding: 0.9em 1.2em 1em;
+  background: $surface;
+  border: 1px solid $hairline;
+  border-radius: 6px;
+}
+.post-toc-h {
+  font-family: $serif; font-weight: 600; font-size: 0.95rem;
+  color: $ink; margin: 0 0 0.5em;
+}
+.post-toc ol { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 1.8rem; }
+.post-toc li { margin: 0.2em 0; break-inside: avoid; font-size: 0.9rem; }
+.post-toc a { color: $muted; }
+.post-toc a:hover { color: $accent; text-decoration: none; }
+.post-toc-num { color: $faint; font-variant-numeric: tabular-nums; margin-right: 0.45em; }
+@media (max-width: 40em) { .post-toc ol { columns: 1; } }
+
+.post-body h2, .post-body h3 { scroll-margin-top: 1.3rem; }
+
+/* ---------- Section anchor offset ---------- */
+h1[id], h2[id], h3[id] { scroll-margin-top: 1.5rem; }
+
 /* ---------- Print ---------- */
 @media print {
-  .site-header, .site-footer, .lang-toggle, .post-comments { display: none; }
+  .site-header, .site-footer, .lang-toggle, .post-comments,
+  .hero-strip, .home-side, .post-toc { display: none; }
+  .home { grid-template-columns: 1fr; }
 }
