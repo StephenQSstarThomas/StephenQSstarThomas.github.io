@@ -261,12 +261,6 @@ pre::-webkit-scrollbar-track { background: transparent; }
   transition: border-color 0.15s ease;
 }
 .post-list li:hover { border-color: #d6cbb6; }
-/* gentle translucent per-post tints — quiet variety, harmonises with the paper */
-.post-list li:nth-child(5n+1) { background: rgba(27, 98, 207, 0.055); }
-.post-list li:nth-child(5n+2) { background: rgba(70, 120, 86, 0.055); }
-.post-list li:nth-child(5n+3) { background: rgba(184, 120, 66, 0.06); }
-.post-list li:nth-child(5n+4) { background: rgba(150, 86, 120, 0.055); }
-.post-list li:nth-child(5n+5) { background: rgba(86, 100, 126, 0.055); }
 .post-link {
   display: block;
   font-family: $serif;
@@ -276,6 +270,21 @@ pre::-webkit-scrollbar-track { background: transparent; }
 }
 .post-list .post-meta { margin: 0.32em 0 0.5em; }
 .post-list .post-excerpt { font-size: 0.94em; color: #55503f; margin-bottom: 0; line-height: 1.65; }
+
+/* lil-log-style tag chips — small translucent coloured boxes filing each post by topic */
+.tags { display: flex; flex-wrap: wrap; gap: 0.42rem; margin-top: 0.85rem; }
+.tag {
+  font-family: $sans;
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.01em;
+  padding: 0.18em 0.66em; border-radius: 999px;
+  background: rgba(120, 110, 95, 0.11); color: $muted;
+  white-space: nowrap;
+}
+.tag[data-t="agents"]      { background: rgba(27, 98, 207, 0.11);  color: #245fb0; }
+.tag[data-t="tool-use"]    { background: rgba(52, 128, 84, 0.13);  color: #37734d; }
+.tag[data-t="harness"]     { background: rgba(186, 120, 60, 0.15); color: #94662e; }
+.tag[data-t="streaming"]   { background: rgba(160, 84, 120, 0.12); color: #964e72; }
+.tag[data-t="parallelism"] { background: rgba(96, 92, 156, 0.14);  color: #5a549a; }
 
 .post-meta {
   font-size: 0.85rem;
