@@ -16,7 +16,7 @@ My research focuses on **AI Agents** and **AI4Physics**, with a particular empha
 
 My open-source work has collectively earned **over 22,000 GitHub stars**, and I am a core contributor to [AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw), [MetaClaw](https://github.com/aiming-lab/MetaClaw), and [Agents](https://github.com/aiwaves-cn/agents).
 
-I've also been collaborating with [Prof. Dawn Song](https://dawnsong.io/)'s team at UC Berkeley, and with the AI4Physics research group led by Professors Qing-Hong Cao, Hua-Xing Zhu, and Ming-Xing Luo at the School of Physics, Peking University. Also, I'm honored to be the only undergrad advisor of [AlphaXiv](https://www.alphaxiv.org).
+I've also been collaborating with [Prof. Dawn Song](https://dawnsong.io/)'s team at UC Berkeley, and with the AI4Physics research group led by Professors [Hua Xing Zhu](https://konformal.github.io/#), [Qing-Hong Cao](https://faculty.pku.edu.cn/caoqinghong/zh_CN/index.htm), and [Ming-Xing Luo](https://www.csrc.ac.cn/en/people/faculty/184.html) at the School of Physics, Peking University. Also, I'm honored to be the only undergrad advisor of [AlphaXiv](https://www.alphaxiv.org).
 
 ## News {#news}
 
