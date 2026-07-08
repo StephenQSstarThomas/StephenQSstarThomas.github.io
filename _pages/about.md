@@ -2,10 +2,13 @@
 permalink: /
 title: ""
 excerpt: ""
+wide: true
 redirect_from: 
   - /about/
   - /about.html
 ---
+
+<img class="avatar" src="{{ '/images/android-chrome-512x512.png' | relative_url }}" alt="Portrait of Shi Qiu">
 
 Hi, I'm **Shi Qiu** (仇是), a senior undergraduate student at the School of Physics, Peking University. I'm also an incoming Ph.D in Computer Science at UNC Chapel-Hill, advised by [Prof. Huaxiu Yao](https://www.huaxiuyao.io).
 
@@ -13,7 +16,7 @@ My research focuses on **AI Agents** and **AI4Physics**, with a particular empha
 
 My open-source work has collectively earned **over 22,000 GitHub stars**, and I am a core contributor to [AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw), [MetaClaw](https://github.com/aiming-lab/MetaClaw), and [Agents](https://github.com/aiwaves-cn/agents).
 
-Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)'s team at UC Berkeley, and with the AI4Physics research group led by Professors Qing-Hong Cao, Hua-Xing Zhu, and Ming-Xing Luo at the School of Physics, Peking University. Also, I'm honored to be the only undergrad advisor of [AlphaXiv](https://www.alphaxiv.org).
+I've also been collaborating with [Prof. Dawn Song](https://dawnsong.io/)'s team at UC Berkeley, and with the AI4Physics research group led by Professors Qing-Hong Cao, Hua-Xing Zhu, and Ming-Xing Luo at the School of Physics, Peking University. Also, I'm honored to be the only undergrad advisor of [AlphaXiv](https://www.alphaxiv.org).
 
 ## News {#news}
 
@@ -25,7 +28,7 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 </ul>
 
 {% if site.data.news.size > visible_news %}
-<details class="news-more" markdown="0">
+<details class="fold" markdown="0">
 <summary>Show earlier news</summary>
 <ul class="news">
 {% for item in site.data.news offset: visible_news %}
@@ -47,13 +50,27 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 
 ## Publications {#publications}
 
-{% for pub in site.data.publications %}
+{% assign visible_pubs = 8 %}
+{% for pub in site.data.publications limit: visible_pubs %}
 <div class="pub">
 <p class="pub-title"><a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a></p>
 <p class="pub-authors">{{ pub.authors | replace: "Shi Qiu", '<span class="me">Shi Qiu</span>' }}</p>
 <p class="pub-venue">{{ pub.venue }}{% for l in pub.links %} · <a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% endfor %}</p>
 </div>
 {% endfor %}
+
+{% if site.data.publications.size > visible_pubs %}
+<details class="fold" markdown="0">
+<summary>Show earlier publications</summary>
+{% for pub in site.data.publications offset: visible_pubs %}
+<div class="pub">
+<p class="pub-title"><a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a></p>
+<p class="pub-authors">{{ pub.authors | replace: "Shi Qiu", '<span class="me">Shi Qiu</span>' }}</p>
+<p class="pub-venue">{{ pub.venue }}{% for l in pub.links %} · <a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% endfor %}</p>
+</div>
+{% endfor %}
+</details>
+{% endif %}
 
 ## Honors and Awards {#honors}
 
@@ -72,28 +89,34 @@ Previously, I've been collaborating with [Prof. Dawn Song](https://dawnsong.io/)
 
 ## Research Experience {#experience}
 
-**Undergraduate Researcher**, UNC Chapel Hill (Jun 2024 – Aug 2024). Advisor: [Prof. Huaxiu Yao](https://www.huaxiuyao.io).
+**Sunblaze Group, UC Berkeley** — Research Intern (2025 – present). Mentor: [Prof. Dawn Song](https://dawnsong.io/).
 
-- Contributed to multiple research projects in large multimodal models and AI agents as a summer research assistant.
+- Lead researcher of **AgentXploit**, an open-source, end-to-end agentic framework for automatic injection-point exploitation and validation.
 
-**Research Intern**, AIWaves (Jun 2023 – Aug 2023).
+**AI4Physics Group, Peking University** — Research Intern (2025 – present). Mentors: [Prof. Hua Xing Zhu](https://konformal.github.io/#), [Prof. Qing-Hong Cao](https://faculty.pku.edu.cn/caoqinghong/zh_CN/index.htm), and [Prof. Ming-Xing Luo](https://www.csrc.ac.cn/en/people/faculty/184.html).
 
-- Contributed to the core development of the open-source framework for autonomous language agents.
-- Co-authored the paper "Agents: An Open-source Framework for Autonomous Language Agents".
-- Project reached over 5,000 stars on GitHub: [aiwaves-cn/agents](https://github.com/aiwaves-cn/agents).
+- Lead researcher and initiator of **PHYBench**, coordinating 178 students from the School of Physics to build the first high-difficulty physics reasoning benchmark.
+- Core contributor to **IdeaSearch**, developing LLM-assisted solutions for optimization problems in physics — HEP, astronomy, and fluid dynamics.
 
-**CUPT Competition Team**, Peking University (Mar 2023 – May 2023).
+**UNC-Chapel Hill** — Research Intern (2024 – present). Mentor: [Prof. Huaxiu Yao](https://www.huaxiuyao.io/).
 
-- Served as a Main Speaker for the team.
-- Awarded Third Prize in the China Undergraduate Physics Tournament (CUPT) school-wide competition.
+- Research on multimodal alignment and evaluation: co-led **MMIE** (a 20,103-sample interleaved comprehension benchmark with an MLLM-as-judge metric), proposed **GLIMPSE** (evaluating whether video LLMs truly watch videos), and released the **MJ-Video** reward model for video generation.
+
+**AIWaves** — Research Intern (Jun – Aug 2023).
+
+- Core developer and paper co-author of the open-source **Agents** framework for autonomous language agents (5,900+ stars on GitHub).
+
+**CUPT Team, Peking University** (Mar – May 2023).
+
+- Main Speaker; Third Prize in the school-wide China Undergraduate Physics Tournament.
 
 ## Projects {#projects}
 
-- [AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw) (★ 12.5k+, 2025 – present) — a fully autonomous, self-evolving research system that turns an idea into a complete paper, chaining literature review, hypothesis generation, experiment design and execution, analysis, and writing.
-- [MetaClaw](https://github.com/aiming-lab/MetaClaw) (★ 3.4k+, 2025 – present) — a meta-learning agent that continuously learns and self-evolves from natural-language interaction.
+- [AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw) (12.5k+ stars, 2025 – present) — a fully autonomous, self-evolving research system that turns an idea into a complete paper, chaining literature review, hypothesis generation, experiment design and execution, analysis, and writing.
+- [MetaClaw](https://github.com/aiming-lab/MetaClaw) (3.4k+ stars, 2025 – present) — a meta-learning agent that continuously learns and self-evolves from natural-language interaction.
 - [ColliderAgent](https://github.com/HET-AGI/ColliderAgent) (2025 – present) — a decoupled, autonomous agentic architecture for high-energy physics phenomenology, automating the full collider analysis pipeline.
-- [Agents](https://github.com/aiwaves-cn/agents) (★ 5.9k+, 2023 – present) — an open-source framework for data-centric, self-evolving autonomous language agents.
-- [CourseCommunity](https://github.com/StephenQSstarThomas/CourseCommunity) (★ 261+, 2024 – present) — an open-source, all-for-free platform providing university course notes and self-study guides.
+- [Agents](https://github.com/aiwaves-cn/agents) (5.9k+ stars, 2023 – present) — an open-source framework for data-centric, self-evolving autonomous language agents.
+- [CourseCommunity](https://github.com/StephenQSstarThomas/CourseCommunity) (261+ stars, 2024 – present) — an open-source, all-for-free platform providing university course notes and self-study guides.
 
 ## Skills {#skills}
 
