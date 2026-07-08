@@ -1,0 +1,100 @@
+# Publications, display order. `authors` is plain text — the template
+# highlights every "Shi Qiu" occurrence automatically. `links` (optional)
+# are extra resources shown after the venue.
+- title: "PHYBench: Holistic Evaluation of Physical Perception and Reasoning in Large Language Models"
+  url: "https://arxiv.org/abs/2504.16074"
+  authors: "Shi Qiu, Shaoyang Guo, Zhuo-Yang Song, Yunbo Sun, Zeyu Cai, Jiashen Wei, Hua-Xing Zhu et al."
+  venue: "NeurIPS 2025"
+  links:
+    - label: "Project"
+      url: "https://phybench-official.github.io/phybench-demo/"
+
+- title: "AutoResearchClaw: Self-Reinforcing Autonomous Research with Human-AI Collaboration"
+  url: "https://arxiv.org/abs/2605.20025"
+  authors: "Jiaqi Liu, Shi Qiu, Mairui Li, Bingzhou Li, James Zou, Caiming Xiong, Huaxiu Yao et al."
+  venue: "arXiv preprint, 2026"
+  links:
+    - label: "Code"
+      url: "https://github.com/aiming-lab/AutoResearchClaw"
+
+- title: "Agents: An Open-source Framework for Autonomous Language Agents"
+  url: "https://arxiv.org/abs/2309.07870"
+  authors: "Wangchunshu Zhou, Yuchen Eleanor Jiang, Long Li, Jialong Wu, Shi Qiu, et al."
+  venue: "ICLR 2024 Workshop on LLM Agents"
+  links:
+    - label: "Code"
+      url: "https://github.com/aiwaves-cn/agents"
+
+- title: "SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines"
+  url: "https://arxiv.org/abs/2502.14739"
+  authors: "Xeron Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu, Yiming Liang, Xiaolong Jin, Zhenlin Wei, Shi Qiu, …, Jiaheng Liu, Ge Zhang"
+  venue: "NeurIPS 2025"
+
+- title: "MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models"
+  url: "https://arxiv.org/abs/2410.10139"
+  authors: "Peng Xia*, Siwei Han*, Shi Qiu*, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng, Zhaorun Chen, Chenhang Cui, Mingyu Ding, Linjie Li, Lijuan Wang, Huaxiu Yao"
+  venue: "ICLR 2025 (Oral)"
+  links:
+    - label: "Project"
+      url: "https://mmie-bench.github.io/"
+
+- title: "MetaClaw: Just Talk — An Agent That Meta-Learns and Evolves in the Wild"
+  url: "https://arxiv.org/abs/2603.17187"
+  authors: "Peng Xia, Jianwen Chen, Xinyu Yang, Haoqin Tu, Jiaqi Liu, Kaiwen Xiong, Siwei Han, Shi Qiu, Haonian Ji, Yuyin Zhou, Zeyu Zheng, Cihang Xie, Huaxiu Yao"
+  venue: "arXiv preprint, 2026"
+  links:
+    - label: "Code"
+      url: "https://github.com/aiming-lab/MetaClaw"
+
+- title: "The Attack and Defense Landscape of Agentic AI: A Comprehensive Survey"
+  url: "https://arxiv.org/abs/2603.11088"
+  authors: "Jaewoo Kim, Xiangru Liu, Zhun Wang, Shi Qiu, Bo Li, Wenbo Guo, Dawn Song"
+  venue: "arXiv preprint (survey), 2026"
+
+- title: "MJ-Video: Fine-Grained Benchmarking and Rewarding Video Preferences in Video Generation"
+  url: "https://arxiv.org/abs/2502.01719"
+  authors: "Haibo Tong, Zhaoyang Wang, Zhaorun Chen, Haonian Ji, Shi Qiu, Siwei Han, Kexin Geng, Zhongkai Xue, Yiyang Zhou, Peng Xia, Mingyu Ding, Rafael Rafailov, Chelsea Finn, Huaxiu Yao"
+  venue: "NeurIPS 2025 (Spotlight)"
+
+- title: "ClawArena: Benchmarking AI Agents in Evolving Information Environments"
+  url: "https://arxiv.org/abs/2604.04202"
+  authors: "Haonian Ji, Kaiwen Xiong, Siwei Han, Peng Xia, Shi Qiu, Yiyang Zhou, Jiaqi Liu, Bo Li, Zeyu Zheng, Cihang Xie, et al."
+  venue: "arXiv preprint, 2026"
+
+- title: "GLIMPSE: Do Large Vision-Language Models Truly Think With Videos or Just Glimpse at Them?"
+  url: "https://arxiv.org/abs/2507.09491"
+  authors: "Yiyang Zhou*, Linjie Li*, Shi Qiu*, Zhengyuan Yang, Yuyang Zhao, Siwei Han, Yangfan He, Kangqi Li, Haonian Ji, Zihao Zhao, Haibo Tong, Lijuan Wang, Huaxiu Yao"
+  venue: "EMNLP 2025 Main (Oral)"
+
+- title: "An End-to-End Architecture for Collider Physics and Beyond"
+  url: "https://arxiv.org/abs/2603.14553"
+  authors: "Shi Qiu, Zeyu Cai, Jiashen Wei, Zeyu Li, Yixuan Yin, Qing-Hong Cao, Chang Liu, Ming-xing Luo, Xing-Bo Yuan, Hua Xing Zhu"
+  venue: "arXiv preprint, 2026"
+  links:
+    - label: "Code"
+      url: "https://github.com/HET-AGI/ColliderAgent"
+
+- title: "OmniMem: Autoresearch-Guided Discovery of Lifelong Multimodal Agent Memory"
+  url: "https://arxiv.org/abs/2604.01007"
+  authors: "Jiaqi Liu, Zipeng Ling, Shi Qiu, Yanqing Liu, Siwei Han, Peng Xia, Haoqin Tu, Zeyu Zheng, Cihang Xie, Charles Fleming, Mingyu Ding, Huaxiu Yao"
+  venue: "arXiv preprint, 2026"
+
+- title: "From EduVisBench to EduVisAgent: A Benchmark and Multi-Agent Framework for Pedagogical Visualization"
+  url: "https://arxiv.org/abs/2505.16832"
+  authors: "Haonian Ji, Shi Qiu, Siyang Xin, Siwei Han, Zhaorun Chen, Hongyi Wang, Dake Zhang, Huaxiu Yao"
+  venue: "ICLR 2026"
+
+- title: "PRBench: End-to-End Paper Reproduction in Physics Research"
+  url: "https://arxiv.org/abs/2603.27646"
+  authors: "Shi Qiu, Junyi Deng, Yiwei Deng, Haoran Dong, Jieyu Fu, Mao Li, Zeyu Li, Hua Xing Zhu et al."
+  venue: "arXiv preprint, 2026"
+
+- title: "Iterated Agent for Symbolic Regression"
+  url: "https://arxiv.org/abs/2510.08317"
+  authors: "Zhuo-Yang Song, Zeyu Cai, Shutao Zhang, Jiashen Wei, Jichen Pan, Shi Qiu, Qing-Hong Cao, Tie-Jiun Hou, Xiaohui Liu, Ming-xing Luo, Hua Xing Zhu"
+  venue: "arXiv preprint, 2025"
+
+- title: "Minos: A Multimodal Evaluation Model for Bidirectional Generation Between Image and Text"
+  url: "https://arxiv.org/abs/2506.02494"
+  authors: "Junzhe Zhang, Huixuan Zhang, Xinyu Hu, Li Lin, Mingqi Gao, Shi Qiu, Xiaojun Wan"
+  venue: "arXiv preprint, 2025"

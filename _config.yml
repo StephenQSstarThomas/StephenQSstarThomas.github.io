@@ -8,7 +8,11 @@
 # Site Settings
 title                    : "Shi Qiu"
 description              : "Shi Qiu's Homepage "
+url                      : "https://stephenqsstarthomas.github.io"
 repository               : "StephenQSstarThomas/StephenQSstarThomas.github.io"
+
+# Default social-share image (og:image); posts override with `image:` front matter
+og_image                 : "/images/android-chrome-512x512.png"
 
 # giscus comments (GitHub Discussions) — used by _layouts/post.html
 giscus:

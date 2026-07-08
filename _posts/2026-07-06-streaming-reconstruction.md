@@ -14,6 +14,7 @@ bilingual: true
 default_lang: en
 excerpt: "A streamed response doesn't hand you a finished assistant message — it dribbles out fragments. Turning those deltas back into a saveable, replayable, tool-executable structured message is one of the least glamorous and most bug-prone jobs in an agent harness."
 excerpt_zh: "流式 API 不会一次性给你一条完整的 assistant 消息，而是一小片一小片吐出来。把这些碎片重建成可保存、可回放、可执行工具的结构化消息，是 agent harness 里最不起眼、也最容易出 bug 的工作之一。"
+image: /images/blog/streaming-reconstruction.png
 read_time: true
 ---
 
