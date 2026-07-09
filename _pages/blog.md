@@ -42,7 +42,7 @@ What follows is my stash: a running set of notes and answers on the problems I f
 
 松鼠的天赋在于**囤**，例如半年后当模型的 context window 结了冰，我还能把它刨出来。
 
-下面是我的存货：一份持续更新的笔记与解答，记录我在搭 agent、造 harness 时觉得有意思的问题。有的松果肥美，有的基本是树皮。随便啃。🌰
+下面是我的存货：一份持续更新的笔记与解答，记录我在搭 agent、造 harness 时觉得有意思的问题。有的松果肥美，有的基本是树皮。欢迎大家来啃！🌰
 </div>
 
   <ul class="post-list">
