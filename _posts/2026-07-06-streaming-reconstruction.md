@@ -25,7 +25,7 @@ read_time: true
 <p>In a streamed response, tool-call arguments arrive in fragments — how do you correctly reconstruct them? How do the streaming events of different vendors (say, OpenAI-style vs. Anthropic-style) differ? And what do you do when a proxy misbehaves?</p>
 </div>
 
-Some background: I, JollySammy, am a thrifty little squirrel. Whenever I build an agent, I can't help wondering — could I wire up a *cheaper* third-party API as the agent's built-in model (a **real** one, mind you, not the kind where you ask "which model (A) are you?" and it cheerfully answers "I'm XXX, made by B")? Building agents this way, I kept tripping over the same handful of problems: streaming output comes in a thousand shapes and needs a sane way to be rebuilt back into context; and some truly infuriating vendors slap an "XYZ-compatible" label on the box while quietly cutting corners behind the curtain — trimming return fields, or outright misbehaving (missing events, duplicated events, out-of-order events). Under those conditions, how do you keep your agent faithfully mapped to the right information and instructions?
+Some background: I, JollySammy, am a thrifty little squirrel. Whenever I build an agent, I can't help wondering — could I wire up a *cheaper* third-party API as the agent's built-in model (a **real** one, mind you, not the kind where you ask "which model (A) are you?" and it cheerfully answers "I'm XXX, made by B")? Building agents this way, I kept tripping over the same handful of problems: streaming output comes in a thousand shapes and needs a sane way to be rebuilt back into context; and some truly infuriating vendors slap an **XYZ-compatible** label on the box while quietly cutting corners behind the curtain — trimming return fields, or outright misbehaving (missing events, duplicated events, out-of-order events). Under those conditions, how do you keep your agent faithfully mapped to the right information and instructions?
 
 First, the essence of it: **when a model streams its output, it doesn't hand you one complete assistant message — it emits it a sliver at a time. The agent harness has to reassemble those slivers into a structured message that can be saved, replayed, continued, and executed as tools.**
 
@@ -61,11 +61,11 @@ TOOL_INPUT_DELTA: "\"main.py\""
 TOOL_INPUT_DELTA: "}"
 ```
 
-So if we're going to build an agent harness, we obviously can't just `print(delta)` — we need a **streaming reconstructor**.
+So an agent harness needs more than `print(delta)`; it needs a **streaming reconstructor**.
 
-### 1. Streaming output is a very "dirty" thing
+### 1. Streaming output is a very **dirty** thing
 
-"Streaming output" sounds like the model speaking one character at a time. In an ordinary LLM call, that's a lovely way to watch the answer land in real time. But drop it into an agent setting and the stream carries more than plain text:
+**Streaming output** sounds like the model speaking one character at a time. In an ordinary LLM call, that's a lovely way to watch the answer land in real time. But drop it into an agent setting and the stream carries more than plain text:
 
 ```text
 plain text
@@ -103,9 +103,9 @@ and might even be split in the middle of an escape sequence:
 "n world\"}"
 ```
 
-So you cannot parse the JSON as it arrives. You must accumulate the argument string in full, and only once the tool block is confirmed finished do you `json.loads()` it in one shot.
+So the JSON can't be parsed as it arrives. The argument string accumulates in full, and only once the tool block is confirmed finished does a single `json.loads()` parse it in one shot.
 
-### 2. The reconstructor is really a "state manager"
+### 2. The reconstructor is really a **state manager**
 
 Picture the reconstructor as a secretary keeping the books. It holds a few ledgers:
 
@@ -124,7 +124,7 @@ current_tool: the tool call being accumulated
 
 For instance, the reconstructor in JollySammy's favourite piece of harness code sets up exactly these few locals.
 
-As long as a content block hasn't ended, it stays in "pending / current." Once a clear boundary arrives, it gets **archived** into `accumulated_content`. "Archiving" just means turning the temporary buffer into a finalized content block. For example:
+As long as a content block hasn't ended, it stays in **pending / current**. Once a clear boundary arrives, it gets **archived** into `accumulated_content`. **Archiving** just means turning the temporary buffer into a finalized content block. For example:
 
 ```text
 pending_text = "Let me read the file first."
@@ -150,7 +150,7 @@ text:     "Let me read the file first."
 tool_use: Read(...)
 ```
 
-You must reconstruct it as:
+The reconstruction should come out as:
 
 ```json
 [
@@ -160,7 +160,7 @@ You must reconstruct it as:
 ]
 ```
 
-not as something that scrambles the model's true output order. So the rule is: when a `TEXT_DELTA` arrives while thinking is still accumulating, finalize the thinking first; when a `THINKING_DELTA` arrives while text is accumulating, finalize the text first; before a tool starts, both text and thinking must be finalized. That way every block boundary lines up with the real switch point in the stream. In fact we should also guarantee that thinking aggregates into a *single* block rather than one-block-per-delta. The thinking signature (`SIGNATURE_DELTA`) may also arrive incrementally, and is finalized together with the thinking at the next archiving boundary.
+not as something that scrambles the model's true output order. So the rule is: when a `TEXT_DELTA` arrives while thinking is still accumulating, finalize the thinking first; when a `THINKING_DELTA` arrives while text is accumulating, finalize the text first; before a tool starts, both text and thinking must be finalized. That way every block boundary lines up with the real switch point in the stream. Thinking also aggregates into a *single* block rather than one-block-per-delta. The thinking signature (`SIGNATURE_DELTA`) may also arrive incrementally, and is finalized together with the thinking at the next archiving boundary.
 
 To pull the rules together, here is where each streamed event goes and when it gets finalized:
 
@@ -212,7 +212,7 @@ pending_signature = "sig_abc"
 
 ### 5. How do OpenAI-style and Anthropic-style streams differ?
 
-Anthropic's streaming protocol is fairly "block-shaped." It tells you:
+Anthropic's streaming protocol is fairly **block-shaped**. It tells you:
 
 ```text
 content_block_start
@@ -231,7 +231,7 @@ delta.tool_calls[0].function.arguments = "\"main.py\"}"
 finish_reason = "tool_calls"
 ```
 
-There is no separate `tool_call_stop` event. So the harness must define its own rule for "tool finished." One rule JollySammy wrote is: **the current tool has exactly two end signals:**
+There is no separate `tool_call_stop` event. So the harness must define its own rule for **tool finished**. One rule JollySammy wrote is: **the current tool has exactly two end signals:**
 
 ```text
 1. the next TOOL_USE_START arrives
@@ -252,7 +252,7 @@ on MESSAGE_STOP:
     parse {"pattern":"TODO","path":"."}
 ```
 
-In one sentence: *OpenAI has no "tool end" event; the next tool start, or message stop, is the previous tool's end.* So — plenty of the *lucky folks who've only ever used a single SDK, or a single official-API quota* assume tool calls naturally arrive as complete objects. But in production you routinely get a string of half-formed incremental events.
+*OpenAI has no **tool end** event; the next tool start, or message stop, is the previous tool's end.* So — plenty of the *lucky folks who've only ever used a single SDK, or a single official-API quota* assume tool calls naturally arrive as complete objects. But in production you routinely get a string of half-formed incremental events.
 
 Side by side, the two protocols differ exactly where it hurts:
 
@@ -290,7 +290,7 @@ network keeps streaming the model output
 tool executor runs the finished tools at the same time
 ```
 
-This is one of the harness's most important latency wins. But there's a precondition: **it's only safe for concurrency-safe, approximately-read-only, execute-early-tolerant tools.** These are usually fine to run early:
+What the overlap saves is the remaining time of the network stream. There's a precondition, though: **it's only safe for concurrency-safe, approximately-read-only, execute-early-tolerant tools.** These are usually fine to run early:
 
 ```text
 Read
@@ -385,14 +385,7 @@ Edit:  required: file_path, old_string, new_string
 
 So it looks at the arguments `{ "file_path": "main.py" }`, finds that only `Read`'s required fields match, and infers `name = "Read"`; for `{"pattern": "TODO", "path": "."}` it might infer `Grep`. CC-Py's inference lives in `_finalize_tool_block`. It isn't chasing perfection — just best-effort recovery when a proxy drops a field. If several schemas match, or none do, the safe move is to *not* execute and mark it an invalid tool call.
 
-The engineering philosophy behind all three is one sentence:
-
-```text
-do not trust the shape of the upstream stream
-the local rebuild must keep its own rules intact
-```
-
-*The upstream may be chaotic; the local rebuild must not be.*
+All three defenses share one assumption: the shape of the upstream stream isn't trusted, and the local rebuild keeps its own rules intact.
 
 ### 8. Why does usage accounting also bite?
 
@@ -430,7 +423,7 @@ harness sees the tool block complete, runs Read immediately.
 then the streaming API fails: connection reset / rate limit / server error
 ```
 
-`Read` has already run. For a read-only tool, no big deal. But for writing a file, sending an email, or deleting a file, there's no rollback. The correct strategy:
+`Read` has already run. For a read-only tool, no big deal. But for writing a file, sending an email, or deleting a file, there's no rollback. The strategy:
 
 - Don't pretend to roll back side effects that already happened — record them honestly in the log and the message;
 - Non-downgrade error path: fill in results for all `tool_use` blocks and terminate;
@@ -451,7 +444,7 @@ instead of letting the whole request blow up.
 
 <div class="answerbox">
 <div class="answerbox-label">In summary</div>
-<p>Streaming reconstruction maintains a small state machine holding the finalized content blocks, the in-flight text, the in-flight thinking/signature, and the current tool call. As each kind of delta arrives, flush the previous unfinalized block first, so block boundaries match the real switch points in the stream. Tool-argument JSON is accumulated as a string and parsed once, only after the tool block ends. Anthropic has content-block-stop; OpenAI-compatible streams often have no tool stop, so use "the next tool start, or message stop" as the current tool's end signal. In production you also defend against messy proxies: duplicated starts, arguments before start, missing tool names, and cumulative usage values reported repeatedly. On safety, execute-while-streaming only suits read-only or concurrency-safe tools, because once a side effect happens a later stream error cannot roll it back.</p>
+<p>Streaming reconstruction maintains a small state machine holding the finalized content blocks, the in-flight text, the in-flight thinking/signature, and the current tool call. As each kind of delta arrives, the previous unfinalized block is flushed first, so block boundaries match the real switch points in the stream. Tool-argument JSON is accumulated as a string and parsed once, only after the tool block ends. Anthropic has content-block-stop; OpenAI-compatible streams often have no tool stop, so <strong>the next tool start, or message stop</strong> serves as the current tool's end signal. In production you also defend against messy proxies: duplicated starts, arguments before start, missing tool names, and cumulative usage values reported repeatedly. On safety, execute-while-streaming only suits read-only or concurrency-safe tools, because once a side effect happens a later stream error cannot roll it back.</p>
 <p><strong>The hard part of a streaming agent harness is holding the message-structure invariants: order must not scramble, every <code>tool_use</code> must close, every <code>tool_result</code> must pair, thinking/signature must bind exactly, and usage must not be double-counted.</strong></p>
 </div>
 
@@ -640,7 +633,7 @@ MESSAGE_STOP
 
 ### 5. OpenAI 系和 Anthropic 系的流式协议有何区别？
 
-Anthropic 的流式协议比较「块状」。它会告诉你：
+Anthropic 的流式协议比较块状。它会告诉你：
 
 ```text
 content_block_start
@@ -751,7 +744,7 @@ TOOL_INPUT_DELTA: "{\"file_path\":\"main.py\"}"
 MESSAGE_STOP
 ```
 
-但某些代理会画蛇添足，多发一个相同 id 的「收尾 start」：
+但某些代理会画蛇添足，多发一个相同 id 的**收尾 start**：
 
 ```text
 TOOL_USE_START: id="tool_1", name="Read"
@@ -813,18 +806,10 @@ Edit:  required: file_path, old_string, new_string
 
 那么它可以看参数 `{ "file_path": "main.py" }`，发现只有 `Read` 的必填字段能匹配，于是反推出 `name = "Read"`；再比如参数是 `{"pattern": "TODO", "path": "."}`，可能推断出 `Grep`。CC-Py 的这段反推逻辑在 `_finalize_tool_block` 里。这个策略不追求完美，只为在代理缺字段时尽量恢复。如果多个工具的 schema 都能匹配，或者一个都不匹配，稳妥做法就是不执行，标记为无效工具调用。
 
-这三个防御背后的工程哲学是同一句话：
-
-```text
-do not trust the shape of the upstream stream
-the local rebuild must keep its own rules intact
-```
-
-*上游可以乱，但本地不能乱。*
 
 ### 8. usage 统计为什么也会坑？
 
-流式 usage 事件经常不是「增量」，而是「累计值」。比如一条消息中可能先在 `message_start` 收到：
+流式 usage 事件经常是**累计值**。比如一条消息中可能先在 `message_start` 收到：
 
 ```json
 { "input_tokens": 1000, "cache_read_tokens": 800, "output_tokens": 0 }
