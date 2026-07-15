@@ -1,0 +1,79 @@
+<figure class="post-figure">
+<svg class="flowfig" viewBox="0 0 760 416" xmlns="http://www.w3.org/2000/svg" role="img">
+  <defs>
+    <marker id="ah2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#b0a897"/>
+    </marker>
+  </defs>
+
+  <!-- title -->
+  <rect x="30" y="14" width="700" height="40" rx="6" fill="#fdfbf6" stroke="#e6dfd2"/>
+  <text x="380" y="39" text-anchor="middle" font-size="13" fill="#2c2a26">one turn of model-visible text · two channels</text>
+
+  <!-- lane 1: system channel -->
+  <text x="26" y="84" font-size="11" fill="#8a8377">system channel — assembled once per user submit</text>
+
+  <rect x="22" y="94" width="162" height="46" rx="6" fill="#fdfbf6" stroke="#e6dfd2"/>
+  <text x="103" y="113" text-anchor="middle" font-size="13" fill="#2c2a26">static builders</text>
+  <text x="103" y="130" text-anchor="middle" font-size="10" fill="#8a8377">identity · rules · tone</text>
+
+  <rect x="22" y="150" width="162" height="46" rx="6" fill="#fdfbf6" stroke="#e6dfd2"/>
+  <text x="103" y="169" text-anchor="middle" font-size="13" fill="#2c2a26">dynamic + appended</text>
+  <text x="103" y="186" text-anchor="middle" font-size="10" fill="#8a8377">env · MCP · append_prompt</text>
+
+  <rect x="218" y="104" width="176" height="84" rx="7" fill="#fdfbf6" stroke="#e6dfd2"/>
+  <text x="306" y="132" text-anchor="middle" font-size="13" fill="#2c2a26">resolve → sort →</text>
+  <text x="306" y="150" text-anchor="middle" font-size="13" fill="#2c2a26">blockify → serialize</text>
+  <text x="306" y="172" text-anchor="middle" font-size="10" fill="#8a8377">the assembly pipeline</text>
+
+  <path d="M184,117 L218,128" stroke="#b0a897" fill="none" marker-end="url(#ah2)"/>
+  <path d="M184,173 L218,162" stroke="#b0a897" fill="none" marker-end="url(#ah2)"/>
+
+  <!-- assembled prompt stack -->
+  <rect x="428" y="74" width="302" height="40" rx="6" fill="#f0ebe0" stroke="#e6dfd2"/>
+  <text x="579" y="91" text-anchor="middle" font-size="13" fill="#2c2a26">STATIC prefix</text>
+  <text x="579" y="106" text-anchor="middle" font-size="10" fill="#8a8377">cacheable · scope = global</text>
+
+  <rect x="428" y="120" width="302" height="26" rx="6" fill="#fdfbf6" stroke="#b5794f" stroke-dasharray="4 3"/>
+  <text x="579" y="137" text-anchor="middle" font-size="11" fill="#2c2a26">__SYSTEM_PROMPT_DYNAMIC_BOUNDARY__</text>
+
+  <rect x="428" y="152" width="302" height="34" rx="6" fill="#fdfbf6" stroke="#e6dfd2"/>
+  <text x="579" y="173" text-anchor="middle" font-size="12" fill="#2c2a26">dynamic blocks · appended blocks</text>
+
+  <rect x="428" y="192" width="302" height="36" rx="6" fill="#fdfbf6" stroke="#b5794f" stroke-dasharray="4 3"/>
+  <text x="579" y="207" text-anchor="middle" font-size="12" fill="#2c2a26">gitStatus: …</text>
+  <text x="579" y="221" text-anchor="middle" font-size="10" fill="#8a8377">taped on per API turn</text>
+
+  <path d="M394,128 L428,96" stroke="#b0a897" fill="none" marker-end="url(#ah2)"/>
+  <path d="M394,164 L428,169" stroke="#b0a897" fill="none" marker-end="url(#ah2)"/>
+
+  <!-- gitStatus source -->
+  <rect x="218" y="210" width="176" height="44" rx="6" fill="#fdfbf6" stroke="#e6dfd2"/>
+  <text x="306" y="229" text-anchor="middle" font-size="13" fill="#2c2a26">gitStatus</text>
+  <text x="306" y="245" text-anchor="middle" font-size="10" fill="#8a8377">git subprocess · every turn</text>
+  <path d="M394,232 L428,214" stroke="#b0a897" fill="none" marker-end="url(#ah2)"/>
+
+  <text x="428" y="250" font-size="11" fill="#1b62cf">prefix is cut before the tail is taped on ⇒ they never overlap</text>
+
+  <!-- lane 2: message channel -->
+  <text x="26" y="294" font-size="11" fill="#8a8377">message channel — rebuilt from disk every turn</text>
+
+  <rect x="22" y="304" width="162" height="50" rx="6" fill="#fdfbf6" stroke="#e6dfd2"/>
+  <text x="103" y="324" text-anchor="middle" font-size="13" fill="#2c2a26">CLAUDE.md + date</text>
+  <text x="103" y="341" text-anchor="middle" font-size="10" fill="#8a8377">read fresh each turn</text>
+
+  <rect x="218" y="304" width="176" height="50" rx="6" fill="#fdfbf6" stroke="#e6dfd2"/>
+  <text x="306" y="324" text-anchor="middle" font-size="12" fill="#2c2a26">wrap in &lt;system-reminder&gt;</text>
+  <text x="306" y="341" text-anchor="middle" font-size="10" fill="#8a8377">synthetic user msg · is_meta</text>
+
+  <rect x="428" y="304" width="302" height="50" rx="6" fill="#fdfbf6" stroke="#e6dfd2"/>
+  <text x="579" y="324" text-anchor="middle" font-size="12" fill="#2c2a26">head of the message list</text>
+  <text x="579" y="341" text-anchor="middle" font-size="10" fill="#8a8377">never written into history</text>
+
+  <path d="M184,329 L218,329" stroke="#b0a897" fill="none" marker-end="url(#ah2)"/>
+  <path d="M394,329 L428,329" stroke="#b0a897" fill="none" marker-end="url(#ah2)"/>
+
+  <text x="380" y="398" text-anchor="middle" font-size="12" fill="#1b62cf">the layering criterion: how often the content changes</text>
+</svg>
+<figcaption>{{ include.caption }}</figcaption>
+</figure>
