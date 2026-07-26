@@ -10,13 +10,13 @@ redirect_from:
 
 ## About {#about}
 
-Hi, I'm **Shi Qiu** (仇是), a senior undergraduate student at the School of Physics, Peking University. I'm also an incoming Ph.D in Computer Science at UNC Chapel-Hill, advised by [Prof. Huaxiu Yao](https://www.huaxiuyao.io).
+Hi, I'm **Shi Qiu** (仇是), a first-year Ph.D student in Computer Science at UNC Chapel-Hill, advised by [Prof. Huaxiu Yao](https://www.huaxiuyao.io). Before that, I obtained my Bachelor's Degree at the School of Physics, Peking University.
 
 My research focuses on **AI Agents** and **AI4Physics**, with a particular emphasis on **self-evolving autoresearch systems for scientific discovery** — agents that iteratively generate hypotheses, design and run experiments, and write papers with minimal human intervention. My work explores two complementary directions: (1) building robust, self-evolving agentic frameworks that automate the full research loop; and (2) leveraging domain-specific physics knowledge to ground agents in rigorous scientific reasoning.
 
 My open-source work has collectively earned **over 22,000 GitHub stars**, and I am a core contributor to [AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw), [MetaClaw](https://github.com/aiming-lab/MetaClaw), and [Agents](https://github.com/aiwaves-cn/agents).
 
-I've also been collaborating with [Prof. Dawn Song](https://dawnsong.io/)'s team at UC Berkeley, and with the AI4Physics research group led by Professors [Hua Xing Zhu](https://konformal.github.io/#), [Qing-Hong Cao](https://faculty.pku.edu.cn/caoqinghong/zh_CN/index.htm), and [Ming-Xing Luo](https://www.csrc.ac.cn/en/people/faculty/184.html) at the School of Physics, Peking University. Also, I'm honored to be the only undergrad advisor of [AlphaXiv](https://www.alphaxiv.org).
+I've also been collaborating with [Prof. Zeyu Zheng](https://zheng80.github.io/) and [Prof. Dawn Song](https://dawnsong.io/) at UC Berkeley, and with the AI4Physics research group led by Professors [Hua Xing Zhu](https://konformal.github.io/#), [Qing-Hong Cao](https://faculty.pku.edu.cn/caoqinghong/zh_CN/index.htm), and [Ming-Xing Luo](https://www.csrc.ac.cn/en/people/faculty/184.html) at the School of Physics, Peking University. Also, I'm honored to be the only undergrad advisor of [AlphaXiv](https://www.alphaxiv.org).
 
 ## News {#news}
 
