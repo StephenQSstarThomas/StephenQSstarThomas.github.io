@@ -50,7 +50,7 @@ I've also been collaborating with [Prof. Zeyu Zheng](https://zheng80.github.io/)
 
 ## Publications {#publications}
 
-{% assign visible_pubs = 8 %}
+{% assign visible_pubs = 10 %}
 {% for pub in site.data.publications limit: visible_pubs %}
 <div class="pub">
 <p class="pub-title"><a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a></p>

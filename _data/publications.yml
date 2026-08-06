@@ -1,6 +1,6 @@
 # Publications. ORDER = display order: pinned first, then newest-first by
 # release date (`date` is informational — the template renders in file order).
-# The homepage shows the first 8 entries; the rest fold into
+# The homepage shows the first 10 entries; the rest fold into
 # "Show earlier publications". `authors` is plain text — the template
 # highlights every "Shi Qiu" occurrence automatically.
 
@@ -26,6 +26,30 @@
       url: "https://github.com/aiming-lab/AutoResearchClaw"
 
 # ---- newest first ----
+- title: "ClawArena-Team: Benchmarking Subagent Orchestration and Dynamic Workflows in Language-Model Agents"
+  url: "https://www.alphaxiv.org/abs/2606.31174"
+  authors: "Kaiwen Xiong, Haonian Ji, Shi Qiu, Zeyu Zheng, Cihang Xie, Xinyu Ye, Huaxiu Yao"
+  venue: "arXiv preprint, 2026"
+  date: 2026-06
+  links:
+    - label: "Code"
+      url: "https://github.com/aiming-lab/ClawArena"
+
+- title: "Paper2Figure: A Multi-Agent Collaborative System for Figure Generation Towards Academic Research Paper"
+  url: "https://openaccess.thecvf.com/content/CVPR2026/html/Han_Paper2Figure_A_Multi-Agent_Collaborative_System_for_Figure_Generation_Towards_Academic_CVPR_2026_paper.html"
+  authors: "Siwei Han, Haonian Ji, Siyang Xin, Juanquan Shi, Shi Qiu, Xinyu Ye, Peng Xia, Jiaqi Liu, Zhaorun Chen, Yiyang Zhou, Linjie Li, Lijuan Wang, Huaxiu Yao"
+  venue: "CVPR 2026"
+  date: 2026-06
+  links:
+    - label: "PDF"
+      url: "https://openaccess.thecvf.com/content/CVPR2026/papers/Han_Paper2Figure_A_Multi-Agent_Collaborative_System_for_Figure_Generation_Towards_Academic_CVPR_2026_paper.pdf"
+
+- title: "Agents' Last Exam"
+  url: "https://www.alphaxiv.org/abs/2606.05405"
+  authors: "Yiyou Sun, Xinyang Han, Weichen Zhang, Yuanbo Pang, Tianyu Wang, …, Shi Qiu, Huaxiu Yao, …, Wenbo Guo, Dawn Song"
+  venue: "arXiv preprint, 2026"
+  date: 2026-06
+
 - title: "ClawArena: Benchmarking AI Agents in Evolving Information Environments"
   url: "https://www.alphaxiv.org/abs/2604.04202"
   authors: "Haonian Ji, Kaiwen Xiong, Siwei Han, Peng Xia, Shi Qiu, Yiyang Zhou, Jiaqi Liu, Bo Li, Zeyu Zheng, Cihang Xie, et al."
@@ -82,10 +106,13 @@
   date: 2025-07
 
 - title: "Minos: A Multimodal Evaluation Model for Bidirectional Generation Between Image and Text"
-  url: "https://www.alphaxiv.org/abs/2506.02494"
+  url: "https://aclanthology.org/2026.findings-acl.744.pdf"
   authors: "Junzhe Zhang, Huixuan Zhang, Xinyu Hu, Li Lin, Mingqi Gao, Shi Qiu, Xiaojun Wan"
-  venue: "arXiv preprint, 2025"
+  venue: "ACL 2026 Findings"
   date: 2025-06
+  links:
+    - label: "arXiv"
+      url: "https://www.alphaxiv.org/abs/2506.02494"
 
 - title: "From EduVisBench to EduVisAgent: A Benchmark and Multi-Agent Framework for Pedagogical Visualization"
   url: "https://www.alphaxiv.org/abs/2505.16832"
