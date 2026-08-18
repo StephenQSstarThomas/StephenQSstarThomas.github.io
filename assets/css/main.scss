@@ -68,16 +68,9 @@ a {
   &:hover, &:focus-visible { text-decoration: underline; }
 }
 
-/* The self-hosted CJK face ships a single weight (declared 400–700), so a
-   font-weight bump bolds Latin but leaves Chinese untouched. Emphasize with a
-   quiet underline instead: identical across scripts, no faux bold anywhere. */
-strong, b {
-  font-weight: inherit;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.24em;
-  text-decoration-color: $muted;
-}
+/* Real bold everywhere: Latin gets Satoshi 600, CJK maps to the vendored
+   LXGW WenKai bold (700) face — no faux bold, no underline workaround. */
+strong, b { font-weight: 600; }
 
 hr {
   border: 0;

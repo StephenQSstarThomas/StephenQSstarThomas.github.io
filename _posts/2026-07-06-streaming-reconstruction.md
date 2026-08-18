@@ -457,7 +457,7 @@ instead of letting the whole request blow up.
 <p>流式输出中工具参数是分片到达的，如何正确重建？各大厂家（例如，OpenAI 系与 Anthropic 系）的流式事件有什么差异？如果代理服务器行为不规范怎么应对？</p>
 </div>
 
-背景：我，JollySammy，是一个勤俭持家的好松鼠。我在搭建agent的时候总会想，能否用比较便宜（但是货一定是真的，而不是问“你是什么（A）模型”回答“我是来自B的XXX模型”）的第三方API，来作为agent的内置模型。在实践的过程中我逐渐意识到几个问题：API的流式输出千人千面，需要合理的重建方法组织到context里面；有些杀千刀的第三方服务厂家尤其可恶，打着“XXX 兼容”的格式，背地里偷工减料减少了不少返回参数，甚至直接行为不规范（漏发事件、重发事件、乱序等）。在这样的情况下，如何让你的agent能够完整对应到对应的信息和指令？
+背景：我，JollySammy，是一个勤俭持家的好松鼠。我在搭建 agent 的时候总会想，能否用比较便宜（但是货一定是真的，而不是问“你是什么（A）模型”回答“我是来自 B 的 XXX 模型”）的第三方 API，来作为 agent 的内置模型。在实践的过程中我逐渐意识到几个问题：API 的流式输出千人千面，需要合理的重建方法组织到 context 里面；有些杀千刀的第三方服务厂家尤其可恶，打着“XXX 兼容”的格式，背地里偷工减料减少了不少返回参数，甚至直接行为不规范（漏发事件、重发事件、乱序等）。在这样的情况下，如何让你的 agent 能够完整对应到对应的信息和指令？
 
 首先，这件事情的本质是：**模型流式输出时，并不是一次性给你一个完整的 assistant 消息，而是一小片一小片吐出来。Agent harness 要把这些碎片重新拼成一个可以保存、可以回放、可以继续对话、可以执行工具的结构化消息。**
 
@@ -497,7 +497,7 @@ TOOL_INPUT_DELTA: "}"
 
 ### 1. 流式输出是一个很“脏”的东西
 
-**流式输出**听起来像是模型一个字一个字往外说。在正常的LLM调用中，这个应用能够帮忙我们实时捕捉模型的回答进程。但带入 agent 场景，这时候流里不只有普通文本，还可能有：
+**流式输出**听起来像是模型一个字一个字往外说。在正常的 LLM 调用中，这个应用能够帮忙我们实时捕捉模型的回答进程。但带入 agent 场景，这时候流里不只有普通文本，还可能有：
 
 ```text
 plain text
@@ -552,7 +552,7 @@ current_tool: the tool call being accumulated
   - input_json_buffer
 ```
 
-例如，JollySammy最喜欢的一份harness代码的重建器设立了如上几个局部变量。只要一个内容块没有结束，它就先放在**pending / current**里。一旦遇到明确边界，就把它**归档**进 `accumulated_content`。所谓**归档**，就是把临时缓冲区里的内容变成正式的 content block。比如：
+例如，JollySammy 最喜欢的一份 harness 代码的重建器设立了如上几个局部变量。只要一个内容块没有结束，它就先放在**pending / current**里。一旦遇到明确边界，就把它**归档**进 `accumulated_content`。所谓**归档**，就是把临时缓冲区里的内容变成正式的 content block。比如：
 
 ```text
 pending_text = "Let me read the file first."
@@ -568,7 +568,7 @@ pending_text = "Let me read the file first."
 
 {% include fig-stream.html caption="图 — 重建器把每个 delta 累积进对应的 pending 缓冲区，在每个块边界把它定稿成正式的内容块，从而让 assistant 消息保持模型真实的输出顺序。" %}
 
-### 3. Blockwise的归档意义
+### 3. Blockwise 的归档意义
 
 正常来说，文本、thinking、工具调用之间有顺序语义。比如模型实际输出顺序是：
 
@@ -652,7 +652,7 @@ delta.tool_calls[0].function.arguments = "\"main.py\"}"
 finish_reason = "tool_calls"
 ```
 
-它没有一个单独事件说 `tool_call_stop`。所以 harness 必须自己定义“工具结束”的判断规则。JollySammy自己写的一种规则是：**当前工具的结束信号只有两个：**
+它没有一个单独事件说 `tool_call_stop`。所以 harness 必须自己定义“工具结束”的判断规则。JollySammy 自己写的一种规则是：**当前工具的结束信号只有两个：**
 
 ```text
 1. the next TOOL_USE_START arrives
@@ -673,7 +673,7 @@ on MESSAGE_STOP:
     parse {"pattern":"TODO","path":"."}
 ```
 
-所以说，很多*只用过单一SDK或者单一官方API额度*的富哥富姐们会以为工具调用自然有完整对象，但生产环境里，你经常拿到的是一串半残的增量事件。
+所以说，很多*只用过单一 SDK 或者单一官方 API 额度*的富哥富姐们会以为工具调用自然有完整对象，但生产环境里，你经常拿到的是一串半残的增量事件。
 
 两种协议的差异，恰好都落在最咬人的地方：
 

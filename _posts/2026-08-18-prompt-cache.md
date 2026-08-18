@@ -279,7 +279,7 @@ Three fixes, all cheap. Warm up: send one agent first (or a scout request with a
 
 背景：JollySammy 最近查了个词，从此得意得不行。计算机说的 cache，居然是他家的祖传手艺，松鼠埋粮过冬这件事在动物学文献里就叫 caching。松果从底往上码，新捡的只许放顶上，只要埋好的那几层没人动，他每天早上路过果堆，清点一下昨天之后新添的几颗就能开饭。有一年表弟好心把堆底"重新整理"了一遍，他花了三天把上面每一颗重新清点归位。
 
-例子照旧用 JollySammy 洞里那份 harness，我们主要在Anthropic的政策下讨论本文。
+例子照旧用 JollySammy 洞里那份 harness，我们主要在 Anthropic 的政策下讨论本文。
 
 ### 1. agent 的账单和 chat 长得不一样
 
@@ -338,7 +338,7 @@ gitStatus: branch=main, 2 files modified
 
 前一半永远不变，断点打在它的末尾；后一半每轮爱怎么变就怎么变，它在断点之后，变化伤不到缓存区。
 
-**本小节Remark：把请求划分成稳定区和易变区，并保证稳定区逐字节不变。**
+**本小节 Remark：把请求划分成稳定区和易变区，并保证稳定区逐字节不变。**
 
 ### 3. 把稳定做成结构
 
