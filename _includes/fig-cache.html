@@ -1,0 +1,65 @@
+<figure class="post-figure">
+<svg class="flowfig" viewBox="0 0 760 452" xmlns="http://www.w3.org/2000/svg" role="img">
+  <defs>
+    <marker id="ahc" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#b0a897"/>
+    </marker>
+  </defs>
+
+  <!-- title -->
+  <rect x="30" y="14" width="700" height="40" rx="6" fill="#fdfbf6" stroke="#e6dfd2"/>
+  <text x="380" y="39" text-anchor="middle" font-size="13" fill="#2c2a26">one request, hashed in this order: tools &#8594; system &#8594; messages</text>
+
+  <path d="M260,54 L260,70" stroke="#b0a897" fill="none" marker-end="url(#ahc)"/>
+
+  <!-- tools block -->
+  <rect x="60" y="72" width="400" height="58" rx="6" fill="#fdfbf6" stroke="#e6dfd2"/>
+  <text x="250" y="95" text-anchor="middle" font-size="13" fill="#2c2a26">tools[] &#183; every tool definition</text>
+  <text x="250" y="113" text-anchor="middle" font-size="11" fill="#8a8377">last element carries cache_control &#9312;</text>
+  <text x="448" y="95" text-anchor="end" font-size="13" fill="#b5794f">&#9312;</text>
+
+  <path d="M260,130 L260,142" stroke="#b0a897" fill="none" marker-end="url(#ahc)"/>
+
+  <!-- static prefix block -->
+  <rect x="60" y="144" width="400" height="58" rx="6" fill="#fdfbf6" stroke="#e6dfd2"/>
+  <text x="250" y="167" text-anchor="middle" font-size="13" fill="#2c2a26">system &#183; static prefix (identity / rules / policy)</text>
+  <text x="250" y="185" text-anchor="middle" font-size="11" fill="#8a8377">ends with cache_control &#9313;</text>
+  <text x="448" y="167" text-anchor="end" font-size="13" fill="#b5794f">&#9313;</text>
+
+  <path d="M260,202 L260,214" stroke="#b0a897" fill="none" marker-end="url(#ahc)"/>
+
+  <!-- boundary sentinel -->
+  <rect x="60" y="216" width="400" height="32" rx="6" fill="none" stroke="#cfc6b6" stroke-dasharray="4 3"/>
+  <text x="260" y="236" text-anchor="middle" font-size="12" fill="#8a8377">__SYSTEM_PROMPT_DYNAMIC_BOUNDARY__</text>
+
+  <path d="M260,248 L260,260" stroke="#b0a897" fill="none" marker-end="url(#ahc)"/>
+
+  <!-- volatile tail block -->
+  <rect x="60" y="262" width="400" height="54" rx="6" fill="#fdfbf6" stroke="#e6dfd2"/>
+  <text x="260" y="284" text-anchor="middle" font-size="13" fill="#2c2a26">system &#183; volatile tail (env, git status)</text>
+  <text x="260" y="302" text-anchor="middle" font-size="11" fill="#8a8377">re-appended every turn, no marker</text>
+
+  <path d="M260,316 L260,328" stroke="#b0a897" fill="none" marker-end="url(#ahc)"/>
+
+  <!-- messages block -->
+  <rect x="60" y="330" width="400" height="54" rx="6" fill="#f0ebe0" stroke="#e6dfd2"/>
+  <text x="260" y="352" text-anchor="middle" font-size="13" fill="#2c2a26">messages[] &#183; session history</text>
+  <text x="260" y="370" text-anchor="middle" font-size="11" fill="#8a8377">append-only, grows every turn</text>
+
+  <!-- stable zone bracket -->
+  <path d="M486,72 L498,72 L498,202 L486,202" stroke="#1b62cf" fill="none"/>
+  <text x="508" y="126" font-size="12" fill="#1b62cf">stable zone</text>
+  <text x="508" y="144" font-size="11" fill="#1b62cf">byte-identical &#8658; re-read at 0.1&#215;</text>
+
+  <!-- volatile zone bracket -->
+  <path d="M486,262 L498,262 L498,384 L486,384" stroke="#b5794f" fill="none"/>
+  <text x="508" y="308" font-size="12" fill="#b5794f">volatile zone</text>
+  <text x="508" y="326" font-size="11" fill="#b5794f">full price, changes land after &#9313;</text>
+  <text x="508" y="342" font-size="11" fill="#b5794f">and never touch the cache</text>
+
+  <!-- semantics notes -->
+  <text x="380" y="414" text-anchor="middle" font-size="12" fill="#1b62cf">a breakpoint caches everything from byte 0 to itself: &#9312; covers tools, &#9313; covers tools + static prefix</text>
+  <text x="380" y="434" text-anchor="middle" font-size="11" fill="#8a8377">one changed byte upstream kills every breakpoint after it, and the whole zone is rewritten at 1.25&#215;</text>
+</svg>
+<figcaption>{{ include.caption }}</figcaption>
+</figure>
