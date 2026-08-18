@@ -8,10 +8,14 @@
 <meta name="msapplication-config" content="{{ '/images/browserconfig.xml' | relative_url }}?v=M44lzPylqQ">
 <meta name="theme-color" content="#ffffff">
 
-<!-- Self-hosted fonts (Satoshi body + Newsreader serif display + LXGW WenKai CJK + JetBrains Mono) -->
+<!-- Self-hosted fonts (Satoshi body + Newsreader serif display + LXGW WenKai CJK + JetBrains Mono).
+     LXGW WenKai is the FULL font split into unicode-range chunks (regular+bold);
+     the browser only fetches the chunks a page actually uses. -->
 <link rel="preload" href="{{ '/assets/fonts/self/satoshi-variable.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{ '/assets/fonts/self/newsreader-400-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ '/assets/fonts/self/fonts.css' | relative_url }}?v={{ site.time | date: '%s' }}"/>
+<link rel="stylesheet" href="{{ '/assets/fonts/self/lxgw-wenkai/lxgwwenkai-regular.css' | relative_url }}?v=1.7.0"/>
+<link rel="stylesheet" href="{{ '/assets/fonts/self/lxgw-wenkai/lxgwwenkai-bold.css' | relative_url }}?v=1.7.0"/>
 
 {% if page.math %}
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
